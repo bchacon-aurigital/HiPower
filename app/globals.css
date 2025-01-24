@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
+
+/* -------------------
+   @font-face
+   ------------------- */
+
+/* Futura Bold font */
+@font-face {
+  font-family: "Futura Bold";
+  src: url("/assets/fonts/Futura Bold font.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* futura medium condensed bt */
+@font-face {
+  font-family: "Futura Medium Condensed";
+  src: url("/assets/fonts/futura medium condensed bt.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* FuturaMediumBT */
+@font-face {
+  font-family: "Futura Medium";
+  src: url("/assets/fonts/FuturaMediumBT.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
