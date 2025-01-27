@@ -7,12 +7,12 @@ const BrandCarousel = () => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 3000, 
+    speed: 3000,
     slidesToShow: 6,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 0, 
-    cssEase: "linear", 
+    autoplaySpeed: 0,
+    cssEase: "linear",
     arrows: false,
     pauseOnHover: false,
     responsive: [
@@ -44,29 +44,38 @@ const BrandCarousel = () => {
   };
 
   const brands = [
-    { src: "/assets/brands/image3.png", alt: "TEC Costa Rica" },
-    { src: "/assets/brands/image4.png", alt: "Banco Popular" },
-    { src: "/assets/brands/image5.png", alt: "Establishment Labs" },
-    { src: "/assets/brands/image6.png", alt: "Segundo Social" },
-    { src: "/assets/brands/image7.png", alt: "Guanacaste Aeropuerto" },
-    { src: "/assets/brands/image8.png", alt: "Fundación Omar Dengo" },
-    { src: "/assets/brands/image9.png", alt: "Claro" },
-    { src: "/assets/brands/image10.png", alt: "Lincoln School" },
-    { src: "/assets/brands/image11.png", alt: "Tigo" },
-    { src: "/assets/brands/image12.png", alt: "BCR" },
-    { src: "/assets/brands/image13.png", alt: "INS" },
-    { src: "/assets/brands/image14.png", alt: "Allergan" },
-    { src: "/assets/brands/image15.png", alt: "Sykes" },
-    { src: "/assets/brands/image16.png", alt: "CG" },
+    { src: "/assets/landing/brands/image3.png", alt: "TEC Costa Rica" },
+    { src: "/assets/landing/brands/image4.png", alt: "Banco Popular" },
+    { src: "/assets/landing/brands/image5.png", alt: "Establishment Labs" },
+    { src: "/assets/landing/brands/image6.png", alt: "Segundo Social" },
+    { src: "/assets/landing/brands/image7.png", alt: "Guanacaste Aeropuerto" },
+    { src: "/assets/landing/brands/image8.png", alt: "Fundación Omar Dengo" },
+    { src: "/assets/landing/brands/image9.png", alt: "Claro" },
+    { src: "/assets/landing/brands/image10.png", alt: "Lincoln School" },
+    { src: "/assets/landing/brands/image11.png", alt: "Tigo" },
+    { src: "/assets/landing/brands/image12.png", alt: "BCR" },
+    { src: "/assets/landing/brands/image13.png", alt: "INS" },
+    { src: "/assets/landing/brands/image14.png", alt: "Allergan" },
+    { src: "/assets/landing/brands/image15.png", alt: "Sykes" },
+    { src: "/assets/landing/brands/image16.png", alt: "CG" },
   ];
 
   return (
-    <div className="w-full bg-white pt-20">
+    <section>
+    <div className="w-full bg-white py-24" role="region" aria-labelledby="carousel-heading">
       <div className="mx-auto px-4">
+        <h2 id="carousel-heading" className="sr-only">
+          Carrusel de marcas asociadas con HiPower
+        </h2>
         <div className="w-full">
-          <Slider {...settings}>
+          <Slider {...settings} role="list">
             {[...brands, ...brands].map((brand, index) => (
-              <div key={index} className="px-6">
+              <div 
+                key={index} 
+                className="px-6" 
+                role="listitem" 
+                aria-label={`Marca: ${brand.alt}`}
+              >
                 <div className="flex items-center justify-center h-28">
                   <img
                     src={brand.src}
@@ -80,16 +89,20 @@ const BrandCarousel = () => {
         </div>
 
         <div className="mt-12 flex justify-center">
-        <button
-              className="relative px-3 py-3 text-lg font-medium text-white overflow-hidden bg-[#037F3F]
+          <button
+            className="relative px-3 py-3 text-lg font-medium text-white overflow-hidden bg-[#037F3F]
              transition-all duration-500 hover:text-white group rounded-tl-xl rounded-br-xl"
-            >
-              <span className="absolute inset-0 bg-gradient-to-r from-[#037F3F] to-[#002D6A] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
-              <span className="relative z-10 font-roboto font-bold text-2xl"> Recibir Asesoría</span>
-            </button>
+            aria-label="Recibir asesoría sobre soluciones de energía solar"
+          >
+            <span className="absolute inset-0 bg-gradient-to-r from-[#037F3F] to-[#002D6A] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
+            <span className="relative z-10 font-roboto font-bold text-2xl">
+              Recibir Asesoría
+            </span>
+          </button>
         </div>
       </div>
     </div>
+  </section>
   );
 };
 

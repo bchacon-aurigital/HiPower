@@ -8,7 +8,7 @@ export const metadata = {
   openGraph: {
     title: "Abraham Studio | Barbería y estética masculina",
     description: "En Abraham Studio, encontrarás la comunidad necesaria para ayudarte a lucir y sentirte en tu mejor momento.",
-    url: "https://abrahamstudio.calendarhit.com/",
+    url: "https://hipower.aurigital.com/",
     siteName: "Abraham Studio | Barbería y estética masculina",
     images: [
       {
@@ -22,7 +22,7 @@ export const metadata = {
     type: "website"
   },
   alternates: {
-    canonical: "https://abrahamstudio.calendarhit.com/"
+    canonical: "https://hipower.aurigital.com/"
   }
 };
 
@@ -30,8 +30,8 @@ export const metadata = {
     "@context": "https://schema.org",
     "@type": "BarberShop",
     "name": "Abraham Studio | Barbería y estética masculina",
-    "image": "https://abrahamstudio.calendarhit.com/HeroBG.png", 
-    "url": "https://abrahamstudio.calendarhit.com/",
+    "image": "https://hipower.aurigital.com/HeroBG.png", 
+    "url": "https://hipower.aurigital.com/",
     "telephone": "+50684249981",       
     "address": {
       "@type": "PostalAddress",
@@ -52,8 +52,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es"> 
-     
-    <script src="https://static.elfsight.com/platform/platform.js" async></script>
     <body>  
       <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
