@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -8,7 +7,6 @@ import { useEffect } from "react";
 export default function Hero() {
   useEffect(() => {
     AOS.init({
-      disableMutationObserver: true,
       once: true,
     });
   }, []);

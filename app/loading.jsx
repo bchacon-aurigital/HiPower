@@ -1,8 +1,8 @@
 export default function Loading() {
     return (
-      <div className="fixed inset-0 flex items-center justify-center bg-[#3C5954] z-50">
+      <div className="fixed inset-0 flex items-center justify-center bg-gradient-to-r from-[#037F3F] to-[#002D6A] z-50">
         <img
-          src="/assets/LogoLoading.svg"
+          src="/assets/landing/LogoHiPower.svg"
           alt="Loading..."
           className="w-[50vh]"
         />
