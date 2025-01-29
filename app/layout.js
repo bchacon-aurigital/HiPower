@@ -3,11 +3,11 @@ import "./globals.css";
 
 export const metadata = {
   title: "Abraham Studio | Barbería y estética masculina",
-  description: "En Abraham Studio, encontrarás la comunidad necesaria para ayudarte a lucir y sentirte en tu mejor momento.",
+  description: "HiPower instala paneles solares para tener industrias autosostenibles y reducir el costo de facturación eléctrica, almacenar energía y reducir emisiones.",
   keywords: "barbería, estética, abraham studio, cortes, cuidado, barbero, afeitado, estilo, masculina, masculino",
   openGraph: {
     title: "Abraham Studio | Barbería y estética masculina",
-    description: "En Abraham Studio, encontrarás la comunidad necesaria para ayudarte a lucir y sentirte en tu mejor momento.",
+    description: "HiPower instala paneles solares para tener industrias autosostenibles y reducir el costo de facturación eléctrica, almacenar energía y reducir emisiones.",
     url: "https://hipower.aurigital.com/",
     siteName: "Abraham Studio | Barbería y estética masculina",
     images: [

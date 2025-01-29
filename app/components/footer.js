@@ -5,18 +5,41 @@ import { FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
     return (
-        <div className="flex items-center justify-center p-6" role="contentinfo">
+        <div className="flex items-center justify-center p-6" role="contentinfo"  data-aos="fade-up">
             <footer
                 className="relative text-white w-full rounded-3xl max-w-[90rem] lg:min-h-[20rem] flex flex-col justify-between"
                 aria-labelledby="footer-heading"
             >
-                <div
-                    className="absolute inset-0 w-full bg-cover bg-center md:bg-[url('/assets/BgFooter.avif')] rounded-3xl"
-                    aria-hidden="true"
-                    style={{
-                        backgroundImage: `url('/assets/FooterBgResponsive.avif'), url('/assets/FooterBgResponsive.png'), url('/assets/BgFooter.png')`,
-                    }}
-                />
+                <div className="absolute inset-0 w-full h-full rounded-3xl overflow-hidden" aria-hidden="true">
+                    <picture>
+                        <source
+                            srcSet="/assets/BgFooter.avif"
+                            type="image/avif"
+                            media="(min-width: 1024px)"
+                        />
+                        <source
+                            srcSet="/assets/BgFooter.png"
+                            type="image/png"
+                            media="(min-width: 1024px)"
+                        />
+                        <source
+                            srcSet="/assets/FooterBgResponsive.avif"
+                            type="image/avif"
+                            media="(max-width: 1023px)"
+                        />
+                        <source
+                            srcSet="/assets/FooterBgResponsive.png"
+                            type="image/png"
+                            media="(max-width: 1023px)"
+                        />
+                        <img
+                            src="/assets/BgFooter.png"
+                            alt="Footer Background"
+                            className="absolute inset-0 w-full h-full object-cover rounded-3xl"
+                        />
+                    </picture>
+                </div>
+
 
                 <div className="relative container mx-auto px-6 md:px-16 pt-8 pb-4 flex-grow">
                     <div className="flex flex-col md:flex-row md:justify-between w-full">
@@ -24,12 +47,12 @@ const Footer = () => {
                             className="text-center md:text-right mb-6 md:mb-0 order-first md:order-last"
                             aria-label="Frase inspiradora para el uso de energía limpia"
                         >
-                            <h2
+                            <h3
                                 id="footer-heading"
                                 className="text-lg md:text-xl font-bold max-w-md mx-auto md:mx-0 text-right"
                             >
                                 Revoluciona tu empresa con energía limpia. Ahorra hoy, protege el mañana.
-                            </h2>
+                            </h3>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -40,7 +63,7 @@ const Footer = () => {
                                 >
                                     SOCIAL
                                 </h3>
-                                <ul className="mt-2 space-y-1" aria-labelledby="social-heading">
+                                <ul className="mt-2 " aria-labelledby="social-heading">
                                     <li>
                                         <a
                                             href="https://www.instagram.com"
@@ -95,7 +118,7 @@ const Footer = () => {
                                 >
                                     RECURSOS
                                 </h3>
-                                <ul className="mt-2 space-y-1" aria-labelledby="resources-heading">
+                                <ul className="mt-2 " aria-labelledby="resources-heading">
                                     <li>
                                         <a
                                             href="/"

@@ -22,7 +22,7 @@ export default function Hero() {
           <div className="absolute inset-0" aria-hidden="true">
             <picture>
               <source
-                srcSet="/assets/landing/HeroBG.png"
+                srcSet="/assets/landing/HeroBG.avif"
                 type="image/png"
                 media="(min-width: 768px)"
               />
@@ -37,7 +37,7 @@ export default function Hero() {
                 media="(max-width: 767px)"
               />
               <Image
-                src="/assets/landing/HeroBG.avif"
+                src="/assets/landing/HeroBG.png"
                 alt="Solar Panels Installation"
                 fill
                 className="object-cover"
@@ -66,9 +66,10 @@ export default function Hero() {
             className="relative flex flex-col items-center justify-center w-full h-full text-white px-4 md:px-8"
             role="region"
             aria-labelledby="hero-heading"
+            data-aos="fade-down"
           >
             {/* Star Icon */}
-            <div data-aos="fade-down" data-aos-duration="1000" className="mb-4" aria-hidden="true">
+            <div className="mb-4" aria-hidden="true">
               <Image
                 src="/assets/landing/HeroIcon.svg"
                 alt="Star Icon"
@@ -78,33 +79,33 @@ export default function Hero() {
               />
             </div>
 
-            {/* Main Heading */}
             <h1
               id="hero-heading"
               className="text-4xl md:text-5xl lg:text-[3.40rem] text-center max-w-[61rem] mb-4 font-roboto font-bold lg:leading-snug"
+              data-aos="fade-down"
             >
               Optimiza tus costos de energía y acelera la sostenibilidad de tu empresa.
             </h1>
 
-            {/* Subheading */}
-            <p
+            <h3
               className="text-md md:text-2xl text-center max-w-xs md:max-w-lg mb-5 font-roboto font-medium"
               id="hero-subheading"
+              data-aos="fade-down"
             >
               Déjanos tus datos y te ayudamos a reducir costos con soluciones personalizadas.
-            </p>
+            </h3>
 
-            {/* CTA Button */}
             <button
               className="relative px-3 py-3 text-lg font-medium text-white overflow-hidden bg-[#037F3F] transition-all duration-500 hover:text-white group rounded-tl-xl rounded-br-xl"
               aria-label="Recibir asesoría"
+              data-aos="fade-down"
             >
               <span className="absolute inset-0 bg-gradient-to-r from-[#037F3F] to-[#002D6A] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>
               <span className="relative z-10 font-roboto font-bold text-2xl"> Recibir Asesoría</span>
             </button>
 
             {/* Stats Section */}
-            <div className="w-full xl:block hidden mt-[5%]" role="region" aria-labelledby="stats-heading">
+            <div className="w-full xl:block hidden mt-[5%]" role="region" aria-labelledby="stats-heading" data-aos="fade-right">
               <div className="flex flex-row px-4 w-full justify-center items-center">
                 <h2
                   id="stats-heading"
@@ -154,7 +155,7 @@ export default function Hero() {
           </div>
         </section>
       </div>
-      <div className="w-full xl:hidden my-[5%] pb-8">
+      <div className="w-full xl:hidden my-[5%] pb-8" data-aos="fade-right">
         <div className="flex flex-col px-4 w-full justify-center items-center">
 
           <h2 className="text-[2.50rem] text-center mb-5 font-bold max-w-sm leading-tight mr-5 text-[#002D6A]">

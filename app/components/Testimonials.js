@@ -82,6 +82,7 @@ export default function SolarCardsGrid() {
         className="grid grid-cols-1 lg:grid-cols-2 gap-1 px-4 max-w-7xl mx-auto"
         role="list"
         aria-label="Tarjetas de proyectos solares de HiPower"
+        data-aos="fade-left"
       >
         <SolarCard
           title="GENERACIÓN"

@@ -23,7 +23,7 @@ const Form = () => {
   }, []);
 
   return (
-    <div className="w-full mx-auto max-w-7xl px-10  py-14">
+    <div className="w-full mx-auto max-w-7xl px-10  py-14" data-aos="fade-up">
       <h2 className='text-3xl md:text-4xl text-center mx-auto font-roboto font-bold text-[#002D6A] mb-8 max-w-[60%]'>¡Comienza tu asesoría energética!</h2>
       <div id="hubspotForm" className="relative w-full h-auto"></div>
     </div>

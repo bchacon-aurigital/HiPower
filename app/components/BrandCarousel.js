@@ -44,20 +44,20 @@ const BrandCarousel = () => {
   };
 
   const brands = [
-    { src: "/assets/landing/brands/image3.png", alt: "TEC Costa Rica" },
-    { src: "/assets/landing/brands/image4.png", alt: "Banco Popular" },
-    { src: "/assets/landing/brands/image5.png", alt: "Establishment Labs" },
-    { src: "/assets/landing/brands/image6.png", alt: "Segundo Social" },
-    { src: "/assets/landing/brands/image7.png", alt: "Guanacaste Aeropuerto" },
-    { src: "/assets/landing/brands/image8.png", alt: "Fundación Omar Dengo" },
-    { src: "/assets/landing/brands/image9.png", alt: "Claro" },
-    { src: "/assets/landing/brands/image10.png", alt: "Lincoln School" },
-    { src: "/assets/landing/brands/image11.png", alt: "Tigo" },
-    { src: "/assets/landing/brands/image12.png", alt: "BCR" },
-    { src: "/assets/landing/brands/image13.png", alt: "INS" },
-    { src: "/assets/landing/brands/image14.png", alt: "Allergan" },
-    { src: "/assets/landing/brands/image15.png", alt: "Sykes" },
-    { src: "/assets/landing/brands/image16.png", alt: "CG" },
+    { src: "/assets/landing/brands/image 3.avif", alt: "TEC Costa Rica" },
+    { src: "/assets/landing/brands/image 4.avif", alt: "Banco Popular" },
+    { src: "/assets/landing/brands/image 5.avif", alt: "Establishment Labs" },
+    { src: "/assets/landing/brands/image 6.avif", alt: "Segundo Social" },
+    { src: "/assets/landing/brands/image 7.avif", alt: "Guanacaste Aeropuerto" },
+    { src: "/assets/landing/brands/image 8.avif", alt: "Fundación Omar Dengo" },
+    { src: "/assets/landing/brands/image 9.avif", alt: "Claro" },
+    { src: "/assets/landing/brands/image 10.avif", alt: "Lincoln School" },
+    { src: "/assets/landing/brands/image 11.avif", alt: "Tigo" },
+    { src: "/assets/landing/brands/image 12.avif", alt: "BCR" },
+    { src: "/assets/landing/brands/image 13.avif", alt: "INS" },
+    { src: "/assets/landing/brands/image 14.avif", alt: "Allergan" },
+    { src: "/assets/landing/brands/image 15.avif", alt: "Sykes" },
+    { src: "/assets/landing/brands/image 16.avif", alt: "CG" },
   ];
 
   return (

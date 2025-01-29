@@ -27,6 +27,7 @@ export default function WhyChooseUs() {
     <section
       className="max-w-7xl mx-auto px-6 mb-20"
       aria-labelledby="why-choose-us-heading"
+      data-aos="zoom-in"
     >
       <h2 id="why-choose-us-heading" className="text-3xl md:text-4xl text-center mx-auto font-roboto font-bold text-[#002D6A] mb-5 max-w-[60%]">
         ¿Por qué elegir HiPower?
@@ -52,13 +53,13 @@ export default function WhyChooseUs() {
               <div className="bg-black/40 p-4 rounded-3xl mx-3 mb-3 h-32">
                 <h3
                   id={`card-title-${index}`}
-                  className="text-xl font-bold mb-1 text-white"
+                  className="mb-1 text-xl text-white font-roboto font-medium"
                 >
                   {card.title}
                 </h3>
                 <p
                   id={`card-description-${index}`}
-                  className="text-sm text-white/90 leading-snug"
+                  className="text-xs md:text-sm text-white/90 leading-tight font-roboto"
                 >
                   {card.description}
                 </p>
