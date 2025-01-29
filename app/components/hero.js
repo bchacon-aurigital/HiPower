@@ -105,7 +105,7 @@ export default function Hero() {
             </button>
 
             {/* Stats Section */}
-            <div className="w-full xl:block hidden mt-[5%]" role="region" aria-labelledby="stats-heading" data-aos="fade-right">
+            <div className="w-full xl:block hidden mt-[2%] 2xl:mt-[5%]" role="region" aria-labelledby="stats-heading" data-aos="fade-right">
               <div className="flex flex-row px-4 w-full justify-center items-center">
                 <h2
                   id="stats-heading"
