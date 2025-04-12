@@ -11,27 +11,27 @@ const Loading = () => (
   </div>
 );
 
-const Hero = dynamic(() => import("./components/hero"), { 
+const Hero = dynamic(() => import("../components/landing/hero"), { 
   ssr: false, 
   loading: () => <Loading />, 
 });
-const Form = dynamic(() => import("./components/Form"), { 
+const Form = dynamic(() => import("../components/landing/Form"), { 
   ssr: false, 
   loading: () => <Loading />,
 });
-const WhyChooseUs = dynamic(() => import("./components/WhyChooseUs"), { 
+const WhyChooseUs = dynamic(() => import("../components/landing/WhyChooseUs"), { 
   ssr: false, 
   loading: () => <Loading />,
 });
-const Testimonials = dynamic(() => import("./components/Testimonials"), { 
+const Testimonials = dynamic(() => import("../components/landing/Testimonials"), { 
   ssr: false, 
   loading: () => <Loading />,
 });
-const BrandCarousel = dynamic(() => import("./components/BrandCarousel"), { 
+const BrandCarousel = dynamic(() => import("../components/landing/BrandCarousel"), { 
   ssr: false, 
   loading: () => <Loading />,
 });
-const Footer = dynamic(() => import("./components/footer"), { 
+const Footer = dynamic(() => import("../components/landing/footer"), { 
   ssr: false, 
   loading: () => <Loading />,
 });
