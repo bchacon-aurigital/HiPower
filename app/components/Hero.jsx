@@ -10,6 +10,7 @@ export default function Hero() {
       once: true,
       duration: 800,
       offset: 100,
+      delay: 3000,
     });
   }, []);
 
@@ -106,7 +107,6 @@ export default function Hero() {
               <div 
                 className="bg-[#037F3F]/50 rounded-full px-4 py-3" 
                 data-aos="fade-right" 
-                data-aos-delay="100"
                 role="text"
               >
                 <p className="text-md 2xl:text-xl font-bold">Únicos en Costa Rica con certificación NABCEP</p>
@@ -119,7 +119,6 @@ export default function Hero() {
                 height={56}
                 className="w-14 h-14"
                 data-aos="fade-right"
-                data-aos-delay="400"
                 aria-hidden="true"
                 priority
               />
@@ -127,9 +126,8 @@ export default function Hero() {
               {stats.slice(1).map((stat, index) => (
                 <div
                   key={index}
-                  className={`${stat.color}/50 rounded-full px-4 py-3`}
+                  className={`bg-[#00439D]/50 rounded-full px-4 py-3`}
                   data-aos="fade-right"
-                  data-aos-delay={stat.delay}
                   role="text"
                 >
                   <p className="text-md 2xl:text-xl font-bold">{stat.text}</p>

@@ -1,37 +1,60 @@
 "use client";
 import dynamic from "next/dynamic";
-
-const Loading = () => (
-  <div className="fixed inset-0 flex items-center justify-center bg-gradient-to-r from-[#037F3F] to-[#002D6A] z-50">
-    <img
-      src="/assets/landing/LogoHiPower.svg"
-      alt="Loading..."
-      className="w-[50vh]"
-    />
-  </div>
-);
+import { Parallax } from 'react-parallax';
 
 const Navbar = dynamic(() => import("./components/Navbar"), {
   ssr: false,
-  loading: () => <Loading />,
 });
 
 const Hero = dynamic(() => import("./components/Hero"), {
   ssr: false,
-  loading: () => <Loading />,
+});
+
+const ProyectoSolar = dynamic(() => import("./components/ProyectoSolar"), {
+  ssr: false,
+});
+
+const BrandCarousel = dynamic(() => import("./components/BrandCarousel"), {
+  ssr: false,
 });
 
 const Footer = dynamic(() => import("./components/Footer"), {
   ssr: false,
-  loading: () => <Loading />,
 });
 
-export default function Home() {
+const StatisticsSection = dynamic(() => import("./components/StatisticsSection"), {
+  ssr: false,
+});
+
+const CertificationsSection = dynamic(() => import("./components/CertificationsSection"), {
+  ssr: false,
+});
+
+const Home = () => {
   return (
     <main className="min-h-screen bg-white">
-      <Navbar />
-      <Hero />
-      <Footer />
+      <div className="relative overflow-hidden">
+        <video
+          className="fixed top-0 left-0 w-full h-full object-cover"
+          src="/assets/homepage/parallax.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-60 z-10" />
+        <section className="relative z-20 h-full md:bg-fixed bg-cover bg-center">
+          <Navbar />
+          <Hero />
+          <ProyectoSolar />
+          <BrandCarousel />
+          <StatisticsSection />
+          <CertificationsSection />
+          <Footer />
+        </section>
+      </div>
     </main>
   );
-} 
+};
+
+export default Home;

@@ -53,7 +53,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed w-full z-50 px-6 py-4" role="navigation" aria-label="Navegación principal" data-aos="fade-down"      >
+      <nav className="absolute w-full z-50 px-6 py-4" role="navigation" aria-label="Navegación principal" data-aos="fade-down"      >
         <div className="container mx-auto flex items-center justify-between xl:justify-center gap-10">
           <Link 
             href="/" 
