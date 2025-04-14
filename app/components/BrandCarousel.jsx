@@ -2,6 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Image from "next/image";
 
 const BrandCarousel = () => {
   const settings = {
@@ -60,19 +61,22 @@ const BrandCarousel = () => {
     { src: "/assets/landing/brands/image 19.avif", alt: "Banco Promerica" },
   ];
 
+  // Obtener las primeras 8 marcas para evitar duplicación excesiva
+  const visibleBrands = [...brands, ...brands.slice(0, 8)];
+
   return (
-    <section>
+    <section aria-labelledby="brands-section-title">
       <div className="w-full bg-white py-24" role="region" aria-labelledby="carousel-heading">
         <div className="mx-auto px-4">
-          <h2 className="text-3xl lg:text-[2.7rem] leading-10 font-semibold text-black px-8 py-10 text-center w-full">
+          <h2 id="carousel-heading" className="text-3xl lg:text-[2.7rem] leading-10 font-semibold text-black px-8 py-10 text-center w-full">
             Marcas que impulsan su crecimiento con{" "}
             <span className="text-[#339C59] font-bold">
               Hi Power
             </span>
           </h2>
           <div className="w-full">
-            <Slider {...settings} role="list">
-              {[...brands, ...brands].map((brand, index) => (
+            <Slider {...settings} role="list" aria-live="polite">
+              {visibleBrands.map((brand, index) => (
                 <div
                   key={index}
                   className="px-2"
@@ -80,10 +84,14 @@ const BrandCarousel = () => {
                   aria-label={`Marca: ${brand.alt}`}
                 >
                   <div className="flex items-center justify-center h-56 w-full rounded-tl-3xl rounded-br-3xl border-2 border-[#656565]">
-                    <img
+                    <Image
                       src={brand.src}
-                      alt={brand.alt}
-                      className="min-h-18 min-w-18 object-contain mx-auto px-7"
+                      alt={`Logo de ${brand.alt} - Cliente de Hi Power`}
+                      width={250}
+                      height={200}
+                      className="object-contain mx-auto px-7"
+                      loading="lazy"
+                      blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjgwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjZTJlOGYwIi8+PC9zdmc+"
                     />
                   </div>
                 </div>

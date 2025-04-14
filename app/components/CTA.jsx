@@ -1,0 +1,71 @@
+"use client";
+import "aos/dist/aos.css";
+
+export default function EnergyCTA() {
+
+    return (
+        <>
+            <div id="contacto" className="flex items-center justify-center h-screen bg-white">
+                <section
+                    className="relative w-[86%] rounded-tl-3xl rounded-br-3xl h-[88vh] overflow-hidden mx-auto my-auto"
+                    aria-labelledby="cta-heading"
+                >
+                    <div className="absolute inset-0" aria-hidden="true">
+                        <video
+                            className="object-cover w-full h-full"
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                            poster="/assets/homepage/heroBG.png"
+                        >
+                            <source src="/assets/homepage/hero.webm" type="video/webm" />
+                            <source src="/assets/homepage/hero.mp4" type="video/mp4" />
+                            <p>Tu navegador no soporta videos HTML5.</p>
+                        </video>
+                        <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+                    </div>
+
+                    <div
+                        className="relative flex flex-col items-center justify-center w-full h-full text-white px-4 md:px-8"
+                        role="region"
+                        aria-labelledby="cta-heading"
+                        data-aos="fade-down"
+                    >
+
+                        <h2
+                            id="cta-heading"
+                            className="text-4xl md:text-5xl text-center max-w-[61rem] mb-4 font-roboto font-bold lg:leading-snug"
+                            data-aos="fade-down"
+                        >
+                            ¿Listo para optimizar tu consumo energético?
+                        </h2>
+
+                        <p
+                            className="text-md md:text-2xl text-center max-w-xs md:max-w-xl mb-5 font-roboto font-medium text-[#CFCFCF]"
+                            id="cta-subheading"
+                            data-aos="fade-down"
+                        >
+                            Da el primer paso hacia un futuro más sostenible y rentable con HiPower
+                        </p>
+
+                        <button
+                            className="relative px-8 py-4 text-lg font-medium text-white overflow-hidden bg-[#037F3F] transition-all duration-500 hover:text-white group rounded-tl-xl rounded-br-xl mt-8 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#037F3F]"
+                            aria-label="Conecta con nosotros para consultoría energética"
+                            type="button"
+                            onClick={() => document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" })}
+                        >
+                            <span
+                                className="absolute inset-0 bg-gradient-to-r from-[#037F3F] to-[#002D6A] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                                aria-hidden="true"
+                            ></span>
+                            <span className="relative z-10 font-bold text-2xl">
+                                Conecta con nosotros
+                            </span>
+                        </button>
+                    </div>
+                </section>
+            </div>
+        </>
+    );
+};

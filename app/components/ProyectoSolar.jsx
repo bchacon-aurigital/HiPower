@@ -18,8 +18,8 @@ const ProyectoSolar = () => {
                 { value: "9.7 MWp", description: "Potencia solar" },
                 { value: "14,404 tn", description: "CO₂ mitigado" },
             ],
-            videoPathWebm: "/assets/homepage/planta-solar.webm",
-            videoPathMp4: "/assets/homepage/planta-solar.mp4",
+            videoPathWebm: "/assets/homepage/energiaSolar.webm",
+            videoPathMp4: "/assets/homepage/energiaSolar.mp4",
             altText: "Vista aérea de la Planta Solar Huacas con sus paneles solares"
         },
         {
@@ -33,8 +33,8 @@ const ProyectoSolar = () => {
                 { value: "900 kWp", description: "Potencia solar" },
                 { value: "216.8 T/A", description: "CO₂ mitigado" },
             ],
-            videoPathWebm: "/assets/homepage/establishment-labs.webm",
-            videoPathMp4: "/assets/homepage/establishment-labs.mp4",
+            videoPathWebm: "/assets/homepage/microredes.webm",
+            videoPathMp4: "/assets/homepage/microredes.mp4",
             altText: "Instalación solar en Establishment Labs mostrando el sistema de microrredes"
         },
         {
@@ -47,8 +47,8 @@ const ProyectoSolar = () => {
                 { value: "360 kWp", description: "Potencia solar" },
                 { value: "86.72 T/A", description: "CO₂ mitigado" },
             ],
-            videoPathWebm: "/assets/homepage/hospital-turrialba.webm",
-            videoPathMp4: "/assets/homepage/hospital-turrialba.mp4",
+            videoPathWebm: "/assets/homepage/autoconsumo.webm",
+            videoPathMp4: "/assets/homepage/autoconsumo.mp4",
             altText: "Vista aérea del Hospital de Turrialba con sus paneles solares"
         },
         {
@@ -62,8 +62,8 @@ const ProyectoSolar = () => {
                 { value: "10 kWp", description: "Potencia solar" },
                 { value: "2.41 T/A", description: "CO₂ mitigado" },
             ],
-            videoPathWebm: "/assets/homepage/casa-santuario.webm",
-            videoPathMp4: "/assets/homepage/casa-santuario.mp4",
+            videoPathWebm: "/assets/homepage/hibridos.webm",
+            videoPathMp4: "/assets/homepage/hibridos.mp4",
             altText: "Vista aérea de la Casa Santuario con sus paneles solares"
         },
     ];
@@ -214,7 +214,7 @@ const ProyectoSolar = () => {
                             {currentServiceData.description}
                         </p>
 
-                        <button 
+                        <button
                             className="font-semibold border-2 border-[#0046AD] text-[#0046AD] rounded-full px-4 py-1 flex items-center gap-2 hover:bg-[#0046AD] hover:text-white transition-colors"
                             aria-label={`Más información sobre ${currentServiceData.title}`}
                         >
@@ -225,7 +225,7 @@ const ProyectoSolar = () => {
                         {renderMetrics(currentServiceData.metrics)}
                     </div>
 
-                    <div className="w-full md:w-[60%] relative order-first md:order-last">
+                    <div className="w-full md:w-[60%] rounded-tl-3xl rounded-br-3xl  relative order-first md:order-last">
                         <div className="relative h-full 339C59339C59339C59339C59339C59339C59 overflow-hidden">
                             <video
                                 ref={videoRef}
@@ -233,7 +233,7 @@ const ProyectoSolar = () => {
                                 loop
                                 muted
                                 playsInline
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-cover rounded-tl-3xl rounded-br-3xl "
                                 aria-label={currentServiceData.altText}
                             >
                                 <source src={currentServiceData.videoPathWebm} type="video/webm" />
@@ -241,9 +241,11 @@ const ProyectoSolar = () => {
                                 <p>Tu navegador no soporta videos HTML5.</p>
                             </video>
                             <div className="absolute bottom-9 left-7 md:top-9 md:left-7">
-                                <span className="bg-white px-10 py-4 rounded-full text-xs font-medium shadow-md text-black">
-                                    {currentServiceData.projectName}
+                                <span className="bg-white relative px-10 py-4 rounded-full text-xs font-medium shadow-md text-black transition-colors duration-300 hover:text-white overflow-hidden group">
+                                    <span className="absolute inset-0 bg-gradient-to-r from-[#037F3F] to-[#002D6A] opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full z-0"></span>
+                                    <span className="relative z-10">{currentServiceData.projectName}</span>
                                 </span>
+
                             </div>
                         </div>
                     </div>

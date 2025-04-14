@@ -30,9 +30,24 @@ const CertificationsSection = dynamic(() => import("./components/CertificationsS
   ssr: false,
 });
 
+const SolarEnergySection = dynamic(() => import("./components/SolarEnergySection"), {
+  ssr: false,
+});
+
+const PartnersSection = dynamic(() => import("./components/PartnersSection"), {
+  ssr: false,
+});
+
+const CTA = dynamic(() => import("./components/CTA"), {
+  ssr: false,
+});
+
 const Home = () => {
   return (
     <main className="min-h-screen bg-white">
+      <h1 className="hidden">
+        Energía solar y almacenamiento para empresas generadoras de energía | HiPower
+      </h1>
       <div className="relative overflow-hidden">
         <video
           className="fixed top-0 left-0 w-full h-full object-cover"
@@ -50,6 +65,9 @@ const Home = () => {
           <BrandCarousel />
           <StatisticsSection />
           <CertificationsSection />
+          <PartnersSection />
+          <SolarEnergySection />
+          <CTA />
           <Footer />
         </section>
       </div>
