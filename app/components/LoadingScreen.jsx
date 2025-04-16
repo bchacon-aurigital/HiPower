@@ -6,9 +6,9 @@ export default function LoadingScreen() {
         <div className="fixed inset-0 bg-white z-[9999] flex items-center justify-center">
             <div className="text-center">
                 {/* Logo con animación de color */}
-                <div className="relative w-56 h-56 mb-8 mx-auto">
+                <div className="relative w-72 h-56 mx-auto">
                     <Image
-                        src="/assets/landing/LogoHiPower.svg"
+                        src="/assets/logo-gradient.svg"
                         alt="HiPower Logo"
                         fill
                         className="object-contain animate-color-change"

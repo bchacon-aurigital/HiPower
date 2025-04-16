@@ -35,8 +35,8 @@ export default function Hero() {
           playsInline
           poster="/assets/homepage/heroBG.png"
         >
-          <source src="/assets/homepage/hero.webm" type="video/webm" />
-          <source src="/assets/homepage/hero.mp4" type="video/mp4" />
+          <source src="/assets/homepage/HPHeroVid.webm" type="video/webm" />
+          <source src="/assets/homepage/HPHeroVid.mp4" type="video/mp4" />
           <p>Tu navegador no soporta videos HTML5.</p>
         </video>
         <div className="absolute inset-0 bg-black/40"></div>

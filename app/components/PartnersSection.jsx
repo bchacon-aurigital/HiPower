@@ -37,7 +37,7 @@ const PartnersSection = () => {
           {firstGroup.map((partner, index) => (
             <div 
               key={`first-${index}`} 
-              className="border border-gray-200 rounded-tl-3xl rounded-br-3xl flex items-center justify-center p-6 h-32 transition-transform hover:scale-105"
+              className="border border-[#C9C9C9] rounded-tl-3xl rounded-br-3xl flex items-center justify-center p-6 h-32 transition-transform hover:scale-105"
               aria-label={`Logo de ${partner.name}`}
             >
               <Image
@@ -55,7 +55,7 @@ const PartnersSection = () => {
           {secondGroup.map((partner, index) => (
             <div 
               key={`second-${index}`} 
-              className={`border border-gray-200 rounded-tl-3xl rounded-br-3xl flex items-center justify-center p-6 h-32 transition-transform hover:scale-105 ${index === 2 ? "col-span-2 md:col-span-1" : ""}`}
+              className={`border border-[#C9C9C9] rounded-tl-3xl rounded-br-3xl flex items-center justify-center p-6 h-32 transition-transform hover:scale-105 ${index === 2 ? "col-span-2 md:col-span-1" : ""}`}
               aria-label={`Logo de ${partner.name}`}
             >
               <Image
@@ -73,7 +73,7 @@ const PartnersSection = () => {
           {thirdGroup.map((partner, index) => (
             <div 
               key={`third-${index}`} 
-              className="border border-gray-200 rounded-tl-3xl rounded-br-3xl flex items-center justify-center p-6 h-32 transition-transform hover:scale-105"
+              className="border border-[#C9C9C9] rounded-tl-3xl rounded-br-3xl flex items-center justify-center p-6 h-32 transition-transform hover:scale-105"
               aria-label={`Logo de ${partner.name}`}
             >
               <Image
