@@ -15,7 +15,7 @@ export default function Hero() {
 
   const stats = [
     { text: "Únicos en Costa Rica con certificación NABCEP", color: "bg-[#037F3F]", delay: 100 },
-    { text: "+25 MW instalados", color: "bg-[#00439D]", delay: 200 },
+    { text: "+30 MW instalados", color: "bg-[#00439D]", delay: 200 },
     { text: "+14 años de experiencia", color: "bg-[#00439D]", delay: 300 },
     { text: "+5MWH generados", color: "bg-[#00439D]", delay: 400 },
   ];
@@ -58,7 +58,7 @@ export default function Hero() {
             className="font-light text-lg mb-6 md:hidden"
             aria-label="Estadísticas móviles"
           >
-            <p>+14 años de experiencia | +25 MW instalados | +5MWH</p>
+            <p>+14 años de experiencia | +30 MW instalados | +5MWH</p>
             <p>Únicos en Costa Rica con certificación NABCEP</p>
           </div>
 

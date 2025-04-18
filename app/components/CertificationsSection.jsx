@@ -33,9 +33,7 @@ const CertificationsSection = () => {
             />
           </div>
 
-          {/* NABCEP */}
           <div className="py-9 px-8 flex flex-col md:flex-row items-center justify-between border-b border-gray-200" id="nabcep-section">
-            {/* Imagen que aparece arriba en mobile, oculta en desktop */}
             <div className="md:hidden w-full flex justify-center mb-6">
               <Image
                 src="/assets/homepage/NABCEP.avif"
@@ -56,7 +54,6 @@ const CertificationsSection = () => {
               </p>
             </div>
             
-            {/* Imagen que se muestra solo en desktop */}
             <div className="hidden md:block">
               <Image
                 src="/assets/homepage/NABCEP.avif"
@@ -68,9 +65,7 @@ const CertificationsSection = () => {
             </div>
           </div>
 
-          {/* SEI */}
           <div className="py-9 px-8 flex flex-col md:flex-row items-center justify-between border-b border-gray-200" id="sei-section">
-            {/* Imagen que aparece arriba en mobile, oculta en desktop */}
             <div className="md:hidden w-full flex justify-center mb-6">
               <Image
                 src="/assets/homepage/SEI.avif"
@@ -91,7 +86,6 @@ const CertificationsSection = () => {
               </p>
             </div>
             
-            {/* Imagen que se muestra solo en desktop */}
             <div className="hidden md:block">
               <Image
                 src="/assets/homepage/SEI.avif"
@@ -103,9 +97,7 @@ const CertificationsSection = () => {
             </div>
           </div>
 
-          {/* OSHA */}
           <div className="py-9 px-8 flex flex-col md:flex-row items-center justify-between" id="osha-section">
-            {/* Imagen que aparece arriba en mobile, oculta en desktop */}
             <div className="md:hidden w-full flex justify-center mb-6">
               <Image
                 src="/assets/homepage/OSHA.avif"
@@ -126,7 +118,6 @@ const CertificationsSection = () => {
               </p>
             </div>
             
-            {/* Imagen que se muestra solo en desktop */}
             <div className="hidden md:block">
               <Image
                 src="/assets/homepage/OSHA.avif"

@@ -87,8 +87,8 @@ const BrandCarousel = () => {
                     <Image
                       src={brand.src}
                       alt={`Logo de ${brand.alt} - Cliente de Hi Power`}
-                      width={250}
-                      height={200}
+                      width={200}
+                      height={160}
                       className="object-contain mx-auto px-7"
                       loading="lazy"
                       blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjgwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjZTJlOGYwIi8+PC9zdmc+"

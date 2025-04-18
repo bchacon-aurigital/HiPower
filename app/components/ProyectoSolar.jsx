@@ -89,14 +89,14 @@ const ProyectoSolar = () => {
             return (
                 <div className="grid grid-cols-2 gap-x-10 gap-y-6 mt-8" role="list" aria-label="Métricas del proyecto">
                     {metrics.map((metric, index) => (
-                        <div key={index} className="flex flex-col" role="listitem">
+                        <h5 key={index} className="flex flex-col" role="listitem">
                             <span className="text-[#037F3F] text-3xl font-bold" aria-label={`Valor: ${metric.value}`}>
                                 {metric.value}
                             </span>
                             <span className="text-md font-semibold max-w-[7rem] text-black">
                                 {metric.description}
                             </span>
-                        </div>
+                        </h5>
                     ))}
                 </div>
             );
@@ -135,59 +135,13 @@ const ProyectoSolar = () => {
     return (
         <section className="w-full bg-white py-16 px-6 md:px-8 lg:px-12" aria-label="Proyectos Solares">
             <div className="max-w-7xl mx-auto">
-                <div className="flex flex-col md:flex-row justify-between items-end mb-16">
-                    <div className="flex items-center space-x-6 w-full md:w-[30%]" role="list" aria-label="Certificaciones">
-                        <picture role="listitem">
-                            <source srcSet="/assets/homepage/NABCEP.avif" type="image/avif" />
-                            <Image
-                                src="/assets/logos/NABCEP.png"
-                                alt="Certificación NABCEP"
-                                width={74}
-                                height={67}
-                                className="h-auto"
-                            />
-                        </picture>
-                        <picture role="listitem">
-                            <source srcSet="/assets/homepage/SolarEnergy.avif" type="image/avif" />
-                            <Image
-                                src="/assets/logos/SolarEnergy.png"
-                                alt="Certificación Solar Energy"
-                                width={111}
-                                height={65}
-                                className="h-auto"
-                            />
-                        </picture>
-                        <picture role="listitem">
-                            <source srcSet="/assets/homepage/OSHA.avif" type="image/avif" />
-                            <Image
-                                src="/assets/logos/OSHA.png"
-                                alt="Certificación OSHA"
-                                width={147}
-                                height={42}
-                                className="h-auto"
-                            />
-                        </picture>
-                    </div>
-
-                    <div className="w-full md:w-[55%] text-center md:text-right mt-6 md:mt-0">
-                        <h2 className="text-3xl lg:text-[2.7rem] leading-10 font-semibold text-black">
-                            Proyectos solares para empresas con{" "}
-                            <span className="text-[#0046AD] font-bold">
-                                alta demanda energética
-                            </span>
-                        </h2>
-                        <p className="text-[#777777] md:max-w-[26rem] md:text-right mt-2 md:ml-auto">
-                            Diseñamos proyectos solares que garantizan tu inversión a lo largo de la vida útil.
-                        </p>
-                    </div>
-                </div>
 
                 <div className="flex flex-col md:flex-row gap-8 mt-8">
                     <div className="w-full md:w-[40%]">
                         <div className="flex justify-between items-center gap-4 mb-6">
-                            <div className="bg-[#0046AD] text-white px-3 py-2 rounded-bl-xl rounded-tr-xl text-lg font-semibold" role="heading" aria-level="2">
+                            <h2 className="bg-[#0046AD] text-white px-3 py-2 rounded-bl-xl rounded-tr-xl text-xl font-semibold" role="heading" aria-level="2">
                                 Nuestros Servicios
-                            </div>
+                            </h2>
                             <div className="flex gap-3 border-2 border-[#037F3F] p-3 rounded-full" role="navigation" aria-label="Navegación de servicios">
                                 <button
                                     onClick={handlePrev}
@@ -206,9 +160,9 @@ const ProyectoSolar = () => {
                             </div>
                         </div>
 
-                        <h2 className="text-[#037F3F] text-5xl font-bold mb-4 w-[80%]">
+                        <h3 className="text-[#037F3F] text-5xl font-bold mb-4 w-[80%]">
                             {currentServiceData.title}
-                        </h2>
+                        </h3>
 
                         <p className="text-black text-base font-medium leading-relaxed w-[90%] mb-6">
                             {currentServiceData.description}
@@ -241,10 +195,10 @@ const ProyectoSolar = () => {
                                 <p>Tu navegador no soporta videos HTML5.</p>
                             </video>
                             <div className="absolute bottom-9 left-7 md:top-9 md:left-7">
-                                <span className="bg-white relative px-10 py-4 rounded-full text-xs font-medium shadow-md text-black transition-colors duration-300 hover:text-white overflow-hidden group">
+                                <h4 className="bg-white relative px-10 py-4 rounded-full text-xs font-medium shadow-md text-black transition-colors duration-300 hover:text-white overflow-hidden group">
                                     <span className="absolute inset-0 bg-gradient-to-r from-[#037F3F] to-[#002D6A] opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full z-0"></span>
                                     <span className="relative z-10">{currentServiceData.projectName}</span>
-                                </span>
+                                </h4>
 
                             </div>
                         </div>
