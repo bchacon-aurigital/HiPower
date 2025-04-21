@@ -35,12 +35,11 @@ const Navbar = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const navLinks = [
-    { name: "INICIO", href: "/inicio" },
+    { name: "INICIO", href: "/" },
     { name: "SERVICIOS", href: "/servicios" },
     { name: "PROYECTOS", href: "/proyectos" },
-    { name: "FINANCIAMIENTO", href: "/financiamiento" },
-    { name: "SOBRE NOSOTROS", href: "/sobre-nosotros" },
-    { name: "CONTACTO", href: "/contacto" },
+    { name: "SOBRE NOSOTROS", href: "/aboutUs" },
+    { name: "CONTACTO", href: "/aboutUs" },
     { name: "BLOG", href: "/blog" },
   ];
 
