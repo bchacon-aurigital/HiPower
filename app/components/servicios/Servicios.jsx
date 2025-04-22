@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useContactAction } from '../../hooks/useContactAction';
 
 const servicios = [
   {
@@ -13,7 +14,8 @@ const servicios = [
       avif: "/assets/servicios/EnergiaSolar.avif",
       png: "/assets/servicios/EnergiaSolar.png",
     },
-    descripcion: "La energía solar a gran escala consiste en la generación de electricidad energía limpia y eficiente mediante grandes plantas fotovoltaicas diseñadas para abastecer industrias, empresas y comunidades enteras.",
+    descripcion: "Las plantas solares a gran escala generan energía limpia y eficiente para empresas generadoras y distribuidoras.",
+    descripcion2: "Hemos diseñado e instalado las plantas solares más grandes de Costa Rica, instaladas a nivel de suelo, para empresas innovadoras como Coopeguanacaste, optimizando costos operativos y promoviendo la sostenibilidad.",
     esIzquierda: true,
     alt: "Planta solar fotovoltaica a gran escala con múltiples paneles solares"
   },
@@ -24,7 +26,8 @@ const servicios = [
       avif: "/assets/servicios/Microrredes.avif",
       png: "/assets/servicios/Microrredes.png",
     },
-    descripcion: "Una microrred integra distintas fuentes de energía como paneles solares, baterías, generadores y la red eléctrica, garantizando autonomía y eficiencia.",
+    descripcion: "Una microred integra distintas fuentes de energía como paneles solares, baterías, generadores y la red eléctrica, garantizando autonomía y eficiencia.",
+    descripcion2: "Hemos diseñado e instalado microrredes en Costa Rica para empresas innovadoras como Establishment Labs, contribuyendo además a la certificación LEED, EDGE y Carbono Neutral de su planta.",
     esIzquierda: false,
     alt: "Sistema de microrred inteligente con múltiples fuentes de energía integradas"
   },
@@ -35,7 +38,8 @@ const servicios = [
       avif: "/assets/servicios/hibridos.avif",
       png: "/assets/servicios/hibridos.png",
     },
-    descripcion: "Estos sistemas se alimentan de los paneles solares, del inversor, las baterías y de la red eléctrica. O, pueden trabajar en ausencia de ella.",
+    descripcion: "Sistemas de generación y almacenamiento de energía que combinan paneles solares, inversores y baterías, permitiendo operar con o sin conexión a la red eléctrica.",
+    descripcion2: "Proyectos como Asoplatal en Talamanca, la Fundación Omar Dengo y Casa Santuario han implementado estas soluciones para garantizar un suministro energético confiable en zonas con acceso limitado a la red.",
     esIzquierda: true,
     alt: "Sistema híbrido de energía solar con paneles solares, baterías y conexión a red eléctrica"
   },
@@ -46,7 +50,8 @@ const servicios = [
       avif: "/assets/servicios/autoconsumo.avif",
       png: "/assets/servicios/autoconsumo.png",
     },
-    descripcion: "Estas plantas de generación distribuida optimizan el gasto energético y reducen costos en industrias de alto consumo, que permiten a las empresas generar su propia electricidad mediante fuentes renovables, para reducir su dependencia de la red eléctrica tradicional.",
+    descripcion: "Estas plantas de generación distribuida optimizan el consumo energético y reducen costos en industrias de alto consumo.",
+    descripcion2: "Hemos diseñado e instalado algunas de las más grandes en Costa Rica para instituciones y empresas como la Caja Costarricense de Seguro Social (CCSS), ICE, Coopeguanacaste y Allergan, Establishment Labs asegurando un suministro más estable, menor dependencia de la red y una operación más eficiente.",
     esIzquierda: false,
     alt: "Sistema de autoconsumo energético con paneles solares instalados en techo industrial"
   },
@@ -56,10 +61,13 @@ const ServicioCard = ({
   titulo,
   imagenPrincipal,
   descripcion,
+  descripcion2,
   esIzquierda,
   id,
   alt
 }) => {
+  const handleContactClick = useContactAction();
+
   return (
     <article
       className={`flex flex-col ${esIzquierda ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-16 my-16`}
@@ -90,11 +98,12 @@ const ServicioCard = ({
         >
           {titulo}
         </h2>
-        <p className="text-gray-600 mb-6 text-base md:text-xl">{descripcion}</p>
+        <p className="text-gray-600 mb-2 text-base md:text-xl">{descripcion}</p>
+        <p className="text-gray-600 mb-6 text-base md:text-xl">{descripcion2}</p>
         <div>
-          <Link
-            href={`/servicios/${id}`}
-            className="inline-flex items-center text-[#037F3F] md:text-xl font-medium hover:text-[#002D6A] transition-colors focus:outline-none focus:ring-2 focus:ring-[#037F3F] focus:ring-offset-2 rounded-md py-1"
+          <div
+            onClick={handleContactClick}
+            className="cursor-pointer inline-flex items-center text-[#037F3F] md:text-xl font-medium hover:text-[#002D6A] transition-colors focus:outline-none focus:ring-2 focus:ring-[#037F3F] focus:ring-offset-2 rounded-md py-1"
             aria-label={`Adquirir servicio de ${titulo}`}
           >
             Adquirir servicio
@@ -111,7 +120,7 @@ const ServicioCard = ({
                 clipRule="evenodd"
               />
             </svg>
-          </Link>
+          </div>
         </div>
       </div>
     </article>
@@ -119,6 +128,8 @@ const ServicioCard = ({
 };
 
 const ServiciosEnergia = () => {
+  const handleContactClick = useContactAction();
+
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -141,6 +152,7 @@ const ServiciosEnergia = () => {
             titulo={servicio.titulo}
             imagenPrincipal={servicio.imagenPrincipal}
             descripcion={servicio.descripcion}
+            descripcion2={servicio.descripcion2}
             esIzquierda={servicio.esIzquierda}
             alt={servicio.alt}
           />

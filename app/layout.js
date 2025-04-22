@@ -1,5 +1,6 @@
 import "./globals.css";
 import { LoadingProvider } from './context/LoadingContext';
+import { ContactModalProvider } from './context/ContactModalContext';
 
 export const metadata = {
   title: 'Energía solar y almacenamiento para empresas generadoras de energía | HiPower',
@@ -119,9 +120,11 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        <LoadingProvider>
-          {children}
-        </LoadingProvider>
+        <ContactModalProvider>
+          <LoadingProvider>
+            {children}
+          </LoadingProvider>
+        </ContactModalProvider>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}

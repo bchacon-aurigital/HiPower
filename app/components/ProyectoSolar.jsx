@@ -168,13 +168,14 @@ const ProyectoSolar = () => {
                             {currentServiceData.description}
                         </p>
 
-                        <button
-                            className="font-semibold border-2 border-[#0046AD] text-[#0046AD] rounded-full px-4 py-1 flex items-center gap-2 hover:bg-[#0046AD] hover:text-white transition-colors"
+                        <a
+                            href="/servicios"                        
+                            className="w-48 font-semibold border-2 border-[#0046AD] text-[#0046AD] rounded-full px-4 py-1 flex items-center justify-center gap-2 hover:bg-[#0046AD] hover:text-white transition-colors"
                             aria-label={`Más información sobre ${currentServiceData.title}`}
                         >
                             Más Información
                             <FaArrowRight aria-hidden="true" />
-                        </button>
+                        </a>
 
                         {renderMetrics(currentServiceData.metrics)}
                     </div>
@@ -194,13 +195,13 @@ const ProyectoSolar = () => {
                                 <source src={currentServiceData.videoPathMp4} type="video/mp4" />
                                 <p>Tu navegador no soporta videos HTML5.</p>
                             </video>
-                            <div className="absolute bottom-9 left-7 md:top-9 md:left-7">
-                                <h4 className="bg-white relative px-10 py-4 rounded-full text-xs font-medium shadow-md text-black transition-colors duration-300 hover:text-white overflow-hidden group">
+                            <a href="/proyectos" className="absolute bottom-9 left-7 md:top-9 md:left-7 w-52">
+                                <h4 className="text-center bg-white relative px-10 py-4 rounded-full text-xs font-medium shadow-md text-black transition-colors duration-300 hover:text-white overflow-hidden group">
                                     <span className="absolute inset-0 bg-gradient-to-r from-[#037F3F] to-[#002D6A] opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full z-0"></span>
-                                    <span className="relative z-10">{currentServiceData.projectName}</span>
+                                    <span className="relative z-10 block group-hover:hidden ">{currentServiceData.projectName}</span>
+                                    <span className="hidden group-hover:block relative z-10">Ver Proyectro</span>
                                 </h4>
-
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>

@@ -4,8 +4,11 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Head from "next/head";
+import { useContactAction } from '../../hooks/useContactAction';
 
 export default function ProjectsHero() {
+  const handleContactClick = useContactAction();
+
   useEffect(() => {
     AOS.init({
       once: true,
@@ -64,8 +67,8 @@ export default function ProjectsHero() {
                 className="relative px-8 py-4 text-lg font-medium text-white overflow-hidden bg-[#037F3F] transition-all duration-500 hover:text-white group rounded-tl-xl rounded-br-xl focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#037F3F]"
                 aria-label="Conecta con nosotros para consultoría energética"
                 type="button"
-                onClick={() => document.getElementById('contact-form')?.scrollIntoView({behavior: 'smooth'})}
-              >
+                onClick={handleContactClick}
+                              >
                 <span
                   className="absolute inset-0 bg-gradient-to-r from-[#037F3F] to-[#002D6A] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
                   aria-hidden="true"

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useContactAction } from '../../hooks/useContactAction';
 
 const proyectos = [
   {
@@ -94,6 +95,7 @@ const ProyectoSolarFixed = ({
   beneficios,
   caracteristicas
 }) => {
+  const handleContactClick = useContactAction();
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -154,7 +156,7 @@ const ProyectoSolarFixed = ({
           {imagenesSecundarias.map((img, index) => (
             <div 
               key={index} 
-              className={`h-[128px] overflow-hidden cursor-pointer ${img.num === imagenActiva ? 'ring-4 ring-[#037F3F] rounded-tl-3xl rounded-br-3xl' : ''}`} 
+              className={`h-[128px] overflow-hidden cursor-pointer`} 
               onClick={() => cambiarImagenPrincipal(img.num)}
               onKeyDown={(e) => e.key === 'Enter' && cambiarImagenPrincipal(img.num)}
               tabIndex={0}
@@ -221,6 +223,7 @@ const ProyectoSolarFixed = ({
             <button 
               className="inline-flex items-center justify-center w-24 h-10 rounded-md mx-auto text-white bg-gradient-to-r from-[#037F3F] to-[#002D6A] group-hover:bg-gradient-to-r group-hover:from-[#ffffff] group-hover:to-[#ffffff] group-hover:text-black transition-all duration-300 group-hover:scale-105"
               aria-label="Contactar sobre este proyecto"
+              onClick={handleContactClick}
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <path d="M9 18l6-6-6-6" />

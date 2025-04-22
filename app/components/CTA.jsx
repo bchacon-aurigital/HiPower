@@ -1,7 +1,9 @@
 "use client";
 import "aos/dist/aos.css";
+import { useContactAction } from '../hooks/useContactAction';
 
 export default function EnergyCTA() {
+    const handleContactClick = useContactAction();
 
     return (
         <>
@@ -19,8 +21,8 @@ export default function EnergyCTA() {
                             playsInline
                             poster="/assets/homepage/heroBG.png"
                         >
-                            <source src="/assets/homepage/hero.webm" type="video/webm" />
-                            <source src="/assets/homepage/hero.mp4" type="video/mp4" />
+                            <source src="/assets/homepage/HPHeroVid.webm" type="video/webm" />
+                            <source src="/assets/homepage/HPHeroVid.mp4" type="video/mp4" />
                             <p>Tu navegador no soporta videos HTML5.</p>
                         </video>
                         <div className="absolute inset-0 bg-black bg-opacity-30"></div>
@@ -53,7 +55,7 @@ export default function EnergyCTA() {
                             className="relative px-8 py-4 text-lg font-medium text-white overflow-hidden bg-[#037F3F] transition-all duration-500 hover:text-white group rounded-tl-xl rounded-br-xl mt-8 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#037F3F]"
                             aria-label="Conecta con nosotros para consultoría energética"
                             type="button"
-                            onClick={() => document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" })}
+                            onClick={handleContactClick}
                         >
                             <span
                                 className="absolute inset-0 bg-gradient-to-r from-[#037F3F] to-[#002D6A] opacity-0 transition-opacity duration-500 group-hover:opacity-100"

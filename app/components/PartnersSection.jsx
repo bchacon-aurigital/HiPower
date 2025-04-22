@@ -21,7 +21,7 @@ const PartnersSection = () => {
   const thirdGroup = partners.slice(7);
 
   return (
-    <section className="py-16 bg-white" aria-labelledby="partners-heading">
+    <section id="partners" className="py-16 bg-white" aria-labelledby="partners-heading">
       <div className="container mx-auto px-4">
         <h2 
           id="partners-heading" 

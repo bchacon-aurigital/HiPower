@@ -1,12 +1,9 @@
 "use client";
 import dynamic from "next/dynamic";
 import { useEffect } from "react";
+import ServiciosHero from "../components/servicios/ServiciosHero";
 
 const Navbar = dynamic(() => import("../components/Navbar"), {
-  ssr: false,
-});
-
-const ServiciosHero = dynamic(() => import("../components/servicios/ServiciosHero"), {
   ssr: false,
 });
 

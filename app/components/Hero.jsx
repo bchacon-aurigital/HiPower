@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useContactAction } from '../hooks/useContactAction';
 
 export default function Hero() {
   useEffect(() => {
@@ -19,6 +20,8 @@ export default function Hero() {
     { text: "+14 años de experiencia", color: "bg-[#00439D]", delay: 300 },
     { text: "+5MWH generados", color: "bg-[#00439D]", delay: 400 },
   ];
+
+  const handleContactClick = useContactAction();
 
   return (
     <section
@@ -66,6 +69,7 @@ export default function Hero() {
             className="relative px-8 py-4 text-lg font-medium text-white overflow-hidden bg-[#037F3F] transition-all duration-500 hover:text-white group rounded-tl-xl rounded-br-xl mt-8 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#037F3F]"
             aria-label="Conecta con nosotros para consultoría energética"
             type="button"
+            onClick={handleContactClick}
           >
             <span
               className="absolute inset-0 bg-gradient-to-r from-[#037F3F] to-[#002D6A] opacity-0 transition-opacity duration-500 group-hover:opacity-100"

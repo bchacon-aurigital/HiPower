@@ -1,12 +1,9 @@
 "use client";
 import dynamic from "next/dynamic";
 import { Parallax } from 'react-parallax';
+import Hero from "./components/Hero";
 
 const Navbar = dynamic(() => import("./components/Navbar"), {
-  ssr: false,
-});
-
-const Hero = dynamic(() => import("./components/Hero"), {
   ssr: false,
 });
 

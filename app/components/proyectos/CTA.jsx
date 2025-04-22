@@ -2,8 +2,11 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useContactAction } from '../../hooks/useContactAction';
 
 export default function ProjectsCTA() {
+    const handleContactClick = useContactAction();
+
     useEffect(() => {
         AOS.init({
             once: true,
@@ -71,7 +74,7 @@ export default function ProjectsCTA() {
                         className="relative px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium text-white overflow-hidden bg-[#037F3F] transition-all duration-500 hover:text-white group rounded-tl-xl rounded-br-xl mt-6 sm:mt-8 focus:outline-none focus:ring-2 focus:ring-[#037F3F] focus:ring-offset-2 focus:ring-offset-white"
                         aria-label="Conecta con nosotros para consultoría energética"
                         type="button"
-                        onClick={() => document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" })}
+                        onClick={handleContactClick}
                         data-aos="fade-up"
                         data-aos-delay="350"
                     >

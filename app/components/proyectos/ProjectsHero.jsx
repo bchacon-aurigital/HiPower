@@ -3,8 +3,12 @@ import Image from "next/image";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useContactAction } from '../../hooks/useContactAction';
+
 
 export default function ProjectsHero() {
+  const handleContactClick = useContactAction();
+
   useEffect(() => {
     AOS.init({
       once: true,
@@ -16,7 +20,7 @@ export default function ProjectsHero() {
   return (
     <section className="relative h-screen w-full overflow-hidden" aria-labelledby="projects-hero-heading">
       <div className="absolute inset-0 z-0">
-      <video
+        <video
           className="object-cover w-full h-full"
           autoPlay
           muted
@@ -38,8 +42,8 @@ export default function ProjectsHero() {
               id="projects-hero-heading"
               className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-white"
             >
-              Energía solar y <br/>
-              almacenamiento para <br/>
+              Energía solar y <br />
+              almacenamiento para <br />
               empresas generadoras de energía
             </h1>
             <p className="text-white text-lg md:text-xl mb-8 max-w-4xl">
@@ -48,6 +52,7 @@ export default function ProjectsHero() {
               className="relative px-8 py-4 text-lg font-medium text-white overflow-hidden bg-[#037F3F] transition-all duration-500 hover:text-white group rounded-tl-xl rounded-br-xl focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#037F3F]"
               aria-label="Conecta con nosotros para consultoría energética"
               type="button"
+              onClick={handleContactClick}
             >
               <span
                 className="absolute inset-0 bg-gradient-to-r from-[#037F3F] to-[#002D6A] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
