@@ -18,8 +18,8 @@ export default function AboutUsHero() {
 
   return (
     <section className="relative h-screen w-full overflow-hidden rounded-b-[4rem]" aria-labelledby="AboutUs-hero-heading">
-      <div className="absolute inset-0 z-0 rounded-b-2xl">
-        <picture className="rounded-b-2xl">
+      <div className="absolute inset-0 z-0">
+        <picture className="">
           <source
             srcSet="/assets/aboutUs/AboutUsHeroBG.avif"
             type="image/avif"

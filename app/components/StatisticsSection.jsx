@@ -48,8 +48,8 @@ const StatisticsSection = () => {
                 height={96}
               />
             </div>
-            <h3 id="storage-heading" className="relative z-10 text-5xl font-bold text-blue-500 mb-2">+5 MWH</h3>
-            <p className="relative z-10 text-2xl">en almacenamiento</p>
+            <h3 id="solar-heading" className="relative z-10 text-5xl font-bold text-blue-500 mb-2">+30 MW</h3>
+            <p className="relative z-10 text-2xl">en nuestra gestión solar</p>
           </div>
           
           <div 
@@ -69,8 +69,8 @@ const StatisticsSection = () => {
                 className="mb-6"
               />
             </div>
-            <h3 id="solar-heading" className="relative z-10 text-5xl font-bold text-blue-500 mb-2">+30 MW</h3>
-            <p className="relative z-10 text-2xl">en nuestra gestión solar</p>
+            <h3 id="storage-heading" className="relative z-10 text-5xl font-bold text-blue-500 mb-2">+5 MWH</h3>
+            <p className="relative z-10 text-2xl">en almacenamiento</p>
           </div>
         </div>
       </div>

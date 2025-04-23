@@ -41,21 +41,57 @@ const Footer = () => {
             </div>
 
             <div className="text-center md:text-left">
-              <h3 className="text-lg font-bold mb-4">Links Útiles</h3>
+              <h3 className="text-lg font-bold mb-4">Relaciones Públicas</h3>
               <ul className="space-y-3">
-                <li><Link href="/que-es-grid-tied" className="hover:text-gray-300 transition-colors">¿Qué es Grid Tied?</Link></li>
-                <li><Link href="/que-es-off-grid" className="hover:text-gray-300 transition-colors">¿Qué es Off-Grid?</Link></li>
-                <li><div  onClick={handleContactClick} className="cursor-pointer hover:text-gray-300 transition-colors">Cotizar</div></li>
+                <li>
+                  <a 
+                    href="https://www.nacion.com/brandvoice/contenido-a-la-medida/hipower-aliado-del-planeta-y-del-ahorro-energetico/Z3UUX53BCRB2RNXT6XE7NFDBWM/story" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="hover:text-gray-300 transition-colors"
+                  >
+                    HiPower, aliado del planeta
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="https://energiaestrategica.com/anticipan-un-apogeo-de-energia-solar-en-costa-rica" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="hover:text-gray-300 transition-colors"
+                  >
+                    Apogeo de energía solar
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="https://energiaestrategica.com/hipower-amplia-su-pipeline-de-proyectos-de-energia-solar-y-almacenamiento-en-costa-rica" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="hover:text-gray-300 transition-colors"
+                  >
+                    HiPower amplía proyectos
+                  </a>
+                </li>
               </ul>
             </div>
 
             <div className="text-center md:text-left">
               <h3 className="text-lg font-bold mb-4">Temas legales</h3>
               <ul className="space-y-3">
-                <li><Link href="/ley-20969" className="hover:text-gray-300 transition-colors">Ley 20969</Link></li>
                 <li>
                   <a 
-                    href="/Términos y Condiciones de HiPower Systems.pdf" 
+                    href="http://www.pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&nValor1=1&nValor2=96064" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="hover:text-gray-300 transition-colors"
+                  >
+                    Ley 10.086
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="/Términos y Condiciones de HiPower Systems.pdf" 
                     download="HiPower-Terminos-y-Condiciones.pdf"
                     className="hover:text-gray-300 transition-colors"
                   >
@@ -71,14 +107,14 @@ const Footer = () => {
                 <ul className="space-y-3">
                   <li>
                     <span className="font-bold">Ventas: </span>
-                    <a href="mailto:asesor@hipowerco.com" className="hover:text-gray-300 transition-colors">
-                      asesor@hipowerco.com
+                    <a href="mailto:asesor@hipowercr.com" className="hover:text-gray-300 transition-colors">
+                      asesor@hipowercr.com
                     </a>
                   </li>
                   <li>
                     <span className="font-bold">General: </span>
-                    <a href="mailto:info@hipowerco.com" className="hover:text-gray-300 transition-colors">
-                      info@hipowerco.com
+                    <a href="mailto:info@hipowercr.com" className="hover:text-gray-300 transition-colors">
+                      info@hipowercr.com
                     </a>
                   </li>
                   <li>
@@ -98,7 +134,7 @@ const Footer = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-10 h-10 flex items-center justify-center bg-[#4C9678] rounded-tl-md rounded-br-md hover:opacity-80 transition-all duration-300 hover:scale-110"
-                    aria-label={`Visitar ${link.label} de HiPower`}
+                    aria-label={`Visitar ${link.name} de HiPower`}
                   >
                     {link.icon}
                   </a>
@@ -107,9 +143,23 @@ const Footer = () => {
             </div>
           </div>
         </div>
+        
+        <div className="mt-8 max-w-7xl mx-auto">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5525.417955663463!2d-84.03334208811162!3d10.0014812900627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e57dbd4b1e8f%3A0xed30c90dcaa44df0!2sHiPower!5e1!3m2!1ses!2scr!4v1745347574017!5m2!1ses!2scr" 
+            width="100%" 
+            height="300" 
+            style={{ border: 0 }} 
+            allowFullScreen="" 
+            loading="lazy" 
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Ubicación de HiPower"
+            className="rounded-lg shadow-md"
+          />
+        </div>
       </div>
     </footer>
   );
 };
 
-export default Footer; 
+export default Footer;

@@ -39,7 +39,6 @@ export default function ProjectsCTA() {
                         <source src="/assets/proyectos/projects.mp4" type="video/mp4" />
                         <p>Tu navegador no soporta videos HTML5.</p>
                     </video>
-                    <div className="absolute inset-0 bg-black bg-opacity-50"></div>
                 </div>
             </div>
 

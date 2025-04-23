@@ -49,7 +49,7 @@ const proyectos = [
   },
   {
     id: "hospitales-publicos",
-    titulo: "Hospitales Públicos",
+    titulo: "Sector de Salud ",
     ubicacionDescripcion: "Hi Power ha desarrollado proyectos solares en hospitales públicos de Turrialba, Puntarenas y San Isidro contribuyendo a la descarbonización del sector salud.",
     descripcion: "Estos centros médicos cuentan con sistemas fotovoltaicos de autoconsumo lo que reduce considerablemente gastos energéticos.",
     beneficios: "Reducir su huella de carbono, costos energéticos y avanzar hacia una operación más sostenible y resiliente.",
@@ -208,9 +208,9 @@ const ProyectoSolarFixed = ({
           <h3 className="text-gray-700 text-3xl italic font-bold">Características</h3>
         </div>
         
-        <div className={caracteristicas.length === 3 ? "grid lg:grid-cols-4 gap-2" : 
-                        caracteristicas.length === 4 ? "grid lg:grid-cols-5 gap-2" : 
-                        caracteristicas.length === 5 ? "grid lg:grid-cols-6 gap-2" : "grid lg:grid-cols-6 gap-2"}>
+        <div className={caracteristicas.length === 3 ? "grid lg:grid-cols-3 gap-2" : 
+                        caracteristicas.length === 4 ? "grid lg:grid-cols-4 gap-2" : 
+                        caracteristicas.length === 5 ? "grid lg:grid-cols-5 gap-2" : "grid lg:grid-cols-6 gap-2"}>
           {caracteristicas.map((item, index) => (
             <div key={index} className="bg-white border border-[#C9C9C9] px-8 py-16 rounded-tl-3xl rounded-br-3xl text-center flex flex-col justify-center items-center" data-aos="flip-up" data-aos-delay={100 * index}>
               <p className="text-[#037F3F] font-bold text-3xl">{item.valor}</p>
@@ -218,18 +218,7 @@ const ProyectoSolarFixed = ({
             </div>
           ))}
           
-          <div className="group bg-white border border-[#C9C9C9] px-8 py-16 rounded-tl-3xl rounded-br-3xl text-center flex flex-col justify-center items-center transition-all duration-300 hover:bg-[#037F3F] hover:border-transparent" data-aos="flip-up" data-aos-delay={100 * caracteristicas.length}>
-            <p className="text-gray-700 font-medium mb-2 text-xl group-hover:text-white transition-colors duration-300">Conecta con nosotros</p>
-            <button 
-              className="inline-flex items-center justify-center w-24 h-10 rounded-md mx-auto text-white bg-gradient-to-r from-[#037F3F] to-[#002D6A] group-hover:bg-gradient-to-r group-hover:from-[#ffffff] group-hover:to-[#ffffff] group-hover:text-black transition-all duration-300 group-hover:scale-105"
-              aria-label="Contactar sobre este proyecto"
-              onClick={handleContactClick}
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <path d="M9 18l6-6-6-6" />
-              </svg>
-            </button>
-          </div>
+    
         </div>
       </div>
     </article>

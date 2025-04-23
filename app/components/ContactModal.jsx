@@ -70,7 +70,7 @@ const ContactModal = ({ isOpen, onClose }) => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="absolute inset-0 z-50 overflow-auto"
+            className="fixed inset-0 z-50 overflow-auto"
             initial="hidden"
             animate="visible"
             exit="exit"
@@ -209,7 +209,7 @@ const ContactModal = ({ isOpen, onClose }) => {
                 </div>
                 
                 {/* Sección derecha - Formulario de HubSpot */}
-                <div className="p-4 md:p-6 lg:p-8 overflow-auto border-2 border-[#000000] rounded-tr-none md:rounded-tr-3xl h-[900px] md:h-auto "> 
+                <div className="p-4 md:p-6 lg:p-8 overflow-auto border-2 border-[#000000] rounded-tr-none md:rounded-tr-3xl h-[700px] md:h-auto "> 
                   <div id="hubspot-form-container" className="hubspot-form min-h-[350px]">
                     {/* Aquí se cargará el formulario de HubSpot */}
                   </div>

@@ -15,7 +15,7 @@ const servicios = [
       png: "/assets/servicios/EnergiaSolar.png",
     },
     descripcion: "Las plantas solares a gran escala generan energía limpia y eficiente para empresas generadoras y distribuidoras.",
-    descripcion2: "Hemos diseñado e instalado las plantas solares más grandes de Costa Rica, instaladas a nivel de suelo, para empresas innovadoras como Coopeguanacaste, optimizando costos operativos y promoviendo la sostenibilidad.",
+    descripcion2: "Hemos diseñado e instalado las plantas solares más grandes de Costa Rica, instaladas a nivel de suelo, para empresas innovadoras como <strong>Coopeguanacaste</strong>, optimizando costos operativos y promoviendo la sostenibilidad.",
     esIzquierda: true,
     alt: "Planta solar fotovoltaica a gran escala con múltiples paneles solares"
   },
@@ -27,21 +27,9 @@ const servicios = [
       png: "/assets/servicios/Microrredes.png",
     },
     descripcion: "Una microred integra distintas fuentes de energía como paneles solares, baterías, generadores y la red eléctrica, garantizando autonomía y eficiencia.",
-    descripcion2: "Hemos diseñado e instalado microrredes en Costa Rica para empresas innovadoras como Establishment Labs, contribuyendo además a la certificación LEED, EDGE y Carbono Neutral de su planta.",
+    descripcion2: "Hemos diseñado e instalado microrredes en Costa Rica para empresas innovadoras como <strong>Establishment Labs</strong>, contribuyendo además a la certificación LEED, EDGE y Carbono Neutral de su planta.",
     esIzquierda: false,
     alt: "Sistema de microrred inteligente con múltiples fuentes de energía integradas"
-  },
-  {
-    id: "sistemas-hibridos",
-    titulo: "Sistemas Híbridos",
-    imagenPrincipal: {
-      avif: "/assets/servicios/hibridos.avif",
-      png: "/assets/servicios/hibridos.png",
-    },
-    descripcion: "Sistemas de generación y almacenamiento de energía que combinan paneles solares, inversores y baterías, permitiendo operar con o sin conexión a la red eléctrica.",
-    descripcion2: "Proyectos como Asoplatal en Talamanca, la Fundación Omar Dengo y Casa Santuario han implementado estas soluciones para garantizar un suministro energético confiable en zonas con acceso limitado a la red.",
-    esIzquierda: true,
-    alt: "Sistema híbrido de energía solar con paneles solares, baterías y conexión a red eléctrica"
   },
   {
     id: "sistemas-autoconsumo",
@@ -51,9 +39,21 @@ const servicios = [
       png: "/assets/servicios/autoconsumo.png",
     },
     descripcion: "Estas plantas de generación distribuida optimizan el consumo energético y reducen costos en industrias de alto consumo.",
-    descripcion2: "Hemos diseñado e instalado algunas de las más grandes en Costa Rica para instituciones y empresas como la Caja Costarricense de Seguro Social (CCSS), ICE, Coopeguanacaste y Allergan, Establishment Labs asegurando un suministro más estable, menor dependencia de la red y una operación más eficiente.",
-    esIzquierda: false,
+    descripcion2: "Hemos diseñado e instalado algunas de las más grandes en Costa Rica para instituciones y empresas como la <strong>Caja Costarricense de Seguro Social (CCSS)</strong>, <strong>ICE</strong>, <strong>Coopeguanacaste</strong> y <strong>Allergan</strong>, <strong>Establishment Labs</strong> asegurando un suministro más estable, menor dependencia de la red y una operación más eficiente.",
+    esIzquierda: true,
     alt: "Sistema de autoconsumo energético con paneles solares instalados en techo industrial"
+  },
+  {
+    id: "sistemas-hibridos",
+    titulo: "Sistemas Híbridos",
+    imagenPrincipal: {
+      avif: "/assets/servicios/hibridos.avif",
+      png: "/assets/servicios/hibridos.png",
+    },
+    descripcion: "Sistemas de generación y almacenamiento de energía que combinan paneles solares, inversores y baterías, permitiendo operar con o sin conexión a la red eléctrica.",
+    descripcion2: "Proyectos como <strong>Asoplatal</strong> en Talamanca, la <strong>Fundación Omar Dengo</strong> y <strong>Casa Santuario</strong> han implementado estas soluciones para garantizar un suministro energético confiable en zonas con acceso limitado a la red.",
+    esIzquierda: false,
+    alt: "Sistema híbrido de energía solar con paneles solares, baterías y conexión a red eléctrica"
   },
 ];
 
@@ -99,8 +99,22 @@ const ServicioCard = ({
           {titulo}
         </h2>
         <p className="text-gray-600 mb-2 text-base md:text-xl">{descripcion}</p>
-        <p className="text-gray-600 mb-6 text-base md:text-xl">{descripcion2}</p>
+        <p className="text-gray-600 mb-6 text-base md:text-xl" dangerouslySetInnerHTML={{__html: descripcion2}}></p>
         <div>
+        <a
+            href='/proyectos'
+            className="mr-3 relative px-2 py-3 font-medium text-white overflow-hidden bg-[#037F3F] transition-all duration-500 hover:text-white group rounded-tl-xl rounded-br-xl mt-8 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#037F3F]"
+            aria-label="Conecta con nosotros para consultoría energética"
+            type="button"
+          >
+            <span
+              className=" absolute inset-0 bg-gradient-to-r from-[#037F3F] to-[#002D6A] opacity-0 transition-opacity duration-500 group-hover:opacity-100 rounded-tl-xl rounded-br-xl"
+              aria-hidden="true"
+            ></span>
+            <span className="relative z-10 font-bold text-xl">
+              Ver Proyecto
+            </span>
+          </a>
           <div
             onClick={handleContactClick}
             className="cursor-pointer inline-flex items-center text-[#037F3F] md:text-xl font-medium hover:text-[#002D6A] transition-colors focus:outline-none focus:ring-2 focus:ring-[#037F3F] focus:ring-offset-2 rounded-md py-1"

@@ -45,6 +45,7 @@ export default function ProjectsHero() {
               Energía solar y <br />
               almacenamiento para <br />
               empresas generadoras de energía
+              
             </h1>
             <p className="text-white text-lg md:text-xl mb-8 max-w-4xl">
               Durante más de 14 años, en Hi Power hemos desarrollado proyectos solares y de almacenamiento que han contribuido a reducir los costos energéticos de nuestros clientes, así como a diversificar y descarbonizar la matriz energética de Costa Rica.            </p>

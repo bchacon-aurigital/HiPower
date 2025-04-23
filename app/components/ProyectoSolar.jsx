@@ -13,10 +13,10 @@ const ProyectoSolar = () => {
             description: "Diseñamos, construimos e instalamos plantas solares para generadoras y distribuidoras de energía, incluyendo algunas de las más grandes de Costa Rica.",
             projectName: "Planta Solar Huacas",
             metrics: [
-                { value: "+15,000", description: "Cantidad de paneles" },
-                { value: "5,000", description: "Casas abastecidas" },
-                { value: "9.7 MWp", description: "Potencia solar" },
-                { value: "14,404 tn", description: "CO₂ mitigado" },
+                { value: "17,000", description: "Cantidad de paneles" },
+                { value: "10 MWp", description: "Potencia instalada" },
+                { value: "46", description: "Inversores" },
+                { value: "1700 tn", description: " anuales de CO₂ mitigado" },
             ],
             videoPathWebm: "/assets/homepage/energiaSolar.webm",
             videoPathMp4: "/assets/homepage/energiaSolar.mp4",
@@ -28,10 +28,10 @@ const ProyectoSolar = () => {
             projectName: "Establishment Labs",
             metrics: [
                 { value: "1,501", description: "Cantidad de paneles" },
-                { value: "2 MWh", description: "Capacidad de almacenamiento" },
-                { value: "2 MWh", description: "Capacidad de baterías" },
-                { value: "900 kWp", description: "Potencia solar" },
-                { value: "216.8 T/A", description: "CO₂ mitigado" },
+                { value: "1 MWp", description: "Potencia instalada" },
+                { value: "2 Mwh", description: "Capacidad de almacenamiento" },
+                { value: "6", description: "Inversores" },
+                { value: "174 tn", description: " anuales de CO₂ mitigado" },
             ],
             videoPathWebm: "/assets/homepage/microredes.webm",
             videoPathMp4: "/assets/homepage/microredes.mp4",
@@ -42,10 +42,10 @@ const ProyectoSolar = () => {
             description: "Sistemas fotovoltaicos diseñados para autoconsumo, que permiten generar electricidad de manera eficiente y reducir costos.",
             projectName: "Hospital de Turrialba",
             metrics: [
-                { value: "792", description: "Cantidad de paneles" },
-                { value: "$36,000", description: "Ahorro estimado" },
                 { value: "360 kWp", description: "Potencia solar" },
-                { value: "86.72 T/A", description: "CO₂ mitigado" },
+                { value: "792", description: "Cantidad de paneles" },
+                { value: "$36,000 anuales", description: "Ahorro estimado" },
+                { value: "86.72 tn", description: "anuales de CO₂ mitigado" },
             ],
             videoPathWebm: "/assets/homepage/autoconsumo.webm",
             videoPathMp4: "/assets/homepage/autoconsumo.mp4",
@@ -57,10 +57,10 @@ const ProyectoSolar = () => {
             projectName: "Casa Santuario",
             metrics: [
                 { value: "20", description: "Cantidad de paneles" },
+                { value: "10 kWp", description: "Potencia instalada" },
                 { value: "10.8 kWh", description: "Capacidad de almacenamiento" },
-                { value: "3 horas", description: "Capacidad de baterías" },
-                { value: "10 kWp", description: "Potencia solar" },
-                { value: "2.41 T/A", description: "CO₂ mitigado" },
+                { value: "2", description: "Capacidad de baterías" },
+                { value: "1", description: "Inversores" },
             ],
             videoPathWebm: "/assets/homepage/hibridos.webm",
             videoPathMp4: "/assets/homepage/hibridos.mp4",
@@ -199,7 +199,7 @@ const ProyectoSolar = () => {
                                 <h4 className="text-center bg-white relative px-10 py-4 rounded-full text-xs font-medium shadow-md text-black transition-colors duration-300 hover:text-white overflow-hidden group">
                                     <span className="absolute inset-0 bg-gradient-to-r from-[#037F3F] to-[#002D6A] opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full z-0"></span>
                                     <span className="relative z-10 block group-hover:hidden ">{currentServiceData.projectName}</span>
-                                    <span className="hidden group-hover:block relative z-10">Ver Proyectro</span>
+                                    <span className="hidden group-hover:block relative z-10">Ver Proyectos</span>
                                 </h4>
                             </a>
                         </div>

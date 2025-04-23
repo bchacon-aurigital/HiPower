@@ -16,8 +16,8 @@ export default function Hero() {
 
   const stats = [
     { text: "Únicos en Costa Rica con certificación NABCEP", color: "bg-[#037F3F]", delay: 100 },
-    { text: "+30 MW instalados", color: "bg-[#00439D]", delay: 200 },
     { text: "+14 años de experiencia", color: "bg-[#00439D]", delay: 300 },
+    { text: "+30 MW instalados", color: "bg-[#00439D]", delay: 200 },
     { text: "+5MWH generados", color: "bg-[#00439D]", delay: 400 },
   ];
 
@@ -54,8 +54,14 @@ export default function Hero() {
             className="text-4xl md:text-5xl font-bold mb-6 leading-tight"
             id="hero-heading"
           >
-            Energía solar y almacenamiento para empresas generadoras de energía
+            Energía solar y almacenamiento para empresas
           </h1>
+          <h2
+            className="text-xl md:text-2xl font-normal mb-6 leading-tight"
+            id="hero-heading"
+          >
+            Solicitá tu diagnóstico sin costo y empezá a reducir tu factura eléctrica.
+          </h2>
 
           <div
             className="font-light text-lg mb-6 md:hidden"
