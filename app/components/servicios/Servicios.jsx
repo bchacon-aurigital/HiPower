@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import AOS from 'aos';
@@ -10,10 +10,20 @@ const servicios = [
   {
     id: "energia-gran-escala",
     titulo: "Energía Solar a Gran Escala",
-    imagenPrincipal: {
-      avif: "/assets/servicios/EnergiaSolar.avif",
-      png: "/assets/servicios/EnergiaSolar.png",
-    },
+    imagenesPrincipales: [
+      {
+        avif: "/assets/servicios/EnergiaSolar.avif",
+        jpg: "/assets/servicios/EnergiaSolar.jpg",
+      },
+      {
+        avif: "/assets/servicios/EnergiaSolar2.avif",
+        jpg: "/assets/servicios/EnergiaSolar2.jpg",
+      },
+      {
+        avif: "/assets/servicios/EnergiaSolar3.avif",
+        jpg: "/assets/servicios/EnergiaSolar3.jpg",
+      }
+    ],
     descripcion: "Las plantas solares a gran escala generan energía limpia y eficiente para empresas generadoras y distribuidoras.",
     descripcion2: "Hemos diseñado e instalado las plantas solares más grandes de Costa Rica, instaladas a nivel de suelo, para empresas innovadoras como <strong>Coopeguanacaste</strong>, optimizando costos operativos y promoviendo la sostenibilidad.",
     esIzquierda: true,
@@ -22,10 +32,20 @@ const servicios = [
   {
     id: "microrredes",
     titulo: "Microrredes",
-    imagenPrincipal: {
-      avif: "/assets/servicios/Microrredes.avif",
-      png: "/assets/servicios/Microrredes.png",
-    },
+    imagenesPrincipales: [
+      {
+        avif: "/assets/servicios/Microrredes.avif",
+        jpg: "/assets/servicios/Microrredes.jpg",
+      },
+      {
+        avif: "/assets/servicios/Microrredes2.avif",
+        jpg: "/assets/servicios/Microrredes2.jpg",
+      },
+      {
+        avif: "/assets/servicios/Microrredes3.avif",
+        jpg: "/assets/servicios/Microrredes3.jpg",
+      }
+    ],
     descripcion: "Una microred integra distintas fuentes de energía como paneles solares, baterías, generadores y la red eléctrica, garantizando autonomía y eficiencia.",
     descripcion2: "Hemos diseñado e instalado microrredes en Costa Rica para empresas innovadoras como <strong>Establishment Labs</strong>, contribuyendo además a la certificación LEED, EDGE y Carbono Neutral de su planta.",
     esIzquierda: false,
@@ -34,10 +54,20 @@ const servicios = [
   {
     id: "sistemas-autoconsumo",
     titulo: "Sistemas de autoconsumo",
-    imagenPrincipal: {
-      avif: "/assets/servicios/autoconsumo.avif",
-      png: "/assets/servicios/autoconsumo.png",
-    },
+    imagenesPrincipales: [
+      {
+        avif: "/assets/servicios/autoconsumo.avif",
+        jpg: "/assets/servicios/autoconsumo.jpg",
+      },
+      {
+        avif: "/assets/servicios/autoconsumo2.avif",
+        jpg: "/assets/servicios/autoconsumo2.jpg",
+      },
+      {
+        avif: "/assets/servicios/autoconsumo3.avif",
+        jpg: "/assets/servicios/autoconsumo3.jpg",
+      }
+    ],
     descripcion: "Estas plantas de generación distribuida optimizan el consumo energético y reducen costos en industrias de alto consumo.",
     descripcion2: "Hemos diseñado e instalado algunas de las más grandes en Costa Rica para instituciones y empresas como la <strong>Caja Costarricense de Seguro Social (CCSS)</strong>, <strong>ICE</strong>, <strong>Coopeguanacaste</strong> y <strong>Allergan</strong>, <strong>Establishment Labs</strong> asegurando un suministro más estable, menor dependencia de la red y una operación más eficiente.",
     esIzquierda: true,
@@ -46,10 +76,20 @@ const servicios = [
   {
     id: "sistemas-hibridos",
     titulo: "Sistemas Híbridos",
-    imagenPrincipal: {
-      avif: "/assets/servicios/hibridos.avif",
-      png: "/assets/servicios/hibridos.png",
-    },
+    imagenesPrincipales: [
+      {
+        avif: "/assets/servicios/hibridos.avif",
+        jpg: "/assets/servicios/hibridos.jpg",
+      },
+      {
+        avif: "/assets/servicios/hibridos2.avif",
+        jpg: "/assets/servicios/hibridos2.jpg",
+      },
+      {
+        avif: "/assets/servicios/hibridos3.avif",
+        jpg: "/assets/servicios/hibridos3.jpg",
+      }
+    ],
     descripcion: "Sistemas de generación y almacenamiento de energía que combinan paneles solares, inversores y baterías, permitiendo operar con o sin conexión a la red eléctrica.",
     descripcion2: "Proyectos como <strong>Asoplatal</strong> en Talamanca, la <strong>Fundación Omar Dengo</strong> y <strong>Casa Santuario</strong> han implementado estas soluciones para garantizar un suministro energético confiable en zonas con acceso limitado a la red.",
     esIzquierda: false,
@@ -57,9 +97,49 @@ const servicios = [
   },
 ];
 
+const Carousel = ({ imagenes, alt }) => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((current) => (current + 1) % imagenes.length);
+    }, 4000); 
+
+    return () => clearInterval(interval);
+  }, [imagenes.length]);
+
+  return (
+    <div className="relative w-full h-full overflow-hidden">
+      {imagenes.map((imagen, index) => (
+        <div
+          key={index}
+          className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ${
+            activeIndex === index ? 'opacity-100' : 'opacity-0'
+          }`}
+        >
+          <picture>
+            <source srcSet={imagen.avif} type="image/avif" />
+            <source srcSet={imagen.jpg} type="image/jpg" />
+            <Image
+              src={imagen.jpg}
+              alt={`${alt} - imagen ${index + 1}`}
+              className="w-full h-full object-cover rounded-tl-3xl rounded-br-3xl transition-transform duration-700 hover:scale-105"
+              width={800}
+              height={500}
+              sizes="(max-width: 768px) 100vw, 50vw"
+              loading="lazy"
+              blurDataURL="data:image/avif;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQICAQECAQEBAgICAgICAgICAQICAgICAgICAgL/2wBDAQEBAQEBAQEBAQECAQEBAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgL/wAARCAAGAAoDAREAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9xtI8d+LfibeeKNW/Z3+A3j1bLxZfaZodlc/FLWvAujWNstlBMNVn0m1gM8fmS3Lf2XPcC31a3udP0r7QoXV9b06//W/FeLspwOF4fy3DZngcNisRioYrGVMXgpV6tLCwg5UMJCpVUlGdSaVWtCLjUjHkptRqRk/zXJ8dicTOvOrCdOFKpGEYVEouTfxVHHVrpddk9UVf+F+ftHf9G8+Ef/DraJ/8r6+S/wCI85v/ANBD/wDLVf8A3bP2POs2P//Z"
+            />
+          </picture>
+        </div>
+      ))}
+    </div>
+  );
+};
+
 const ServicioCard = ({
   titulo,
-  imagenPrincipal,
+  imagenesPrincipales,
   descripcion,
   descripcion2,
   esIzquierda,
@@ -77,19 +157,7 @@ const ServicioCard = ({
       aria-labelledby={`titulo-${id}`}
     >
       <div className="lg:w-2/3 overflow-hidden rounded-tl-3xl rounded-br-3xl">
-        <picture>
-          <source srcSet={imagenPrincipal.png} type="image/png" />
-          <Image
-            src={imagenPrincipal.avif}
-            alt={alt || `Servicio de ${titulo}`}
-            className="w-full h-full object-cover rounded-tl-3xl rounded-br-3xl transition-transform duration-700 hover:scale-105"
-            width={800}
-            height={500}
-            sizes="(max-width: 768px) 100vw, 50vw"
-            loading="lazy"
-            blurDataURL="data:image/avif;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQICAQECAQEBAgICAgICAgICAQICAgICAgICAgL/2wBDAQEBAQEBAQEBAQECAQEBAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgL/wAARCAAGAAoDAREAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9xtI8d+LfibeeKNW/Z3+A3j1bLxZfaZodlc/FLWvAujWNstlBMNVn0m1gM8fmS3Lf2XPcC31a3udP0r7QoXV9b06//W/FeLspwOF4fy3DZngcNisRioYrGVMXgpV6tLCwg5UMJCpVUlGdSaVWtCLjUjHkptRqRk/zXJ8dicTOvOrCdOFKpGEYVEouTfxVHHVrpddk9UVf+F+ftHf9G8+Ef/DraJ/8r6+S/wCI85v/ANBD/wDLVf8A3bP2POs2P//Z"
-          />
-        </picture>
+        <Carousel imagenes={imagenesPrincipales} alt={alt || `Servicio de ${titulo}`} />
       </div>
       <div className="lg:w-1/2 flex flex-col justify-center">
         <h2
@@ -103,12 +171,12 @@ const ServicioCard = ({
         <div>
         <a
             href='/proyectos'
-            className="mr-3 relative px-2 py-3 font-medium text-white overflow-hidden bg-[#037F3F] transition-all duration-500 hover:text-white group rounded-tl-xl rounded-br-xl mt-8 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#037F3F]"
+            className="mr-8 relative px-5 py-3 font-medium text-white overflow-hidden bg-[#037F3F] transition-all duration-500 hover:text-white group rounded-tl-xl rounded-br-xl mt-8 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#037F3F]"
             aria-label="Conecta con nosotros para consultoría energética"
             type="button"
           >
             <span
-              className=" absolute inset-0 bg-gradient-to-r from-[#037F3F] to-[#002D6A] opacity-0 transition-opacity duration-500 group-hover:opacity-100 rounded-tl-xl rounded-br-xl"
+              className="absolute inset-0 bg-gradient-to-r from-[#037F3F] to-[#002D6A] opacity-0 transition-opacity duration-500 group-hover:opacity-100 rounded-tl-xl rounded-br-xl"
               aria-hidden="true"
             ></span>
             <span className="relative z-10 font-bold text-xl">
@@ -164,7 +232,7 @@ const ServiciosEnergia = () => {
             key={servicio.id}
             id={servicio.id}
             titulo={servicio.titulo}
-            imagenPrincipal={servicio.imagenPrincipal}
+            imagenesPrincipales={servicio.imagenesPrincipales}
             descripcion={servicio.descripcion}
             descripcion2={servicio.descripcion2}
             esIzquierda={servicio.esIzquierda}

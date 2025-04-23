@@ -4,7 +4,6 @@ import Image from "next/image";
 import { FaInstagram, FaLinkedin, FaFacebook, FaYoutube } from "react-icons/fa";
 import { useContactAction } from '../hooks/useContactAction';
 
-
 const Footer = () => {
   const handleContactClick = useContactAction();
 
@@ -15,28 +14,51 @@ const Footer = () => {
     { icon: <FaYoutube className="text-2xl sm:text-3xl" />, href: "https://www.youtube.com/@hipowercr", name: "YouTube" },
   ];
 
+  const navLinks = [
+    { name: "INICIO", href: "/" },
+    { name: "SERVICIOS", href: "/servicios" },
+    { name: "PROYECTOS", href: "/proyectos" },
+    { name: "SOBRE NOSOTROS", href: "/aboutUs" },
+    { name: "CONTACTO", action: "contact" },
+    { name: "BLOG", href: "/", comingSoon: true },
+  ];
+
   return (
     <footer className="bg-gradient-to-r from-[#002D6A] to-[#037F3F] text-white py-12" role="contentinfo">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center lg:items-start lg:flex-row justify-between gap-8 max-w-7xl mx-auto">
-          <div className="flex-shrink-0 text-center lg:text-left">
-            <Image
-              src="/assets/landing/LogoHiPower.svg"
-              alt="Logo de HiPower"
-              width={280}
-              height={84}
-              className="mb-4 mx-auto lg:mx-0"
-              priority
-            />
-          </div>
-
-          <div className="flex flex-col md:flex-row gap-12 flex-grow justify-between max-w-4xl">
+        <div className="flex flex-col lg:flex-row justify-between gap-8 max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row gap-16 flex-grow justify-between max-w-4xl">
             <div className="text-center md:text-left">
               <h3 className="text-lg font-bold mb-4">Nosotros</h3>
               <ul className="space-y-3">
-                <li><Link href="/aboutUs" className="hover:text-gray-300 transition-colors">Empresa</Link></li>
-                <li><Link href="/proyectos" className="hover:text-gray-300 transition-colors">Proyectos</Link></li>
-                <li><Link href="/#partners" className="hover:text-gray-300 transition-colors">Aliados</Link></li>
+                {navLinks.map((link, index) => (
+                  <li key={index}>
+                    {link.comingSoon ? (
+                      <div className="group relative">
+                        <span className="absolute -top-3 left-0 whitespace-nowrap text-[#037F3F] text-[10px] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                          Proximamente!
+                        </span>
+                        <a 
+                          href="/#" 
+                          className="hover:text-gray-300 transition-colors opacity-100 group-hover:opacity-50"
+                        >
+                          {link.name}
+                        </a>
+                      </div>
+                    ) : link.action === "contact" ? (
+                      <button
+                        onClick={handleContactClick}
+                        className="hover:text-gray-300 transition-colors bg-transparent border-none p-0 cursor-pointer text-left text-white"
+                      >
+                        {link.name}
+                      </button>
+                    ) : (
+                      <Link href={link.href} className="hover:text-gray-300 transition-colors">
+                        {link.name}
+                      </Link>
+                    )}
+                  </li>
+                ))}
               </ul>
             </div>
 
@@ -142,20 +164,29 @@ const Footer = () => {
               </div>
             </div>
           </div>
-        </div>
-        
-        <div className="mt-8 max-w-7xl mx-auto">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5525.417955663463!2d-84.03334208811162!3d10.0014812900627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e57dbd4b1e8f%3A0xed30c90dcaa44df0!2sHiPower!5e1!3m2!1ses!2scr!4v1745347574017!5m2!1ses!2scr" 
-            width="100%" 
-            height="300" 
-            style={{ border: 0 }} 
-            allowFullScreen="" 
-            loading="lazy" 
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Ubicación de HiPower"
-            className="rounded-lg shadow-md"
-          />
+
+          <div className="flex-shrink-0 flex flex-col items-center lg:items-end space-y-6 lg:max-w-md">
+            <Image
+              src="/assets/landing/LogoHiPower.svg"
+              alt="Logo de HiPower"
+              width={280}
+              height={84}
+              className="mb-4 mx-auto"
+              priority
+            />
+            
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5525.417955663463!2d-84.03334208811162!3d10.0014812900627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e57dbd4b1e8f%3A0xed30c90dcaa44df0!2sHiPower!5e1!3m2!1ses!2scr!4v1745347574017!5m2!1ses!2scr" 
+              width="100%" 
+              height="250" 
+              style={{ border: 0 }} 
+              allowFullScreen="" 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Ubicación de HiPower"
+              className="rounded-lg shadow-md"
+            />
+          </div>
         </div>
       </div>
     </footer>

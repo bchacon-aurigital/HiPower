@@ -105,22 +105,18 @@ const ProyectoSolarFixed = ({
     });
   }, []);
 
-  const [imagenActiva, setImagenActiva] = useState(1);
-
+  // Definimos las rutas de las imágenes principales y secundarias
   const imagenPrincipal = {
-    avif: `/assets/proyectos/${id}${imagenActiva}.avif`,
-    png: `/assets/proyectos/${id}${imagenActiva}.png`
+    avif: `/assets/proyectos/${id}.avif`,
+    png: `/assets/proyectos/${id}.png`
   };
 
+  // Ahora las imágenes secundarias son independientes de la principal
   const imagenesSecundarias = [1, 2, 3].map(num => ({
     avif: `/assets/proyectos/${id}${num}.avif`,
     png: `/assets/proyectos/${id}${num}.png`,
     num: num
   }));
-
-  const cambiarImagenPrincipal = (numeroImagen) => {
-    setImagenActiva(numeroImagen);
-  };
 
   return (
     <article className="w-full p-4 rounded-lg shadow-sm max-w-7xl mx-auto mt-16" id={`proyecto-${id}`} role="region" aria-label={`Proyecto: ${titulo}`}>
@@ -156,19 +152,16 @@ const ProyectoSolarFixed = ({
           {imagenesSecundarias.map((img, index) => (
             <div 
               key={index} 
-              className={`h-[128px] overflow-hidden cursor-pointer`} 
-              onClick={() => cambiarImagenPrincipal(img.num)}
-              onKeyDown={(e) => e.key === 'Enter' && cambiarImagenPrincipal(img.num)}
+              className={`h-[128px] overflow-hidden`} 
               tabIndex={0}
-              role="button"
-              aria-label={`Ver imagen ${index + 1} del proyecto ${titulo}`}
+              aria-label={`Imagen ${index + 1} del proyecto ${titulo}`}
             >
               <picture>
                 <source srcSet={img.avif} type="image/avif" />
                 <Image 
                   src={img.png} 
                   alt={`${titulo} - Vista complementaria ${index + 1}`}
-                  className="w-full h-full object-cover rounded-tl-3xl rounded-br-3xl transition-all duration-300 hover:scale-105" 
+                  className="w-full h-full object-cover rounded-tl-3xl rounded-br-3xl" 
                   width={300}
                   height={128}
                   loading="lazy"

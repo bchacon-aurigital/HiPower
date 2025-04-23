@@ -1,6 +1,7 @@
 import "./globals.css";
 import { LoadingProvider } from './context/LoadingContext';
 import { ContactModalProvider } from './context/ContactModalContext';
+import GoogleAnalytics from './components/GoogleAnalytics';
 
 export const metadata = {
   title: 'Energía solar y almacenamiento para empresas generadoras de energía | HiPower',
@@ -9,11 +10,11 @@ export const metadata = {
   openGraph: {
     title: "HiPower | Energía Solar y Almacenamiento",
     description: "Empresa líder en soluciones solares en Costa Rica. Más de 13 años de experiencia en energía renovable.",
-    url: "https://hipower.aurigital.com/",
+    url: "https://hipowercr.com/",
     siteName: "HiPower | Energía Solar y Almacenamiento",
     images: [
       {
-        url: "/assets/images/hero-bg.jpg",
+        url: './HeroBG.png',
         width: 1200,
         height: 630,
         alt: "HiPower Energía Solar"
@@ -23,7 +24,7 @@ export const metadata = {
     type: "website"
   },
   alternates: {
-    canonical: "https://hipower.aurigital.com/"
+    canonical: "https://hipowercr.com/"
   }
 };
 
@@ -125,6 +126,7 @@ export default function RootLayout({ children }) {
             {children}
           </LoadingProvider>
         </ContactModalProvider>
+        <GoogleAnalytics />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}

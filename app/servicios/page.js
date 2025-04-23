@@ -9,7 +9,7 @@ export const metadata = {
     description: 'Servicios especializados en energía solar y almacenamiento con más de 14 años de experiencia. Proyectos innovadores, rentables y con tecnología avanzada.',
     images: [
       {
-        url: '/HeroBG.png',
+        url: './HeroBG.png',
         width: 1200,
         height: 630,
         alt: 'Proyectos de energía solar en Costa Rica',

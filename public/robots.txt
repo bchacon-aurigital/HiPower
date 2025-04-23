@@ -1,4 +1,6 @@
+# Allow all user agents
 User-agent: *
 Allow: /
 
-Sitemap: https://hipower.aurigital.com/sitemap.xml
+# Sitemap location
+Sitemap: https://hipowercr.com/sitemap.xml

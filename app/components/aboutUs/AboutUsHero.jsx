@@ -17,7 +17,7 @@ export default function AboutUsHero() {
   }, []);
 
   return (
-    <section className="relative h-screen w-full overflow-hidden rounded-b-[4rem]" aria-labelledby="AboutUs-hero-heading">
+    <section className="relative h-screen w-full overflow-hidden " aria-labelledby="AboutUs-hero-heading">
       <div className="absolute inset-0 z-0">
         <picture className="">
           <source

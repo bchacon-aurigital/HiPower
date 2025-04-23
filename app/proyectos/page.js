@@ -9,7 +9,7 @@ export const metadata = {
     description: 'Descubre nuestros proyectos de energía solar y almacenamiento en Costa Rica',
     images: [
       {
-        url: '/HeroBG.png',
+        url: './HeroBG.png',
         width: 1200,
         height: 630,
         alt: 'Proyectos de energía solar en Costa Rica',

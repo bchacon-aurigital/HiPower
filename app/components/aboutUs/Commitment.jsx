@@ -28,7 +28,7 @@ const CommitmentSection = () => {
 
         <div className="mt-10 overflow-hidden rounded-b-2xl">
           <Image
-            src="/assets/aboutUs/Frame 4.avif"
+            src="/assets/aboutUs/Frame.avif"
             alt="Proyecto solar en zona rural"
             width={1200}
             height={300}
