@@ -42,10 +42,9 @@ const ProyectoSolar = () => {
             description: "Sistemas fotovoltaicos diseñados para autoconsumo, que permiten generar electricidad de manera eficiente y reducir costos.",
             projectName: "Hospital de Turrialba",
             metrics: [
-                { value: "360 kWp", description: "Potencia solar" },
-                { value: "792", description: "Cantidad de paneles" },
-                { value: "$36,000 anuales", description: "Ahorro estimado" },
-                { value: "86.72 tn", description: "anuales de CO₂ mitigado" },
+                { value: "1700", description: "Paneles Solares" },
+                { value: "900 kWp", description: "Potencia instalada" },
+                { value: "142 tn", description: "anuales de CO₂ mitigado" },
             ],
             videoPathWebm: "/assets/homepage/autoconsumo.webm",
             videoPathMp4: "/assets/homepage/autoconsumo.mp4",
@@ -104,7 +103,7 @@ const ProyectoSolar = () => {
 
         return (
             <div className="flex flex-col gap-6 mt-8" role="list" aria-label="Métricas del proyecto">
-                <div className="grid grid-cols-3 gap-x-10 gap-y-6 justify-items-center mx-auto w-fit">
+                <div className="hidden lg:grid grid-cols-3 gap-x-10 gap-y-6 w-full">
                     {metrics.slice(0, 3).map((metric, index) => (
                         <div key={index} className="flex flex-col" role="listitem">
                             <span className="text-[#037F3F] text-3xl font-bold" aria-label={`Valor: ${metric.value}`}>
@@ -116,10 +115,24 @@ const ProyectoSolar = () => {
                         </div>
                     ))}
                 </div>
-                <div className="grid grid-cols-2 gap-x-10 gap-y-6 justify-items-center mx-auto w-fit">
+                <div className="hidden lg:grid grid-cols-2 gap-x-10 gap-y-6 justify-items-center w-full">
                     {metrics.slice(3).map((metric, index) => (
                         <div key={index} className="flex flex-col" role="listitem">
                             <span className="text-[#037F3F] text-3xl font-bold" aria-label={`Valor: ${metric.value}`}>
+                                {metric.value}
+                            </span>
+                            <span className="text-md font-semibold max-w-[7rem] text-black">
+                                {metric.description}
+                            </span>
+                        </div>
+                    ))}
+                </div>
+
+
+                <div className="grid grid-cols-2 lg:hidden gap-x-10 gap-y-6 mx-auto w-full">
+                    {metrics.slice(0, 5).map((metric, index) => (
+                        <div key={index} className="flex flex-col" role="listitem">
+                            <span className="text-[#037F3F] text-3xl font-bold justify-start" aria-label={`Valor: ${metric.value}`}>
                                 {metric.value}
                             </span>
                             <span className="text-md font-semibold max-w-[7rem] text-black">
