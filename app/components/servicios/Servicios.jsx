@@ -1,9 +1,8 @@
 "use client";
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, memo, useCallback } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import { initAOS } from '../../utils/aos-helper';
 import { useContactAction } from '../../hooks/useContactAction';
 
 const servicios = [
@@ -97,7 +96,7 @@ const servicios = [
   },
 ];
 
-const Carousel = ({ imagenes, alt }) => {
+const Carousel = memo(({ imagenes, alt }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   
   useEffect(() => {
@@ -114,7 +113,7 @@ const Carousel = ({ imagenes, alt }) => {
         <div
           key={index}
           className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ${
-            activeIndex === index ? 'opacity-100' : 'opacity-0'
+            activeIndex === index ? 'opacity-100' : 'opacity-0 pointer-events-none'
           }`}
         >
           <picture>
@@ -127,7 +126,7 @@ const Carousel = ({ imagenes, alt }) => {
               width={800}
               height={500}
               sizes="(max-width: 768px) 100vw, 50vw"
-              loading="lazy"
+              loading={index === 0 && imagen.id === "energia-gran-escala" ? "eager" : "lazy"}
               blurDataURL="data:image/avif;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQICAQECAQEBAgICAgICAgICAQICAgICAgICAgL/2wBDAQEBAQEBAQEBAQECAQEBAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgL/wAARCAAGAAoDAREAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD9xtI8d+LfibeeKNW/Z3+A3j1bLxZfaZodlc/FLWvAujWNstlBMNVn0m1gM8fmS3Lf2XPcC31a3udP0r7QoXV9b06//W/FeLspwOF4fy3DZngcNisRioYrGVMXgpV6tLCwg5UMJCpVUlGdSaVWtCLjUjHkptRqRk/zXJ8dicTOvOrCdOFKpGEYVEouTfxVHHVrpddk9UVf+F+ftHf9G8+Ef/DraJ/8r6+S/wCI85v/ANBD/wDLVf8A3bP2POs2P//Z"
             />
           </picture>
@@ -135,9 +134,47 @@ const Carousel = ({ imagenes, alt }) => {
       ))}
     </div>
   );
-};
+});
 
-const ServicioCard = ({
+const ActionButtons = memo(({ titulo, handleContactClick }) => (
+  <div>
+    <a
+      href='/proyectos'
+      className="mr-8 relative px-5 py-3 font-medium text-white overflow-hidden bg-[#037F3F] transition-all duration-500 hover:text-white group rounded-tl-xl rounded-br-xl mt-8 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#037F3F]"
+      aria-label="Ver proyectos relacionados"
+    >
+      <span
+        className="absolute inset-0 bg-gradient-to-r from-[#037F3F] to-[#002D6A] opacity-0 transition-opacity duration-500 group-hover:opacity-100 rounded-tl-xl rounded-br-xl"
+        aria-hidden="true"
+      ></span>
+      <span className="relative z-10 font-bold text-xl">
+        Ver Proyecto
+      </span>
+    </a>
+    <div
+      onClick={handleContactClick}
+      className="cursor-pointer inline-flex items-center text-[#037F3F] md:text-xl font-medium hover:text-[#002D6A] transition-colors focus:outline-none focus:ring-2 focus:ring-[#037F3F] focus:ring-offset-2 rounded-md py-1"
+      aria-label={`Adquirir servicio de ${titulo}`}
+    >
+      Adquirir servicio
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-5 w-5 ml-1"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <path
+          fillRule="evenodd"
+          d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+          clipRule="evenodd"
+        />
+      </svg>
+    </div>
+  </div>
+));
+
+const ServicioCard = memo(({
   titulo,
   imagenesPrincipales,
   descripcion,
@@ -153,6 +190,7 @@ const ServicioCard = ({
       className={`flex flex-col ${esIzquierda ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-16 my-16`}
       id={`servicio-${id}`}
       data-aos={esIzquierda ? "fade-right" : "fade-left"}
+      data-aos-duration="600"
       role="region"
       aria-labelledby={`titulo-${id}`}
     >
@@ -168,58 +206,20 @@ const ServicioCard = ({
         </h2>
         <p className="text-gray-600 mb-2 text-base md:text-xl">{descripcion}</p>
         <p className="text-gray-600 mb-6 text-base md:text-xl" dangerouslySetInnerHTML={{__html: descripcion2}}></p>
-        <div>
-        <a
-            href='/proyectos'
-            className="mr-8 relative px-5 py-3 font-medium text-white overflow-hidden bg-[#037F3F] transition-all duration-500 hover:text-white group rounded-tl-xl rounded-br-xl mt-8 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#037F3F]"
-            aria-label="Conecta con nosotros para consultoría energética"
-            type="button"
-          >
-            <span
-              className="absolute inset-0 bg-gradient-to-r from-[#037F3F] to-[#002D6A] opacity-0 transition-opacity duration-500 group-hover:opacity-100 rounded-tl-xl rounded-br-xl"
-              aria-hidden="true"
-            ></span>
-            <span className="relative z-10 font-bold text-xl">
-              Ver Proyecto
-            </span>
-          </a>
-          <div
-            onClick={handleContactClick}
-            className="cursor-pointer inline-flex items-center text-[#037F3F] md:text-xl font-medium hover:text-[#002D6A] transition-colors focus:outline-none focus:ring-2 focus:ring-[#037F3F] focus:ring-offset-2 rounded-md py-1"
-            aria-label={`Adquirir servicio de ${titulo}`}
-          >
-            Adquirir servicio
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 ml-1"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              aria-hidden="true"
-            >
-              <path
-                fillRule="evenodd"
-                d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
-                clipRule="evenodd"
-              />
-            </svg>
-          </div>
-        </div>
+        <ActionButtons titulo={titulo} handleContactClick={handleContactClick} />
       </div>
     </article>
   );
-};
+});
 
 const ServiciosEnergia = () => {
-  const handleContactClick = useContactAction();
-
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      once: true,
-      offset: 100,
-      delay: 100
-    });
-  }, []);
+  initAOS({
+    duration: 600,
+    once: true,
+    offset: 50,
+    delay: 50,
+    disable: window.innerWidth < 768
+  });
 
   return (
     <section
@@ -227,7 +227,7 @@ const ServiciosEnergia = () => {
       aria-labelledby="servicios-energia-titulo"
     >
       <div className="space-y-24">
-        {servicios.map((servicio) => (
+        {servicios.map((servicio, index) => (
           <ServicioCard
             key={servicio.id}
             id={servicio.id}
@@ -244,4 +244,8 @@ const ServiciosEnergia = () => {
   );
 };
 
-export default ServiciosEnergia;
+Carousel.displayName = 'Carousel';
+ActionButtons.displayName = 'ActionButtons';
+ServicioCard.displayName = 'ServicioCard';
+
+export default memo(ServiciosEnergia);
