@@ -36,7 +36,7 @@ const CertificationsSection = () => {
           <div className="py-9 px-8 flex flex-col md:flex-row items-center justify-between border-b border-gray-200" id="nabcep-section">
             <div className="md:hidden w-full flex justify-center mb-6">
               <Image
-                src="/assets/homepage/NABCEP.avif"
+                src="/assets/homepage/NABCEP.svg"
                 alt="NABCEP Certification Badge"
                 width={150}
                 height={120}
@@ -56,7 +56,7 @@ const CertificationsSection = () => {
             
             <div className="hidden md:block">
               <Image
-                src="/assets/homepage/NABCEP.avif"
+                src="/assets/homepage/NABCEP.svg"
                 alt="NABCEP Certification Badge"
                 width={96}
                 height={96}
