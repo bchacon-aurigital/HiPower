@@ -39,7 +39,7 @@ export default function projectsjCTA() {
                     <div className="absolute inset-0 bg-black bg-opacity-20"></div>
                 </div>
                 <section
-                    className="relative z-20 w-[86%] rounded-tl-3xl rounded-br-3xl h-[66vh] py-12 overflow-hidden mx-auto my-auto bg-white/80"
+                    className="relative z-20 w-[86%] rounded-tl-3xl rounded-br-3xl h-[66vh] py-12 overflow-hidden mx-auto my-auto bg-white/60 md:bg-white/80"
                     aria-labelledby="cta-heading"
                 >
                     <div
@@ -57,7 +57,7 @@ export default function projectsjCTA() {
                         </h2>
 
                         <p
-                            className="text-md md:text-xl text-center max-w-xs md:max-w-2xl mb-5 font-roboto font-medium text-[#959595]"
+                            className="text-lg md:text-xl text-center max-w-xs md:max-w-2xl mb-5 font-roboto font-medium md:text-[#959595]"
                             id="cta-subheading"
                             data-aos="fade-down"
                         >

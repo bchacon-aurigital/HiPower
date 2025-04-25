@@ -33,10 +33,9 @@ export default function ProjectsCTA() {
                         loop
                         playsInline
                         poster="/assets/homepage/heroBG.png"
-                        aria-hidden="true"
-                    >
-                        <source src="/assets/proyectos/projects.webm" type="video/webm" />
-                        <source src="/assets/proyectos/projects.mp4" type="video/mp4" />
+                        >
+                          <source src="/assets/proyectos/projects.webm" type="video/webm" />
+                          <source src="/assets/proyectos/projects.mp4" type="video/mp4" />
                         <p>Tu navegador no soporta videos HTML5.</p>
                     </video>
                 </div>

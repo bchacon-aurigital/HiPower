@@ -4,6 +4,7 @@ import { ContactModalProvider } from './context/ContactModalContext';
 import GoogleAnalytics from './components/GoogleAnalytics';
 
 export const metadata = {
+  metadataBase: new URL('https://hipowercr.com/'),
   title: 'Energía solar y almacenamiento para empresas generadoras de energía | HiPower',
   description: 'Empresa líder en soluciones solares en Costa Rica con más de 13 años de experiencia en energía renovable. Ofrecemos diseño e instalación de sistemas fotovoltaicos.',
   keywords: "energía solar, paneles solares, almacenamiento de energía, energía renovable, sostenibilidad",

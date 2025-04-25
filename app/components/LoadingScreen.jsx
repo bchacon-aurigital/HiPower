@@ -5,7 +5,6 @@ export default function LoadingScreen() {
     return (
         <div className="fixed inset-0 bg-white z-[9999] flex items-center justify-center">
             <div className="text-center">
-                {/* Logo con animación de color */}
                 <div className="relative w-72 h-56 mx-auto">
                     <Image
                         src="/assets/logo-gradient.svg"

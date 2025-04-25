@@ -59,7 +59,7 @@ const ProcesoTrabajo = () => {
             data-aos-delay="300"
           >
             <div className="w-10 h-10 text-xl rounded-full bg-[#037F3F] text-white flex items-center justify-center font-bold mb-4">
-            <img src="assets/servicios/iconos/ion_document-sharp" className='w-6 h-6'/>
+            <img src="assets/servicios/iconos/ion_document-sharp.svg" className='w-6 h-6'/>
             </div>
             <h3 className="text-xl font-bold mb-2 text-black pt-3">Gestión de Permisos y Trámites</h3>
             <p className="text-gray-600 text-sm">Te apoyamos en la búsqueda de opciones de financiamiento para tu proyecto.</p>

@@ -64,7 +64,7 @@ export default function Hero() {
           </h2>
 
           <div
-            className="font-light text-lg mb-6 md:hidden"
+            className="font-light mb-6 md:hidden text-sm"
             aria-label="Estadísticas móviles"
           >
             <p>+14 años de experiencia | +30 MW instalados | +5MWH</p>

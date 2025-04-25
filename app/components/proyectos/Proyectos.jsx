@@ -105,13 +105,11 @@ const ProyectoSolarFixed = ({
     });
   }, []);
 
-  // Definimos las rutas de las imágenes principales y secundarias
   const imagenPrincipal = {
     avif: `/assets/proyectos/${id}.avif`,
     png: `/assets/proyectos/${id}.png`
   };
 
-  // Ahora las imágenes secundarias son independientes de la principal
   const imagenesSecundarias = [1, 2, 3].map(num => ({
     avif: `/assets/proyectos/${id}${num}.avif`,
     png: `/assets/proyectos/${id}${num}.png`,
@@ -121,7 +119,7 @@ const ProyectoSolarFixed = ({
   return (
     <article className="w-full p-4 rounded-lg shadow-sm max-w-7xl mx-auto mt-16" id={`proyecto-${id}`} role="region" aria-label={`Proyecto: ${titulo}`}>
       <div className="flex items-center gap-2 mb-4" data-aos="fade-right">
-        <div className="text-green-600 w-8 h-8 relative" aria-hidden="true">
+        <div className="text-green-600 w-10 h-10 relative" aria-hidden="true">
           <Image 
             src={`/assets/proyectos/${id}.svg`}
             alt=""
@@ -129,7 +127,7 @@ const ProyectoSolarFixed = ({
             className="object-contain"
           />
         </div>
-        <h2 className="text-gray-700 text-3xl italic font-bold">{titulo}</h2>
+        <h2 className="text-gray-700 text-xl md:text-3xl italic font-bold">{titulo}</h2>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-2 mb-6 lg:max-h-[400px]">

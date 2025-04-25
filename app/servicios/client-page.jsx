@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 import { useEffect } from "react";
 import ServiciosHero from "../components/servicios/ServiciosHero";
 
-const Navbar = dynamic(() => import("../components/Navbar"), {
+const NavbarServicios = dynamic(() => import("../components/NavbarServicios"), {
   ssr: false,
 });
 
@@ -31,7 +31,7 @@ const CTA = dynamic(() => import("../components/servicios/CTA"), {
 export default function ProyectosClientPage() {
   return (
     <main className="min-h-screen bg-[#F3F3F3]">
-      <Navbar />
+      <NavbarServicios />
       <ServiciosHero />
       <Servicios />
       <ProcesoTrabajo/>

@@ -149,7 +149,7 @@ const ContactModal = ({ isOpen, onClose }) => {
                     <p className="text-xs md:text-sm mb-2 md:mb-4">Redes Sociales:</p>
                     <div className="grid grid-cols-2 gap-2 md:gap-3">
                       <a 
-                        href="https://www.instagram.com/hipowercr" 
+                        href="https://www.instagram.com/hipower.cr/" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="flex items-center justify-center bg-transparent border border-white py-2 md:py-4 px-2 md:px-4 rounded-br-xl rounded-tl-xl transition-colors hover:bg-white hover:bg-opacity-10 font-light text-sm md:text-base"
@@ -192,7 +192,7 @@ const ContactModal = ({ isOpen, onClose }) => {
                       </a>
                       
                       <a 
-                        href="https://www.youtube.com/channel/hipowercr" 
+                        href="https://www.youtube.com/@hipowercr/videos" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="flex items-center justify-center bg-transparent border border-white py-2 md:py-4 px-2 md:px-4 rounded-br-xl rounded-tl-xl transition-colors hover:bg-white hover:bg-opacity-10 font-light text-sm md:text-base"
@@ -208,10 +208,8 @@ const ContactModal = ({ isOpen, onClose }) => {
                   </div>
                 </div>
                 
-                {/* Sección derecha - Formulario de HubSpot */}
                 <div className="p-4 md:p-6 lg:p-8 overflow-auto border-2 border-[#000000] rounded-tr-none md:rounded-tr-3xl h-[700px] md:h-auto "> 
                   <div id="hubspot-form-container" className="hubspot-form min-h-[350px]">
-                    {/* Aquí se cargará el formulario de HubSpot */}
                   </div>
                 </div>
               </div>
