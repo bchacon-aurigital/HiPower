@@ -40,10 +40,10 @@ const BeneficiosEnergiaSolar = () => {
 
     return (
         <section
-            className="py-16 md:py-24 bg-[#037F3F]"
+            className="px-6 md:px-8 py-8 md:py-14 bg-[#037F3F]"
             aria-labelledby="beneficios-titulo"
         >
-            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-6xl mx-auto">
                 <div
                     className="text-center mb-12"
                     data-aos="fade-up"

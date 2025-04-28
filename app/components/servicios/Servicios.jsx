@@ -154,7 +154,7 @@ const ServicioCard = memo(
     return (
       <article
         id={`servicio-${id}`}
-        className={`flex flex-col ${esIzquierda ? "lg:flex-row" : "lg:flex-row-reverse"} gap-16 my-16`}
+        className={`flex flex-col ${esIzquierda ? "lg:flex-row" : "lg:flex-row-reverse"} md:gap-16 gap-4`}
         data-aos={esIzquierda ? "fade-right" : "fade-left"}
         data-aos-duration="600"
       >
@@ -180,8 +180,8 @@ ServicioCard.displayName = "ServicioCard";
 const ServiciosEnergia = () => {
 
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-      <div className="space-y-24">
+    <section className="max-w-7xl mx-auto px-6 md:px-8 pt-12 md:pt-24 pb-8 md:pb-14">
+      <div className="space-y-16 md:space-y-28">
         {servicios.map((s) => (
           <ServicioCard key={s.id} {...s} />
         ))}

@@ -18,8 +18,8 @@ const ProcesoTrabajo = () => {
   }, []);
 
   return (
-    <section className="py-16 md:py-24" aria-labelledby="proceso-trabajo-titulo">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="px-6 md:px-8 py-8 md:py-14" aria-labelledby="proceso-trabajo-titulo">
+      <div className="max-w-6xl mx-auto">
         <h2 
           id="proceso-trabajo-titulo" 
           className="text-4xl md:text-5xl font-bold text-[#037F3F] text-center mb-12"

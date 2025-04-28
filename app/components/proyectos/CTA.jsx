@@ -43,7 +43,7 @@ export default function ProjectsCTA() {
 
             {/* Contenido principal */}
             <section
-                className="relative z-10 w-11/12 sm:w-10/12 md:w-[86%] rounded-tl-3xl rounded-br-3xl py-16 sm:py-20 md:py-24 max-h-[90vh] md:max-h-[85vh] overflow-hidden mx-auto bg-white shadow-2xl"
+                className="relative z-10 w-11/12 sm:w-10/12 md:w-[86%] rounded-tl-3xl rounded-br-3xl py-16 sm:py-20 md:py-24 max-h-[90vh] md:max-h-[85vh] overflow-hidden mx-auto bg-white/60 md:bg-white/80 shadow-2xl"
                 aria-labelledby="cta-heading"
             >
                 <div
@@ -60,7 +60,7 @@ export default function ProjectsCTA() {
                     </h2>
 
                     <p
-                        className="text-base sm:text-lg md:text-2xl text-center max-w-xs sm:max-w-lg md:max-w-xl mb-5 sm:mb-8 font-medium text-[#959595]"
+                        className="text-base sm:text-lg md:text-2xl text-center max-w-xs sm:max-w-lg md:max-w-xl mb-5 sm:mb-8 font-medium text-black md:text-[#959595] font-roboto"
                         id="cta-subheading"
                         data-aos="fade-up"
                         data-aos-delay="250"

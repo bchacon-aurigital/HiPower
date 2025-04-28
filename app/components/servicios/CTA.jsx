@@ -7,7 +7,7 @@ export default function projectsjCTA() {
 
     return (
         <>
-            <div id="contacto" className="relative flex items-center justify-center h-screen">
+            <div id="contacto" className="relative flex items-center justify-center h-screen px-6 md:px-8 py-8 md:py-14">
                 <div className="absolute inset-0 z-0" aria-hidden="true">
                     <picture>
                         <source
@@ -39,7 +39,7 @@ export default function projectsjCTA() {
                     <div className="absolute inset-0 bg-black bg-opacity-20"></div>
                 </div>
                 <section
-                    className="relative z-20 w-[86%] rounded-tl-3xl rounded-br-3xl h-[66vh] py-12 overflow-hidden mx-auto my-auto bg-white/60 md:bg-white/80"
+                    className="relative z-20 md:w-[86%] rounded-tl-3xl rounded-br-3xl h-[66vh] overflow-hidden mx-auto my-auto bg-white/60 md:bg-white/80"
                     aria-labelledby="cta-heading"
                 >
                     <div

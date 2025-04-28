@@ -28,7 +28,6 @@ const CertificationsSection = () => {
               className="w-full h-full object-cover"
               controls
               preload="metadata"
-              poster="/assets/homepage/video-poster.jpg"
               aria-label="Video sobre certificación NABCEP"
             />
           </div>

@@ -7,7 +7,7 @@ export default function EnergyCTA() {
 
     return (
         <>
-            <div id="contacto" className="flex items-center justify-center  bg-white px-6 md:px-8 py-8 md:py-14">
+            <div id="contacto" className="flex items-center justify-center bg-white px-6 md:px-8 py-8 md:py-14">
                 <section
                     className="relative md:w-[86%] rounded-tl-3xl rounded-br-3xl h-[88vh] overflow-hidden mx-auto"
                     aria-labelledby="cta-heading"

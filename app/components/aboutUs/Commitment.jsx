@@ -4,9 +4,9 @@ import Image from "next/image";
 
 const CommitmentSection = () => {
   return (
-    <section className="bg-[#f5f5f5]">
-      <div className="max-w-screen mx-auto py-12">
-        <div className="px-4 mx-auto max-w-md md:max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-8 py-12 text-center md:text-left">
+    <section className="bg-[#f5f5f5] px-6 md:px-8 pt-12 md:pt-24 pb-8 md:pb-14">
+      <div className="max-w-screen mx-auto">
+        <div className="mx-auto max-w-md md:max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-8 pb-12 text-center md:text-left">
           <div>
             <h2 className="text-3xl md:text-[2.9rem] font-normal text-black leading-tight">
               Nuestro <br /> compromiso es claro

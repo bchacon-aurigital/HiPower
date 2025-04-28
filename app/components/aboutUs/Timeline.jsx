@@ -202,7 +202,7 @@ const TimelineItem = ({ data, index }) => {
 const Timeline = () => {
     return (
         <section
-            className="py-12 max-w-screen-xl mx-auto px-4 relative overflow-hidden"
+            className="px-6 md:px-8 py-8 md:py-14 max-w-screen-xl mx-auto relative overflow-hidden"
             aria-labelledby="timeline-heading"
         >
 
