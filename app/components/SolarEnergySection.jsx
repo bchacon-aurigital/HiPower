@@ -13,7 +13,7 @@ export default function SolarEnergySection() {
   }, []);
 
   return (
-    <section className="relative w-full md:h-screen flex items-center justify-center py-16 md:py-24 overflow-hidden" aria-labelledby="solar-heading">
+    <section className="relative w-full md:h-screen flex items-center justify-center px-6 md:px-8 py-8 md:py-14 overflow-hidden" aria-labelledby="solar-heading">
       <div className="absolute inset-0 z-0" aria-hidden="true">
         <picture>
           <source
@@ -45,7 +45,7 @@ export default function SolarEnergySection() {
         <div className="absolute inset-0 bg-black bg-opacity-20"></div>
       </div>
 
-      <div className="relative z-10 container mx-auto px-4 md:px-6 text-center">
+      <div className="relative z-10 container mx-auto text-center">
         <div className="max-w-5xl mx-auto" data-aos="fade-up" data-aos-duration="800">
           <h2
             id="solar-heading"

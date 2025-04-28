@@ -3,8 +3,8 @@ import Image from "next/image";
 
 const StatisticsSection = () => {
   return (
-    <section className="w-full py-16 md:py-24" aria-labelledby="statistics-heading" role="region">
-      <div className="max-w-7xl mx-auto px-4 text-center">
+    <section className="w-full px-6 md:px-8 py-8 md:py-14" aria-labelledby="statistics-heading" role="region">
+      <div className="max-w-7xl mx-auto text-center">
         <h2 id="statistics-heading" className="text-3xl text-white md:text-4xl lg:text-5xl leading-tight font-semibold mb-12">
           ¿Por qué{" "}
           <span className="text-[#339C59] font-bold">Hi Power</span>?

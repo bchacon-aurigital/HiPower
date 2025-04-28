@@ -61,14 +61,13 @@ const BrandCarousel = () => {
     { src: "/assets/landing/brands/image 19.avif", alt: "Banco Promerica" },
   ];
 
-  // Obtener las primeras 8 marcas para evitar duplicación excesiva
   const visibleBrands = [...brands, ...brands.slice(0, 8)];
 
   return (
     <section aria-labelledby="brands-section-title">
-      <div className="w-full bg-white py-24" role="region" aria-labelledby="carousel-heading">
-        <div className="mx-auto px-4">
-          <h2 id="carousel-heading" className="text-3xl lg:text-[2.7rem] leading-10 font-semibold text-black px-8 py-10 text-center w-full">
+      <div className="w-full bg-white px-6 md:px-8 py-8 md:py-14" role="region" aria-labelledby="carousel-heading">
+        <div className="mx-auto">
+          <h2 id="carousel-heading" className="text-3xl lg:text-[2.7rem] leading-10 font-semibold text-black px-8 pb-10 text-center w-full">
             Marcas que impulsan su crecimiento con{" "}
             <span className="text-[#339C59] font-bold">
               Hi Power

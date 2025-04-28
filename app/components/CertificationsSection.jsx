@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const CertificationsSection = () => {
   return (
-    <section className="relative w-full" aria-labelledby="certifications-heading">
+    <section className="relative w-full px-6 md:px-8 py-8 md:py-14" aria-labelledby="certifications-heading">
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4 mb-8">
         <h2 id="certifications-heading" className="text-3xl md:text-5xl font-bold mb-6">
           Certificaciones Internacionales
@@ -20,7 +20,7 @@ const CertificationsSection = () => {
         />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 py-8">
+      <div className="max-w-7xl mx-auto">
         <div className="bg-white rounded-tl-3xl rounded-br-3xl shadow-md overflow-hidden">
           <div className="w-full mb-8 bg-black relative aspect-video">
             <video
