@@ -9,6 +9,7 @@ const BrotliPlugin = require('brotli-webpack-plugin');
 const nextConfig = {
   compress: true,
   output: 'export',  // Genera una exportación estática
+  trailingSlash: true,
   images: {
     unoptimized: true, // Necesario para exportación estática
   },

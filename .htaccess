@@ -1,0 +1,7 @@
+RewriteEngine On
+
+# Redirección 301 de /proyectos-1 a /proyectos
+Redirect 301 /proyectos-1 https://hipowercr.com/proyectos
+
+# Redirección 301 de /empresa a /sobrenosotros
+Redirect 301 /empresa https://www.hipowercr.com/sobrenosotros
