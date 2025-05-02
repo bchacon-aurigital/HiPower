@@ -5,11 +5,11 @@ import { ContactModalProvider } from './context/ContactModalContext';
 export const metadata = {
   metadataBase: new URL('https://hipowercr.com/'),
   title: 'Energía solar y almacenamiento para empresas generadoras de energía | HiPower',
-  description: 'Empresa líder en soluciones solares en Costa Rica con más de 13 años de experiencia en energía renovable. Ofrecemos diseño e instalación de sistemas fotovoltaicos.',
+  description: 'Empresa líder en soluciones solares en Costa Rica con más de 14 años de experiencia en energía renovable. Ofrecemos diseño e instalación de sistemas fotovoltaicos.',
   keywords: "energía solar, paneles solares, almacenamiento de energía, energía renovable, sostenibilidad",
   openGraph: {
     title: "HiPower | Energía Solar y Almacenamiento",
-    description: "Empresa líder en soluciones solares en Costa Rica. Más de 13 años de experiencia en energía renovable.",
+    description: "Empresa líder en soluciones solares en Costa Rica. Más de 14 años de experiencia en energía renovable.",
     url: "https://hipowercr.com/",
     siteName: "HiPower | Energía Solar y Almacenamiento",
     images: [
@@ -32,7 +32,7 @@ const schemaData = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Hi Power",
-  "description": "Empresa líder en soluciones solares en Costa Rica. Más de 13 años de experiencia en energía renovable.",
+  "description": "Empresa líder en soluciones solares en Costa Rica. Más de 14 años de experiencia en energía renovable.",
   "telephone": "+50640004990",
   "address": {
     "@type": "PostalAddress",
