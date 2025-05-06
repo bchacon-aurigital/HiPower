@@ -42,9 +42,6 @@ const CTA = dynamic(() => import("./components/CTA"), {
 const Home = () => {
   return (
     <main className="min-h-screen bg-white">
-      <h1 className="hidden">
-        Energía solar y almacenamiento para empresas generadoras de energía | HiPower
-      </h1>
       <div className="relative overflow-hidden">
         <video
           className="fixed top-0 left-0 w-full h-full object-cover"

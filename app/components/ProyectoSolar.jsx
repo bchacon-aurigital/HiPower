@@ -20,7 +20,8 @@ const ProyectoSolar = () => {
             ],
             videoPathWebm: "/assets/homepage/energiaSolar.webm",
             videoPathMp4: "/assets/homepage/energiaSolar.mp4",
-            altText: "Vista aérea de la Planta Solar Huacas con sus paneles solares"
+            altText: "Vista aérea de la Planta Solar Huacas con sus paneles solares",
+            id: "gran-escala-heading"
         },
         {
             title: "Microrredes (Microgrids)",
@@ -34,7 +35,8 @@ const ProyectoSolar = () => {
             ],
             videoPathWebm: "/assets/homepage/microredes.webm",
             videoPathMp4: "/assets/homepage/microredes.mp4",
-            altText: "Instalación solar en Establishment Labs mostrando el sistema de microrredes"
+            altText: "Instalación solar en Establishment Labs mostrando el sistema de microrredes",
+            id: "microgrids-heading"
         },
         {
             title: "Sistemas de autoconsumo",
@@ -47,7 +49,8 @@ const ProyectoSolar = () => {
             ],
             videoPathWebm: "/assets/homepage/autoconsumo.webm",
             videoPathMp4: "/assets/homepage/autoconsumo.mp4",
-            altText: "Vista aérea del Hospital de Turrialba con sus paneles solares"
+            altText: "Vista aérea del Hospital de Turrialba con sus paneles solares",
+            id: "autoconsumo-heading"
         },
         {
             title: "Sistemas Híbridos",
@@ -61,7 +64,8 @@ const ProyectoSolar = () => {
             ],
             videoPathWebm: "/assets/homepage/hibridos.webm",
             videoPathMp4: "/assets/homepage/hibridos.mp4",
-            altText: "Vista aérea de la Casa Santuario con sus paneles solares"
+            altText: "Vista aérea de la Casa Santuario con sus paneles solares",
+            id: "hibridos-heading"
         },
     ];
 
@@ -82,78 +86,33 @@ const ProyectoSolar = () => {
     const currentServiceData = services[currentService];
 
     const renderMetrics = (metrics) => {
-        if (metrics.length === 4) {
-            return (
-                <div className="grid grid-cols-2 gap-x-10 gap-y-6 mt-8" role="list" aria-label="Métricas del proyecto">
-                    {metrics.map((metric, index) => (
-                        <h5 key={index} className="flex flex-col" role="listitem">
-                            <span className="text-[#037F3F] text-3xl font-bold" aria-label={`Valor: ${metric.value}`}>
-                                {metric.value}
-                            </span>
-                            <span className="text-md font-semibold max-w-[7rem] text-black">
+        return (
+            <ul className="grid grid-cols-2 gap-x-10 gap-y-6 mt-8" aria-label="Métricas del proyecto">
+                {metrics.map((metric, index) => (
+                    <li key={index} className="flex flex-col">
+                        <h5 className="text-[#037F3F] text-3xl font-bold" aria-label={`${metric.description}: ${metric.value}`}>
+                            {metric.value}
+                            <span className=" text-xl md:text-2xl font-medium max-w-[7rem] text-black block">
                                 {metric.description}
                             </span>
                         </h5>
-                    ))}
-                </div>
-            );
-        }
-
-        return (
-            <div className="flex flex-col gap-6 mt-8" role="list" aria-label="Métricas del proyecto">
-                <div className="hidden lg:grid grid-cols-3 gap-x-10 gap-y-6 w-full">
-                    {metrics.slice(0, 3).map((metric, index) => (
-                        <div key={index} className="flex flex-col" role="listitem">
-                            <span className="text-[#037F3F] text-3xl font-bold" aria-label={`Valor: ${metric.value}`}>
-                                {metric.value}
-                            </span>
-                            <span className="text-md font-semibold max-w-[7rem] text-black">
-                                {metric.description}
-                            </span>
-                        </div>
-                    ))}
-                </div>
-                <div className="hidden lg:grid grid-cols-2 gap-x-10 gap-y-6 justify-items-center w-full">
-                    {metrics.slice(3).map((metric, index) => (
-                        <div key={index} className="flex flex-col" role="listitem">
-                            <span className="text-[#037F3F] text-3xl font-bold" aria-label={`Valor: ${metric.value}`}>
-                                {metric.value}
-                            </span>
-                            <span className="text-md font-semibold max-w-[7rem] text-black">
-                                {metric.description}
-                            </span>
-                        </div>
-                    ))}
-                </div>
-
-
-                <div className="grid grid-cols-2 lg:hidden gap-x-10 gap-y-6 mx-auto w-full">
-                    {metrics.slice(0, 5).map((metric, index) => (
-                        <div key={index} className="flex flex-col" role="listitem">
-                            <span className="text-[#037F3F] text-3xl font-bold justify-start" aria-label={`Valor: ${metric.value}`}>
-                                {metric.value}
-                            </span>
-                            <span className="text-md font-semibold max-w-[7rem] text-black">
-                                {metric.description}
-                            </span>
-                        </div>
-                    ))}
-                </div>
-            </div>
+                    </li>
+                ))}
+            </ul>
         );
     };
 
     return (
-        <section className="w-full bg-white px-6 md:px-8 pt-12 md:pt-24 pb-8 md:pb-14" aria-label="Proyectos Solares">
+        <section className="w-full bg-white px-6 md:px-8 pt-12 md:pt-24 pb-8 md:pb-14" aria-labelledby="servicios-heading">
+            <h2 id="servicios-heading" className="bg-[#0046AD] text-white px-3 py-2 rounded-bl-xl rounded-tr-xl text-xl font-semibold inline-block mb-6">
+                Nuestros Servicios
+            </h2>
+            
             <div className="max-w-7xl mx-auto">
-
                 <div className="flex flex-col md:flex-row gap-8">
-                    <div className="w-full md:w-[40%]">
-                        <div className="flex justify-between items-center gap-4 mb-6">
-                            <h2 className="bg-[#0046AD] text-white px-3 py-2 rounded-bl-xl rounded-tr-xl text-xl font-semibold" role="heading" aria-level="2">
-                                Nuestros Servicios
-                            </h2>
-                            <div className="flex gap-3 border-2 border-[#037F3F] p-3 rounded-full" role="navigation" aria-label="Navegación de servicios">
+                    <article className="w-full md:w-[40%]" aria-labelledby={currentServiceData.id}>
+                        <div className="flex justify-end items-center gap-4 mb-6">
+                            <div className="flex gap-3 border-2 border-[#037F3F] p-3 rounded-full" aria-label="Navegación de servicios">
                                 <button
                                     onClick={handlePrev}
                                     className="w-9 h-9 bg-[#037F3F] rounded-full flex items-center justify-center"
@@ -171,7 +130,7 @@ const ProyectoSolar = () => {
                             </div>
                         </div>
 
-                        <h3 className="text-[#037F3F] text-5xl font-bold mb-4 w-[80%]">
+                        <h3 id={currentServiceData.id} className="text-[#037F3F] text-5xl font-bold mb-4 w-[80%]">
                             {currentServiceData.title}
                         </h3>
 
@@ -189,7 +148,7 @@ const ProyectoSolar = () => {
                         </a>
 
                         {renderMetrics(currentServiceData.metrics)}
-                    </div>
+                    </article>
 
                     <div className="w-full md:w-[60%] rounded-tl-3xl rounded-br-3xl relative order-first md:order-last">
                         <div className="relative h-full overflow-hidden">
@@ -207,11 +166,11 @@ const ProyectoSolar = () => {
                                 <p>Tu navegador no soporta videos HTML5.</p>
                             </video>
                             <a href="/proyectos" className="absolute top-5 md:top-9 left-7 md:w-52">
-                                <h4 className="text-center bg-white relative px-3 py-2 md:px-10 md:py-4 rounded-full text-xs font-medium shadow-md text-black transition-colors duration-300 hover:text-white overflow-hidden group">
+                                <div className="text-center bg-white relative px-3 py-2 md:px-10 md:py-4 rounded-full text-xs font-medium shadow-md text-black transition-colors duration-300 hover:text-white overflow-hidden group">
                                     <span className="absolute inset-0 bg-gradient-to-r from-[#037F3F] to-[#002D6A] opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full z-0"></span>
                                     <span className="relative z-10 block group-hover:hidden ">{currentServiceData.projectName}</span>
                                     <span className="hidden group-hover:block relative z-10">Ver Proyectos</span>
-                                </h4>
+                                </div>
                             </a>
                         </div>
                     </div>
@@ -221,4 +180,4 @@ const ProyectoSolar = () => {
     );
 };
 
-export default ProyectoSolar; 
+export default ProyectoSolar;

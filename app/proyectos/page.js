@@ -5,7 +5,7 @@ export const metadata = {
   description: 'Descubre nuestros proyectos de energía solar y almacenamiento en Costa Rica. Implementamos soluciones sostenibles para hogares, empresas e industrias.',
   keywords: ['proyectos solares', 'energía renovable', 'paneles solares', 'microrredes', 'almacenamiento de energía', 'Costa Rica'],
   openGraph: {
-    title: 'Proyectos de Energía Solar | HiPower',
+    title: 'Energía solar y almacenamiento para empresas | HiPower',
     description: 'Descubre nuestros proyectos de energía solar y almacenamiento en Costa Rica',
     images: [
       {

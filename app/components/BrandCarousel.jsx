@@ -64,40 +64,44 @@ const BrandCarousel = () => {
   const visibleBrands = [...brands, ...brands.slice(0, 8)];
 
   return (
-    <section aria-labelledby="brands-section-title">
-      <div className="w-full bg-white px-6 md:px-8 py-8 md:py-14" role="region" aria-labelledby="carousel-heading">
-        <div className="mx-auto">
-          <h2 id="carousel-heading" className="text-3xl lg:text-[2.7rem] leading-10 font-semibold text-black px-8 pb-10 text-center w-full">
-            Marcas que impulsan su crecimiento con{" "}
-            <span className="text-[#339C59] font-bold">
-              Hi Power
-            </span>
-          </h2>
-          <div className="w-full">
-            <Slider {...settings} role="list" aria-live="polite">
-              {visibleBrands.map((brand, index) => (
-                <div
-                  key={index}
-                  className="px-2"
-                  role="listitem"
-                  aria-label={`Marca: ${brand.alt}`}
-                >
-                  <div className="flex items-center justify-center h-56 w-full rounded-tl-3xl rounded-br-3xl border-2 border-[#656565]">
-                    <Image
-                      src={brand.src}
-                      alt={`Logo de ${brand.alt} - Cliente de Hi Power`}
-                      width={200}
-                      height={160}
-                      className="object-contain mx-auto px-7"
-                      loading="lazy"
-                      blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjgwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjZTJlOGYwIi8+PC9zdmc+"
-                    />
-                  </div>
+    <section className="w-full bg-white px-6 md:px-8 py-8 md:py-14" aria-labelledby="clientes-heading">
+      <div className="mx-auto">
+        <h2 
+          id="clientes-heading" 
+          className="text-3xl lg:text-[2.7rem] leading-10 font-semibold text-black px-8 pb-10 text-center w-full"
+        >
+          Marcas que impulsan su crecimiento con{" "}
+          <span className="text-[#339C59] font-bold">
+            Hi Power
+          </span>
+        </h2>
+        
+        <ul 
+          className="w-full" 
+          aria-label="Clientes de Hi Power"
+        >
+          <Slider {...settings} aria-live="polite">
+            {visibleBrands.map((brand, index) => (
+              <li
+                key={index}
+                className="px-2"
+                aria-label={brand.alt}
+              >
+                <div className="flex items-center justify-center h-56 w-full rounded-tl-3xl rounded-br-3xl border-2 border-[#656565]">
+                  <Image
+                    src={brand.src}
+                    alt={`Logo de ${brand.alt} - Cliente de Hi Power`}
+                    width={200}
+                    height={160}
+                    className="object-contain mx-auto px-7"
+                    loading="lazy"
+                    blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjgwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjZTJlOGYwIi8+PC9zdmc+"
+                  />
                 </div>
-              ))}
-            </Slider>
-          </div>
-        </div>
+              </li>
+            ))}
+          </Slider>
+        </ul>
       </div>
     </section>
   );

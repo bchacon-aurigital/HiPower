@@ -29,7 +29,7 @@ const Footer = () => {
         <div className="flex flex-col lg:flex-row justify-between gap-8 max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row gap-16 flex-grow justify-between max-w-4xl">
             <div className="text-center md:text-left">
-              <h3 className="text-lg font-bold mb-4">Nosotros</h3>
+              <p className="text-lg font-bold mb-4">Nosotros</p>
               <ul className="space-y-3">
                 {navLinks.map((link, index) => (
                   <li key={index}>
@@ -63,7 +63,7 @@ const Footer = () => {
             </div>
 
             <div className="text-center md:text-left">
-              <h3 className="text-lg font-bold mb-4">Relaciones Públicas</h3>
+              <p className="text-lg font-bold mb-4">Relaciones Públicas</p>
               <ul className="space-y-3">
                 <li>
                   <a 
@@ -99,7 +99,7 @@ const Footer = () => {
             </div>
 
             <div className="text-center md:text-left">
-              <h3 className="text-lg font-bold mb-4">Temas legales</h3>
+              <p className="text-lg font-bold mb-4">Temas legales</p>
               <ul className="space-y-3">
                 <li>
                   <a 
@@ -125,7 +125,7 @@ const Footer = () => {
 
             <div className="flex flex-col items-center md:items-start">
               <div className="mb-6 text-center md:text-left">
-                <h3 className="text-lg font-bold mb-4">Contacto</h3>
+                <p className="text-lg font-bold mb-4">Contacto</p>
                 <ul className="space-y-3">
                   <li>
                     <span className="font-bold">Ventas: </span>

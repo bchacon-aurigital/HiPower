@@ -24,7 +24,7 @@ export default function Hero() {
   const handleContactClick = useContactAction();
 
   return (
-    <section
+    <header
       className="relative h-screen w-full overflow-hidden"
       role="banner"
       aria-label="Sección principal"
@@ -56,12 +56,11 @@ export default function Hero() {
           >
             Energía solar y almacenamiento para empresas
           </h1>
-          <h2
+          <p
             className="text-xl md:text-2xl font-normal mb-6 leading-tight"
-            id="hero-heading"
           >
             Solicitá tu diagnóstico sin costo y empezá a reducir tu factura eléctrica.
-          </h2>
+          </p>
 
           <div
             className="font-light mb-6 md:hidden text-sm"
@@ -87,46 +86,46 @@ export default function Hero() {
           </button>
         </div>
 
-        <div
+        <section 
           className="hidden xl:block absolute bottom-12 left-0 right-0"
-          role="region"
-          aria-label="Estadísticas principales"
+          aria-labelledby="estadisticas"
         >
+          <h2 id="estadisticas" className="sr-only">Resultados destacados</h2>
           <div className="container mx-auto px-4">
-            <div className="flex items-center justify-center gap-8 text-white">
-              <div
+            <ul className="flex items-center justify-center gap-8 text-white list-none">
+              <li
                 className="bg-[#037F3F]/50 rounded-full px-4 py-3"
                 data-aos="fade-right"
-                role="text"
               >
-                <p className="text-md 2xl:text-xl font-bold">Únicos en Costa Rica con certificación NABCEP</p>
-              </div>
+                <p className="text-md 2xl:text-xl font-bold">{stats[0].text}</p>
+              </li>
 
-              <Image
-                src="/assets/landing/HeroIcon.svg"
-                alt=""
-                width={56}
-                height={56}
-                className="w-14 h-14"
-                data-aos="fade-right"
-                aria-hidden="true"
-                priority
-              />
+              <li className="flex-shrink-0">
+                <Image
+                  src="/assets/landing/HeroIcon.svg"
+                  alt=""
+                  width={56}
+                  height={56}
+                  className="w-14 h-14"
+                  data-aos="fade-right"
+                  aria-hidden="true"
+                  priority
+                />
+              </li>
 
               {stats.slice(1).map((stat, index) => (
-                <div
+                <li
                   key={index}
                   className={`bg-[#00439D]/50 rounded-full px-4 py-3`}
                   data-aos="fade-right"
-                  role="text"
                 >
                   <p className="text-md 2xl:text-xl font-bold">{stat.text}</p>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
-        </div>
+        </section>
       </div>
-    </section>
+    </header>
   );
-} 
+}
