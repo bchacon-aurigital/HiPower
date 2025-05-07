@@ -2,11 +2,37 @@ import "./globals.css";
 import { LoadingProvider } from './context/LoadingContext';
 import { ContactModalProvider } from './context/ContactModalContext';
 
+
 export const metadata = {
   metadataBase: new URL('https://hipowercr.com/'),
   title: 'Energía solar y almacenamiento para empresas | HiPower',
   description: 'Ahorra energía, evitá cortes y optimizá tu operación. Con 14 años de experiencia, lideramos proyectos solares exitosos en todo Costa Rica.',
   keywords: "energía solar, paneles solares, almacenamiento de energía, energía renovable, sostenibilidad",
+  
+  // Favicon configuration
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png' },
+    ],
+    other: [
+      {
+        rel: 'icon',
+        url: '/android-chrome-192x192.png',
+        sizes: '192x192',
+        type: 'image/png'
+      }
+    ],
+  },
+  
+  // Web manifest
+  manifest: '/site.webmanifest',
+  
+  // OpenGraph
   openGraph: {
     title: "Energía solar y almacenamiento para empresas | HiPower",
     description: "Ahorra energía, evitá cortes y optimizá tu operación. Con 14 años de experiencia, lideramos proyectos solares exitosos en todo Costa Rica.",
@@ -14,7 +40,7 @@ export const metadata = {
     siteName: "Energía solar y almacenamiento para empresas | HiPower",
     images: [
       {
-        url: './HeroBG.png',
+        url: 'https://hipowercr.com/HeroBG.png',
         width: 1200,
         height: 630,
         alt: "HiPower Energía Solar"
@@ -23,6 +49,17 @@ export const metadata = {
     locale: "es_ES",
     type: "website"
   },
+  
+  // Twitter Card
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Energía solar y almacenamiento para empresas | HiPower',
+    description: 'Ahorra energía, evitá cortes y optimizá tu operación. Con 14 años de experiencia, lideramos proyectos solares exitosos en todo Costa Rica.',
+    images: ['https://hipowercr.com/HeroBG.png'],
+    creator: '@hipowercr',
+    site: '@hipowercr'
+  },
+  
   alternates: {
     canonical: "https://hipowercr.com/"
   }

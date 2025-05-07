@@ -35,11 +35,12 @@ const Navbar = () => {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  // Updated navLinks with trailing slashes
   const navLinks = [
     { name: "INICIO", href: "/" },
-    { name: "SERVICIOS", href: "/servicios" },
-    { name: "PROYECTOS", href: "/proyectos" },
-    { name: "SOBRE NOSOTROS", href: "/sobrenosotros" },
+    { name: "SERVICIOS", href: "/servicios/" },
+    { name: "PROYECTOS", href: "/proyectos/" },
+    { name: "SOBRE NOSOTROS", href: "/sobrenosotros/" },
     { name: "CONTACTO", href: "#", action: "contact" },
     { name: "BLOG", href: "/", comingSoon: true },
   ];
@@ -67,7 +68,7 @@ const Navbar = () => {
               alt="Logo de HiPower"
               width={200}
               height={74}
-              className="h-auto brightness-0 invert hidden "
+              className="h-auto brightness-0 invert hidden"
               priority
             />
           </Link>

@@ -35,11 +35,12 @@ const Navbar = () => {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  // Updated links with trailing slashes
   const navLinks = [
     { name: "INICIO", href: "/" },
-    { name: "SERVICIOS", href: "/servicios" },
-    { name: "PROYECTOS", href: "/proyectos" },
-    { name: "SOBRE NOSOTROS", href: "/sobrenosotros" },
+    { name: "SERVICIOS", href: "/servicios/" },
+    { name: "PROYECTOS", href: "/proyectos/" },
+    { name: "SOBRE NOSOTROS", href: "/sobrenosotros/" },
     { name: "CONTACTO", href: "#", action: "contact" },
     { name: "BLOG", href: "/", comingSoon: true },
   ];

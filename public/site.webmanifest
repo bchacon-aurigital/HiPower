@@ -1,0 +1,16 @@
+{
+    "name": "HiPower | Energía solar y almacenamiento",
+    "short_name": "HiPower",
+    "icons": [
+      {
+        "src": "/android-chrome-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }
+    ],
+    "theme_color": "#037F3F",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "start_url": "/",
+    "description": "Sistemas de energía solar y soluciones de almacenamiento para empresas en Costa Rica"
+  }

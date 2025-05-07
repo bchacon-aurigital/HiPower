@@ -16,6 +16,13 @@ const PartnersSection = () => {
     { name: "Longi", logo: "/assets/homepage/partners/image 32.png" }
   ];
 
+  // First row - 4 logos
+  const firstRow = partners.slice(0, 4);
+  // Second row - 3 logos
+  const secondRow = partners.slice(4, 7);
+  // Third row - 4 logos
+  const thirdRow = partners.slice(7);
+
   return (
     <section className="px-6 md:px-8 py-8 md:py-14 bg-white" aria-labelledby="aliados-heading">
       <div className="container mx-auto px-4">
@@ -26,17 +33,13 @@ const PartnersSection = () => {
           Nuestros Aliados
         </h2>
         <p className="text-center text-gray-600 mb-10">
-          Conocé sobre nuestros aliados en la fabricación de paneles, inversores y baterías.
+          Conoce sobre nuestros aliados en la fabricación de paneles, inversores y baterías.
         </p>
         
-        <ul 
-          className="lista-aliados grid grid-cols-2 md:grid-cols-4 gap-4"
-          role="list"
-          aria-label="Logos de aliados estratégicos de Hi Power"
-        >
-          {/* First row - 4 items */}
-          {partners.slice(0, 4).map((partner, index) => (
-            <li 
+        {/* First row - 4 logos */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
+          {firstRow.map((partner, index) => (
+            <div 
               key={`first-${index}`} 
               className="border border-[#C9C9C9] rounded-tl-3xl rounded-br-3xl flex items-center justify-center p-6 h-32 transition-transform hover:scale-105"
             >
@@ -47,47 +50,32 @@ const PartnersSection = () => {
                 height={60}
                 className="object-contain"
               />
-            </li>
+            </div>
           ))}
-          
-          {/* Second row with custom layout - 3 items */}
-          <li 
-            className="border border-[#C9C9C9] rounded-tl-3xl rounded-br-3xl flex items-center justify-center p-6 h-32 transition-transform hover:scale-105 col-span-1"
-          >
-            <Image
-              src={partners[4].logo}
-              alt={`Logo de ${partners[4].name}`}
-              width={150}
-              height={60}
-              className="object-contain"
-            />
-          </li>
-          <li 
-            className="border border-[#C9C9C9] rounded-tl-3xl rounded-br-3xl flex items-center justify-center p-6 h-32 transition-transform hover:scale-105 col-span-1"
-          >
-            <Image
-              src={partners[5].logo}
-              alt={`Logo de ${partners[5].name}`}
-              width={150}
-              height={60}
-              className="object-contain"
-            />
-          </li>
-          <li 
-            className="border border-[#C9C9C9] rounded-tl-3xl rounded-br-3xl flex items-center justify-center p-6 h-32 transition-transform hover:scale-105 col-span-2 md:col-span-1"
-          >
-            <Image
-              src={partners[6].logo}
-              alt={`Logo de ${partners[6].name}`}
-              width={150}
-              height={60}
-              className="object-contain"
-            />
-          </li>
-          
-          {/* Third row - 4 items */}
-          {partners.slice(7).map((partner, index) => (
-            <li 
+        </div>
+        
+        {/* Second row - 3 logos (equal width) */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+          {secondRow.map((partner, index) => (
+            <div 
+              key={`second-${index}`} 
+              className="border border-[#C9C9C9] rounded-tl-3xl rounded-br-3xl flex items-center justify-center p-6 h-32 transition-transform hover:scale-105"
+            >
+              <Image
+                src={partner.logo}
+                alt={`Logo de ${partner.name}`}
+                width={150}
+                height={60}
+                className="object-contain"
+              />
+            </div>
+          ))}
+        </div>
+        
+        {/* Third row - 4 logos */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+          {thirdRow.map((partner, index) => (
+            <div 
               key={`third-${index}`} 
               className="border border-[#C9C9C9] rounded-tl-3xl rounded-br-3xl flex items-center justify-center p-6 h-32 transition-transform hover:scale-105"
             >
@@ -98,9 +86,9 @@ const PartnersSection = () => {
                 height={60}
                 className="object-contain"
               />
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
     </section>
   );

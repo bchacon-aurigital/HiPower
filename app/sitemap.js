@@ -13,22 +13,22 @@ export default function sitemap() {
       priority: 1,
     },
     {
-      url: `${baseUrl}/servicios`,
+      url: `${baseUrl}/servicios/`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/proyectos`,
+      url: `${baseUrl}/proyectos/`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/sobrenosotros`,
+      url: `${baseUrl}/sobrenosotros/`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
   ];
-} 
+}
