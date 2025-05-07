@@ -37,7 +37,7 @@ const Navbar = () => {
 
   // Updated links with trailing slashes
   const navLinks = [
-    { name: "INICIO", href: "/" },
+    { name: "INICIO", href: "https://hipowercr.com/" },
     { name: "SERVICIOS", href: "/servicios/" },
     { name: "PROYECTOS", href: "/proyectos/" },
     { name: "SOBRE NOSOTROS", href: "/sobrenosotros/" },

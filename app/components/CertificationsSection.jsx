@@ -31,6 +31,8 @@ const CertificationsSection = () => {
               src="/assets/homepage/nabcep.mp4"
               className="w-full h-full object-cover"
               controls
+              autoPlay={true}
+              muted
               preload="metadata"
               poster="/assets/homepage/video-poster.jpg"
             >

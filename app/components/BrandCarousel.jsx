@@ -70,7 +70,7 @@ const BrandCarousel = () => {
           id="clientes-heading" 
           className="text-3xl lg:text-[2.7rem] leading-10 font-semibold text-black px-8 pb-10 text-center w-full"
         >
-          Marcas que impulsan su crecimiento con{" "}
+          Empresas que impulsan su crecimiento con{" "}
           <span className="text-[#339C59] font-bold">
             Hi Power
           </span>

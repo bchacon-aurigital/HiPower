@@ -18,7 +18,7 @@ const BeneficiosEnergiaSolar = () => {
         {
             id: 1,
             titulo: "Maximiza la rentabilidad",
-            descripcion: "Si buscas que tu proyecto genere la mayor rentabilidad con nosotros.",
+            descripcion: "Si buscas que tu proyecto genere la mayor rentabilidad, es con nosotros.",
             imageSrc: "/assets/servicios/BeneficiosEnergiaSolar1",
             imageAlt: "Paneles solares instalados en un techo generando alta rentabilidad"
         },

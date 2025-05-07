@@ -37,7 +37,7 @@ const Navbar = () => {
 
   // Updated navLinks with trailing slashes
   const navLinks = [
-    { name: "INICIO", href: "/" },
+    { name: "INICIO", href: "https://hipowercr.com/" },
     { name: "SERVICIOS", href: "/servicios/" },
     { name: "PROYECTOS", href: "/proyectos/" },
     { name: "SOBRE NOSOTROS", href: "/sobrenosotros/" },
@@ -213,7 +213,7 @@ const Navbar = () => {
           </nav>
 
           <div className="mt-auto mb-8">
-            <h3 className="text-white text-lg mb-4" id="social-heading">Síguenos</h3>
+            <p className="text-white text-lg mb-4" id="social-heading">Síguenos</p>
             <div 
               className="flex gap-4" 
               role="list" 
