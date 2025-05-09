@@ -6,6 +6,6 @@ export default function robots() {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://hipowercr.com/sitemap.xml',
+    sitemap: 'https://www.hipowercr.com/sitemap.xml',
   }
 } 

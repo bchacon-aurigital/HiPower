@@ -173,15 +173,15 @@ const ProyectoSolarFixed = ({
 
       <div className="grid lg:grid-cols-3 gap-4 mb-6">
         <div className="border pr-4 rounded-tl-3xl rounded-br-3xl bg-white px-6 py-16 border-[#C9C9C9]" role="region" aria-label="Ubicación" data-aos="fade-up" data-aos-delay="100">
-          <h3 className="text-[#037F3F] font-bold mb-2 text-2xl">Ubicación</h3>
+          <p className="text-[#037F3F] font-bold mb-2 text-2xl">Ubicación</p>
           <p className="text-gray-600 text-md italic">{ubicacionDescripcion}</p>
         </div>
         <div className="border pr-4 rounded-tl-3xl rounded-br-3xl bg-white px-6 py-16 border-[#C9C9C9]" role="region" aria-label="Descripción" data-aos="fade-up" data-aos-delay="200">
-          <h3 className="text-[#037F3F] font-bold mb-2 text-2xl">Descripción</h3>
+          <p className="text-[#037F3F] font-bold mb-2 text-2xl">Descripción</p>
           <p className="text-gray-600 text-md italic">{descripcion}</p>
         </div>
         <div className="border pr-4 rounded-tl-3xl rounded-br-3xl bg-white px-6 py-16 border-[#C9C9C9]" role="region" aria-label="Beneficios" data-aos="fade-up" data-aos-delay="300">
-          <h3 className="text-[#037F3F] font-bold mb-2 text-2xl">Beneficios</h3>
+          <p className="text-[#037F3F] font-bold mb-2 text-2xl">Beneficios</p>
           <p className="text-gray-600 text-md italic">{beneficios}</p>
         </div>
       </div>
@@ -196,7 +196,7 @@ const ProyectoSolarFixed = ({
               <rect x="3" y="14" width="7" height="7"></rect>
             </svg>
           </div>
-          <h3 className="text-gray-700 text-3xl italic font-bold">Características</h3>
+          <p className="text-gray-700 text-3xl italic font-bold">Características</p>
         </div>
         
         <div className={caracteristicas.length === 3 ? "grid lg:grid-cols-3 gap-2" : 

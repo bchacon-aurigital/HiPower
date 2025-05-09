@@ -190,7 +190,7 @@ const TimelineItem = ({ data, index }) => {
                 <div className="bg-white border-4 w-full border-[#037F3F] rounded-lg p-5">
                     <div className="flex items-center mb-3">
                         <p className="text-[#037F3F] font-bold text-xl mr-3">{data.year}</p>
-                        <h3 className="text-[#037F3F] font-bold text-xl flex-1">{data.title}</h3>
+                        <p className="text-[#037F3F] font-bold text-xl flex-1">{data.title}</p>
                     </div>
                     <p className="text-gray-700 text-sm">{data.description}</p>
                 </div>

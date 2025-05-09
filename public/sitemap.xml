@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://hipowercr.com/</loc>
+    <loc>https://www.hipowercr.com/</loc>
     <lastmod>2023-08-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://hipowercr.com/servicios/</loc>
+    <loc>https://www.hipowercr.com/servicios/</loc>
     <lastmod>2023-08-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hipowercr.com/proyectos/</loc>
+    <loc>https://www.hipowercr.com/proyectos/</loc>
     <lastmod>2023-08-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hipowercr.com/sobrenosotros/</loc>
+    <loc>https://www.hipowercr.com/sobrenosotros/</loc>
     <lastmod>2023-08-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

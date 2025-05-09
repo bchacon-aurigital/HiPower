@@ -26,7 +26,7 @@ export default function ProjectsHero() {
           muted
           loop
           playsInline
-          poster="/assets/homepage/heroBG.png"
+          poster="/assets/homepage/HeroBG.png"
         >
           <source src="/assets/proyectos/projects.webm" type="video/webm" />
           <source src="/assets/proyectos/projects.mp4" type="video/mp4" />
@@ -40,10 +40,9 @@ export default function ProjectsHero() {
           <div className="max-w-4xl text-center md:text-left" data-aos="fade-right">
             <h1
               id="projects-hero-heading"
-              className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-white"
+              className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-white max-w-[700px]"
             >
-              Energía solar y <br />
-              almacenamiento para empresas 
+              Energía solar y almacenamiento para empresas 
             </h1>
             <p className="text-white text-lg md:text-xl mb-8 max-w-4xl">
               Durante más de 14 años, en Hi Power hemos desarrollado proyectos solares y de almacenamiento que han contribuido a reducir los costos energéticos de nuestros clientes, así como a diversificar y descarbonizar la matriz energética de Costa Rica.            </p>

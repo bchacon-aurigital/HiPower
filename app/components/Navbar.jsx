@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect } from "react";
-import Link from "next/link";
 import Image from "next/image";
 import { FaInstagram, FaLinkedin, FaFacebook, FaYoutube } from "react-icons/fa";
 import { useContactAction } from '../hooks/useContactAction';
@@ -35,12 +34,12 @@ const Navbar = () => {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  // Updated links with trailing slashes
+  // Updated links with trailing slashes and absolute URLs
   const navLinks = [
-    { name: "INICIO", href: "https://hipowercr.com/" },
-    { name: "SERVICIOS", href: "/servicios/" },
-    { name: "PROYECTOS", href: "/proyectos/" },
-    { name: "SOBRE NOSOTROS", href: "/sobrenosotros/" },
+    { name: "INICIO", href: "https://www.hipowercr.com/" },
+    { name: "SERVICIOS", href: "https://www.hipowercr.com/servicios/" },
+    { name: "PROYECTOS", href: "https://www.hipowercr.com/proyectos/" },
+    { name: "SOBRE NOSOTROS", href: "https://www.hipowercr.com/sobrenosotros/" },
     { name: "CONTACTO", href: "#", action: "contact" },
     { name: "BLOG", href: "/", comingSoon: true },
   ];
@@ -56,10 +55,10 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="absolute w-full z-50 px-6 py-4" role="navigation" aria-label="Navegación principal" data-aos="fade-down">
+      <nav className="absolute w-full z-50 px-6 py-4" aria-label="Navegación principal" data-aos="fade-down">
         <div className="container mx-auto flex items-center justify-between xl:justify-center gap-10">
-          <Link 
-            href="/" 
+          <a 
+            href="https://www.hipowercr.com/" 
             className={`flex-shrink-0 transition-opacity duration-300 ${isOpen ? 'opacity-0' : 'opacity-100'}`}
             aria-label="HiPower - Ir a inicio"
           >
@@ -71,7 +70,7 @@ const Navbar = () => {
               className="h-auto brightness-0 invert"
               priority
             />
-          </Link>
+          </a>
 
           <button
             className="xl:hidden text-white focus:outline-none relative w-6 h-6 z-50"
@@ -97,58 +96,56 @@ const Navbar = () => {
             />
           </button>
 
-          <div className="hidden xl:flex items-center gap-16" role="menubar">
-            <div className="bg-white rounded-full px-9 py-4 flex items-center gap-4 2xl:gap-8 text-sm">
+          <div className="hidden xl:flex items-center gap-16">
+            <ul className="bg-white rounded-full px-9 py-4 flex items-center gap-4 2xl:gap-8 text-sm" aria-label="Menú principal">
               {navLinks.map((link) => (
-                link.comingSoon ? (
-                  <div key={link.name} className="group relative flex flex-col items-center">
-                    <span className="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap text-[#037F3F] text-[10px] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      Proximamente!
-                    </span>
-                    <a 
-                      href="/#" 
-                      className="text-gray-800 font-medium transition-colors opacity-100 group-hover:opacity-50"
+                <li key={link.name}>
+                  {link.comingSoon ? (
+                    <div className="group relative flex flex-col items-center">
+                      <span className="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap text-[#037F3F] text-[10px] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        Proximamente!
+                      </span>
+                      <a 
+                        href="/#" 
+                        className="text-gray-800 font-medium transition-colors opacity-100 group-hover:opacity-50"
+                      >
+                        {link.name}
+                      </a>
+                    </div>
+                  ) : link.action === "contact" ? (
+                    <button
+                      onClick={handleContactClick}
+                      className="text-gray-800 hover:text-[#037F3F] font-medium transition-colors bg-transparent border-none p-0 cursor-pointer"
+                    >
+                      {link.name}
+                    </button>
+                  ) : (
+                    <a
+                      href={link.href}
+                      className="text-gray-800 hover:text-[#037F3F] font-medium transition-colors"
                     >
                       {link.name}
                     </a>
-                  </div>
-                ) : link.action === "contact" ? (
-                  <button
-                    key={link.name}
-                    onClick={handleContactClick}
-                    className="text-gray-800 hover:text-[#037F3F] font-medium transition-colors bg-transparent border-none p-0 cursor-pointer"
-                    role="menuitem"
-                  >
-                    {link.name}
-                  </button>
-                ) : (
-                  <Link
-                    key={link.name}
-                    href={link.href}
-                    className="text-gray-800 hover:text-[#037F3F] font-medium transition-colors"
-                    role="menuitem"
-                  >
-                    {link.name}
-                  </Link>
-                )
+                  )}
+                </li>
               ))}
-            </div>
+            </ul>
 
-            <div className="flex items-center gap-2" role="list" aria-label="Redes sociales">
+            <ul className="flex items-center gap-2" aria-label="Redes sociales">
               {socialLinks.map((link, index) => (
-                <a
-                  key={index}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-9 h-9 flex items-center justify-center bg-white/25 rounded-tl-md rounded-br-md hover:bg-white/40 transition-colors"
-                  aria-label={`Visitar ${link.name} de HiPower`}
-                  role="listitem"
-                >
-                  {link.icon}
-                </a>
+                <li key={index}>
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-9 h-9 flex items-center justify-center bg-white/25 rounded-tl-md rounded-br-md hover:bg-white/40 transition-colors"
+                    aria-label={`Visitar ${link.name} de HiPower`}
+                  >
+                    {link.icon}
+                  </a>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </div>
       </nav>
@@ -171,68 +168,67 @@ const Navbar = () => {
         aria-label="Menú de navegación móvil"
       >
         <div className="flex flex-col h-full pt-20 px-6">
-          <nav className="flex flex-col space-y-6" role="navigation" aria-label="Menú móvil">
-            {navLinks.map((link) => (
-              link.comingSoon ? (
-                <div key={link.name} className="group relative flex flex-col">
-                  <span className="absolute -top-3 left-0 whitespace-nowrap text-[#037F3F] text-[10px] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    Proximamente!
-                  </span>
-                  <a 
-                    href="/#" 
-                    className="text-white text-xl font-medium hover:text-gray-300 transition-colors opacity-100 group-hover:opacity-50"
-                    onClick={toggleMenu}
-                  >
-                    {link.name}
-                  </a>
-                </div>
-              ) : link.action === "contact" ? (
-                <button
-                  key={link.name}
-                  onClick={(e) => {
-                    toggleMenu();
-                    handleContactClick();
-                  }}
-                  className="text-white text-xl font-medium hover:text-gray-300 transition-colors bg-transparent border-none p-0 cursor-pointer text-left"
-                  role="menuitem"
-                >
-                  {link.name}
-                </button>
-              ) : (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className="text-white text-xl font-medium hover:text-gray-300 transition-colors"
-                  onClick={toggleMenu}
-                  role="menuitem"
-                >
-                  {link.name}
-                </Link>
-              )
-            ))}
+          <nav aria-label="Menú móvil">
+            <ul className="flex flex-col space-y-6">
+              {navLinks.map((link) => (
+                <li key={link.name}>
+                  {link.comingSoon ? (
+                    <div className="group relative flex flex-col">
+                      <span className="absolute -top-3 left-0 whitespace-nowrap text-[#037F3F] text-[10px] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        Proximamente!
+                      </span>
+                      <a 
+                        href="/#" 
+                        className="text-white text-xl font-medium hover:text-gray-300 transition-colors opacity-100 group-hover:opacity-50"
+                        onClick={toggleMenu}
+                      >
+                        {link.name}
+                      </a>
+                    </div>
+                  ) : link.action === "contact" ? (
+                    <button
+                      onClick={(e) => {
+                        toggleMenu();
+                        handleContactClick();
+                      }}
+                      className="text-white text-xl font-medium hover:text-gray-300 transition-colors bg-transparent border-none p-0 cursor-pointer text-left"
+                    >
+                      {link.name}
+                    </button>
+                  ) : (
+                    <a
+                      href={link.href}
+                      className="text-white text-xl font-medium hover:text-gray-300 transition-colors"
+                      onClick={toggleMenu}
+                    >
+                      {link.name}
+                    </a>
+                  )}
+                </li>
+              ))}
+            </ul>
           </nav>
 
           <div className="mt-auto mb-8">
             <p className="text-white text-lg mb-4" id="social-heading">Síguenos</p>
-            <div 
+            <ul 
               className="flex gap-4" 
-              role="list" 
               aria-labelledby="social-heading"
             >
               {socialLinks.map((link, index) => (
-                <a
-                  key={index}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white hover:text-gray-300 transition-colors"
-                  aria-label={`Visitar ${link.name} de HiPower`}
-                  role="listitem"
-                >
-                  {link.icon}
-                </a>
+                <li key={index}>
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white hover:text-gray-300 transition-colors"
+                    aria-label={`Visitar ${link.name} de HiPower`}
+                  >
+                    {link.icon}
+                  </a>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </div>
       </div>

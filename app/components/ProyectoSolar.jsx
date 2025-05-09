@@ -139,7 +139,7 @@ const ProyectoSolar = () => {
                         </p>
 
                         <a
-                            href="/servicios"                        
+                            href="https://www.hipowercr.com/servicios/"                        
                             className="w-48 font-semibold border-2 border-[#0046AD] text-[#0046AD] rounded-full px-4 py-1 flex items-center justify-center gap-2 hover:bg-[#0046AD] hover:text-white transition-colors"
                             aria-label={`Más información sobre ${currentServiceData.title}`}
                         >

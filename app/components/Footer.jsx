@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import Image from "next/image";
 import { FaInstagram, FaLinkedin, FaFacebook, FaYoutube } from "react-icons/fa";
 import { useContactAction } from '../hooks/useContactAction';
@@ -10,16 +9,16 @@ const Footer = () => {
   const socialLinks = [
     { icon: <FaInstagram className="text-2xl sm:text-3xl" />, href: "https://www.instagram.com/hipower.cr/", name: "Instagram" },
     { icon: <FaLinkedin className="text-2xl sm:text-3xl" />, href: "https://www.linkedin.com/company/hipowercr/", name: "LinkedIn" },
-    { icon: <FaFacebook className="text-2xl sm:text-3xl" />, href: "https://www.facebook.com/hipowercr", name: "Facebook" },
-    { icon: <FaYoutube className="text-2xl sm:text-3xl" />, href: "https://www.youtube.com/@hipowercr", name: "YouTube" },
+    { icon: <FaFacebook className="text-2xl sm:text-3xl" />, href: "https://www.facebook.com/hipowercr/", name: "Facebook" },
+    { icon: <FaYoutube className="text-2xl sm:text-3xl" />, href: "https://www.youtube.com/@hipowercr/", name: "YouTube" },
   ];
 
   // Updated navLinks with trailing slashes
   const navLinks = [
-    { name: "INICIO", href: "https://hipowercr.com/" },
-    { name: "SERVICIOS", href: "/servicios/" },
-    { name: "PROYECTOS", href: "/proyectos/" },
-    { name: "SOBRE NOSOTROS", href: "/sobrenosotros/" },
+    { name: "INICIO", href: "https://www.hipowercr.com/" },
+    { name: "SERVICIOS", href: "https://www.hipowercr.com/servicios/" },
+    { name: "PROYECTOS", href: "https://www.hipowercr.com/proyectos/" },
+    { name: "SOBRE NOSOTROS", href: "https://www.hipowercr.com/sobrenosotros/" },
     { name: "CONTACTO", action: "contact" },
     { name: "BLOG", href: "/", comingSoon: true },
   ];
@@ -54,9 +53,9 @@ const Footer = () => {
                         {link.name}
                       </button>
                     ) : (
-                      <Link href={link.href} className="hover:text-gray-300 transition-colors">
+                      <a href={link.href} className="hover:text-gray-300 transition-colors">
                         {link.name}
-                      </Link>
+                      </a>
                     )}
                   </li>
                 ))}
@@ -167,7 +166,7 @@ const Footer = () => {
           </div>
 
           <div className="flex-shrink-0 flex flex-col items-center lg:items-end space-y-6 lg:max-w-md">
-            <Link href="/">
+            <a href="https://www.hipowercr.com/">
               <Image
                 src="/assets/landing/LogoHiPower.svg"
                 alt="Logo de HiPower"
@@ -176,7 +175,7 @@ const Footer = () => {
                 className="mb-4 mx-auto"
                 priority
               />
-            </Link>
+            </a>
             
             <iframe 
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5525.417955663463!2d-84.03334208811162!3d10.0014812900627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e57dbd4b1e8f%3A0xed30c90dcaa44df0!2sHiPower!5e1!3m2!1ses!2scr!4v1745347574017!5m2!1ses!2scr" 
@@ -197,6 +196,7 @@ const Footer = () => {
         <a
           href="https://aurigital.com"
           target="_blank"
+          rel="noopener noreferrer"
           className="flex justify-center mx-auto w-full"
         >
           <p className="text-white uppercase text-[8px] text-center p-1 hover:text-[#28C0F5] ">

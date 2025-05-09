@@ -1,7 +1,7 @@
 export const dynamic = "force-static";
 
 export default function sitemap() {
-  const baseUrl = 'https://hipowercr.com';
+  const baseUrl = 'https://www.hipowercr.com';
   
   const currentDate = new Date().toISOString();
 

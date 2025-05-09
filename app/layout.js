@@ -4,7 +4,7 @@ import { ContactModalProvider } from './context/ContactModalContext';
 
 
 export const metadata = {
-  metadataBase: new URL('https://hipowercr.com/'),
+  metadataBase: new URL('https://www.hipowercr.com/'),
   title: 'Energía solar y almacenamiento para empresas | HiPower',
   description: 'Ahorra energía, evitá cortes y optimizá tu operación. Con 14 años de experiencia, lideramos proyectos solares exitosos en todo Costa Rica.',
   keywords: "energía solar, paneles solares, almacenamiento de energía, energía renovable, sostenibilidad",
@@ -36,11 +36,11 @@ export const metadata = {
   openGraph: {
     title: "Energía solar y almacenamiento para empresas | HiPower",
     description: "Ahorra energía, evitá cortes y optimizá tu operación. Con 14 años de experiencia, lideramos proyectos solares exitosos en todo Costa Rica.",
-    url: "https://hipowercr.com/",
+    url: "https://www.hipowercr.com/",
     siteName: "Energía solar y almacenamiento para empresas | HiPower",
     images: [
       {
-        url: 'https://hipowercr.com/HeroBG.png',
+        url: 'https://www.hipowercr.com/HeroBG.png',
         width: 1200,
         height: 630,
         alt: "HiPower Energía Solar"
@@ -55,13 +55,13 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Energía solar y almacenamiento para empresas | HiPower',
     description: 'Ahorra energía, evitá cortes y optimizá tu operación. Con 14 años de experiencia, lideramos proyectos solares exitosos en todo Costa Rica.',
-    images: ['https://hipowercr.com/HeroBG.png'],
+    images: ['https://www.hipowercr.com/HeroBG.png'],
     creator: '@hipowercr',
     site: '@hipowercr'
   },
   
   alternates: {
-    canonical: "https://hipowercr.com/"
+    canonical: "https://www.hipowercr.com/"
   }
 };
 
@@ -145,6 +145,8 @@ const schemaData = {
     }
   ]
 };
+
+
 
 export default function RootLayout({ children }) {
   return (

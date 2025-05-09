@@ -53,10 +53,10 @@ export default function AboutUsHero() {
           <div className="max-w-4xl text-center md:text-left" data-aos="fade-right">
             <h1
               id="AboutUs-hero-heading"
-              className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-white"
+              className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-white max-w-[500px]"
             >
-              Impulsamos el <br />
-              cambio hacia un futuro <br />
+              Impulsamos el
+              cambio hacia un futuro 
               más limpio y sostenible
             </h1>
             <h2 className="text-white text-lg md:text-xl mb-8 max-w-4xl">

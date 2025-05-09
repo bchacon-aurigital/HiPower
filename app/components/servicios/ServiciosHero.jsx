@@ -39,7 +39,7 @@ export default function ProjectsHero() {
             muted
             loop
             playsInline
-            poster="/assets/homepage/heroBG.png"
+            poster="/assets/homepage/HeroBG.png"
             aria-label="Video de fondo mostrando servicios de energía solar"
           >
             <source src="/assets/servicios/services.webm" type="video/webm" />
