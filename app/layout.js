@@ -7,7 +7,6 @@ export const metadata = {
   metadataBase: new URL('https://www.hipowercr.com/'),
   title: 'Energía solar y almacenamiento para empresas | HiPower',
   description: 'Ahorra energía, evitá cortes y optimizá tu operación. Con 14 años de experiencia, lideramos proyectos solares exitosos en todo Costa Rica.',
-  keywords: "energía solar, paneles solares, almacenamiento de energía, energía renovable, sostenibilidad",
   
   // Favicon configuration
   icons: {

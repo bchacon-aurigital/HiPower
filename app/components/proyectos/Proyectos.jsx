@@ -122,7 +122,7 @@ const ProyectoSolarFixed = ({
         <div className="text-green-600 w-10 h-10 relative" aria-hidden="true">
           <Image 
             src={`/assets/proyectos/${id}.svg`}
-            alt=""
+            alt="Icono de Proyecto"
             fill
             className="object-contain"
           />
@@ -196,7 +196,7 @@ const ProyectoSolarFixed = ({
               <rect x="3" y="14" width="7" height="7"></rect>
             </svg>
           </div>
-          <p className="text-gray-700 text-3xl italic font-bold">Características</p>
+          <h3 className="text-gray-700 text-3xl italic font-bold">Características</h3>
         </div>
         
         <div className={caracteristicas.length === 3 ? "grid lg:grid-cols-3 gap-2" : 

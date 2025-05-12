@@ -53,15 +53,15 @@ export default function AboutUsHero() {
           <div className="max-w-4xl text-center md:text-left" data-aos="fade-right">
             <h1
               id="AboutUs-hero-heading"
-              className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-white max-w-[500px]"
+              className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-white max-w-[650px]"
             >
               Impulsamos el
               cambio hacia un futuro 
               más limpio y sostenible
             </h1>
-            <h2 className="text-white text-lg md:text-xl mb-8 max-w-4xl">
-              En Hi Power, tenemos más de 14 años diseñando, instalando y construyendo proyectos solares que contribuyen a diversificar y descarbonizar nuestras matrices energéticas. Estos proyectos han permitido a nuestros clientes disminuir costos y fortalecer su independencia energética de una manera sostenible.
-            </h2>
+            <p className="text-white text-lg md:text-xl mb-8 max-w-4xl max-w-[650px]">
+            Lideramos proyectos solares desde hace 14 años para diversificar y descarbonizar la energía en Costa Rica
+            </p>
             <button
               className="relative px-8 py-4 text-lg font-medium text-white overflow-hidden bg-[#037F3F] transition-all duration-500 hover:text-white group rounded-tl-xl rounded-br-xl focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#037F3F]"
               aria-label="Conecta con nosotros para consultoría energética"

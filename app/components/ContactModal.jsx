@@ -62,7 +62,7 @@ const ContactModal = ({ isOpen, onClose }) => {
   return (
     <>
       <Script 
-        src="//js.hsforms.net/forms/embed/v2.js" 
+        src="https://js.hsforms.net/forms/embed/v2.js" 
         strategy="lazyOnload"
         onLoad={handleHubspotLoad}
       />

@@ -40,6 +40,7 @@ export default function SolarEnergySection() {
             src="/assets/homepage/mission_sectionM.png"
             alt="Paneles solares en techo industrial"
             className="w-full h-full object-cover absolute inset-0"
+            loading="lazy"
           />
         </picture>
         <div className="absolute inset-0 bg-black bg-opacity-20"></div>

@@ -4,7 +4,6 @@ export const metadata = {
   metadataBase: new URL('https://www.hipowercr.com/'),
   title: 'Servicios de Energía Solar | HiPower - Soluciones Renovables en Costa Rica',
   description: 'Servicios especializados en energía solar y almacenamiento con más de 14 años de experiencia. Proyectos innovadores, rentables y con tecnología avanzada.',
-  keywords: ['energía solar', 'servicios solares', 'paneles solares', 'microrredes', 'almacenamiento de energía', 'Costa Rica'],
   
   // Canonical URL for this specific page
   alternates: {

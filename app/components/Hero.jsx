@@ -1,24 +1,26 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import { useContactAction } from '../hooks/useContactAction';
 
 export default function Hero() {
+  // State to control animation classes
+  const [isLoaded, setIsLoaded] = useState(false);
+  
   useEffect(() => {
-    AOS.init({
-      once: true,
-      duration: 800,
-      offset: 100,
-    });
+    // Set a timeout to trigger animations after component mounts
+    const timer = setTimeout(() => {
+      setIsLoaded(true);
+    }, 100);
+    
+    return () => clearTimeout(timer);
   }, []);
 
   const stats = [
-    { text: "Únicos en Costa Rica con certificación NABCEP", color: "bg-[#037F3F]", delay: 100 },
-    { text: "+14 años de experiencia", color: "bg-[#00439D]", delay: 300 },
-    { text: "+30 MW instalados", color: "bg-[#00439D]", delay: 200 },
-    { text: "+5MWH generados", color: "bg-[#00439D]", delay: 400 },
+    { text: "Únicos en Costa Rica con certificación NABCEP", color: "bg-[#037F3F]" },
+    { text: "+14 años de experiencia", color: "bg-[#00439D]" },
+    { text: "+30 MW instalados", color: "bg-[#00439D]" },
+    { text: "+5MWH generados", color: "bg-[#00439D]" },
   ];
 
   const handleContactClick = useContactAction();
@@ -37,6 +39,8 @@ export default function Hero() {
           loop
           playsInline
           poster="/assets/homepage/HeroBG.png"
+          preload="auto"
+          fetchPriority="high"
         >
           <source src="/assets/homepage/HPHeroVid.webm" type="video/webm" />
           <source src="/assets/homepage/HPHeroVid.mp4" type="video/mp4" />
@@ -47,8 +51,9 @@ export default function Hero() {
 
       <div className="relative h-full flex flex-col items-center justify-center text-white px-4">
         <div
-          className="text-center max-w-4xl mx-auto"
-          data-aos="fade-up"
+          className={`text-center max-w-4xl mx-auto transition-all duration-700 ${
+            isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
         >
           <h1
             className="text-4xl md:text-5xl font-bold mb-6 leading-tight"
@@ -90,34 +95,42 @@ export default function Hero() {
           className="hidden xl:block absolute bottom-12 left-0 right-0"
           aria-labelledby="estadisticas"
         >
-          <h2 id="estadisticas" className="sr-only">Resultados destacados</h2>
+          <div id="estadisticas" className="sr-only">Resultados destacados</div>
           <div className="container mx-auto px-4">
             <ul className="flex items-center justify-center gap-8 text-white list-none">
+              {/* First stat with staggered animation */}
               <li
-                className="bg-[#037F3F]/50 rounded-full px-4 py-3"
-                data-aos="fade-right"
+                className={`bg-[#037F3F]/50 rounded-full px-4 py-3 transition-all duration-700 ${
+                  isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
+                }`}
+                style={{ transitionDelay: '200ms' }}
               >
                 <p className="text-md 2xl:text-xl font-bold">{stats[0].text}</p>
               </li>
 
-              <li className="flex-shrink-0">
+              {/* Star icon with staggered animation */}
+              <li className={`flex-shrink-0 transition-all duration-700 ${
+                isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
+              }`} style={{ transitionDelay: '300ms' }}>
                 <Image
                   src="/assets/landing/HeroIcon.svg"
-                  alt=""
+                  alt="star"
                   width={56}
                   height={56}
                   className="w-14 h-14"
-                  data-aos="fade-right"
                   aria-hidden="true"
                   priority
                 />
               </li>
 
+              {/* Other stats with staggered animations */}
               {stats.slice(1).map((stat, index) => (
                 <li
                   key={index}
-                  className={`bg-[#00439D]/50 rounded-full px-4 py-3`}
-                  data-aos="fade-right"
+                  className={`bg-[#00439D]/50 rounded-full px-4 py-3 transition-all duration-700 ${
+                    isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
+                  }`}
+                  style={{ transitionDelay: `${400 + index * 100}ms` }}
                 >
                   <p className="text-md 2xl:text-xl font-bold">{stat.text}</p>
                 </li>

@@ -13,7 +13,7 @@ const CertificationsSection = () => {
         </p>
         <Image
           src="/assets/landing/HeroIcon.svg"
-          alt=""
+          alt="star"
           width={64}
           height={64}
           aria-hidden="true"
@@ -34,7 +34,7 @@ const CertificationsSection = () => {
               autoPlay={true}
               muted
               preload="metadata"
-              poster="/assets/homepage/video-poster.jpg"
+              poster="/assets/homepage/video-poster.png"
             >
               <source src="/assets/homepage/nabcep.mp4" type="video/mp4" />
               <p>Tu navegador no soporta video HTML5. Podés contactarnos para más información sobre nuestras certificaciones.</p>

@@ -68,7 +68,7 @@ const Navbar = () => {
               width={200}
               height={74}
               className="h-auto brightness-0 invert hidden"
-              priority
+              loading="lazy"
             />
           </a>
 

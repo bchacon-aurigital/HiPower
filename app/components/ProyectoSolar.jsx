@@ -90,12 +90,12 @@ const ProyectoSolar = () => {
             <ul className="grid grid-cols-2 gap-x-10 gap-y-6 mt-8" aria-label="Métricas del proyecto">
                 {metrics.map((metric, index) => (
                     <li key={index} className="flex flex-col">
-                        <h5 className="text-[#037F3F] text-3xl font-bold" aria-label={`${metric.description}: ${metric.value}`}>
+                        <p className="text-[#037F3F] text-3xl font-bold" aria-label={`${metric.description}: ${metric.value}`}>
                             {metric.value}
                             <span className=" text-xl md:text-2xl font-medium max-w-[7rem] text-black block">
                                 {metric.description}
                             </span>
-                        </h5>
+                        </p>
                     </li>
                 ))}
             </ul>
@@ -165,12 +165,12 @@ const ProyectoSolar = () => {
                                 <source src={currentServiceData.videoPathMp4} type="video/mp4" />
                                 <p>Tu navegador no soporta videos HTML5.</p>
                             </video>
-                            <a href="/proyectos" className="absolute top-5 md:top-9 left-7 md:w-52">
-                                <h4 className="text-center bg-white relative px-3 py-2 md:px-10 md:py-4 rounded-full text-xs font-medium shadow-md text-black transition-colors duration-300 hover:text-white overflow-hidden group">
+                            <a href="/proyectos/" className="absolute top-5 md:top-9 left-7 md:w-52">
+                                <p className="text-center bg-white relative px-3 py-2 md:px-10 md:py-4 rounded-full text-xs font-medium shadow-md text-black transition-colors duration-300 hover:text-white overflow-hidden group">
                                     <span className="absolute inset-0 bg-gradient-to-r from-[#037F3F] to-[#002D6A] opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full z-0"></span>
                                     <span className="relative z-10 block group-hover:hidden ">{currentServiceData.projectName}</span>
                                     <span className="hidden group-hover:block relative z-10">Ver Proyectos</span>
-                                </h4>
+                                </p>
                             </a>
                         </div>
                     </div>

@@ -25,7 +25,6 @@ export default function ProjectsHero() {
           name="description" 
           content="Servicios especializados en energía solar y almacenamiento con más de 14 años de experiencia. Proyectos innovadores, rentables y con tecnología avanzada." 
         />
-        <meta name="keywords" content="energía solar, almacenamiento energético, proyectos solares, energía renovable, consultoría energética" />
       </Head>
       
       <section 
@@ -41,6 +40,8 @@ export default function ProjectsHero() {
             playsInline
             poster="/assets/homepage/HeroBG.png"
             aria-label="Video de fondo mostrando servicios de energía solar"
+            preload="auto"
+            
           >
             <source src="/assets/servicios/services.webm" type="video/webm" />
             <source src="/assets/servicios/services.mp4" type="video/mp4" />
@@ -61,7 +62,7 @@ export default function ProjectsHero() {
                 Servicios especializados en energía solar y almacenamiento
               </h1>
               <p className="text-[#9B9B9B] text-lg md:text-xl mb-8 max-w-4xl">
-                Por más de 14 años, hemos desarrollado proyectos solares y de almacenamiento innovadores, altamente rentables y con las tecnologías más avanzadas. Nuestros clientes lo confirman.
+                Por más de 14 años, hemos desarrollado proyectos solares y de almacenamiento innovadores, altamente rentables y con las tecnologías más avanzadas. Nuestros proyectos hablan por sí solos, impulsando la eficiencia y sostenibilidad de grandes empresas.
               </p>
               <button
                 className="relative px-8 py-4 text-lg font-medium text-white overflow-hidden bg-[#037F3F] transition-all duration-500 hover:text-white group rounded-tl-xl rounded-br-xl focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#037F3F]"

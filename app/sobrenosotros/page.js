@@ -4,7 +4,6 @@ export const metadata = {
   metadataBase: new URL('https://www.hipowercr.com/'),
   title: 'Sobre Nosotros | HiPower - Soluciones Energéticas Sostenibles en Costa Rica',
   description: 'Con más de 14 años de experiencia, diseñamos e instalamos proyectos solares que contribuyen a un futuro más limpio y sostenible en Costa Rica.',
-  keywords: ['energía solar', 'sostenibilidad', 'proyectos solares', 'Costa Rica', 'empresa sostenible', 'energía renovable'],
   
   // Canonical URL for this specific page
   alternates: {

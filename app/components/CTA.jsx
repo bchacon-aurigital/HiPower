@@ -20,6 +20,7 @@ export default function EnergyCTA() {
                             loop
                             playsInline
                             poster="/assets/homepage/HeroBG.png"
+                            fetchPriority="low"
                         >
                             <source src="/assets/homepage/HPHeroVid.webm" type="video/webm" />
                             <source src="/assets/homepage/HPHeroVid.mp4" type="video/mp4" />

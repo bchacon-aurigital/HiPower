@@ -113,7 +113,7 @@ Carousel.displayName = "Carousel";
 const ActionButtons = memo(({ titulo, onContact }) => (
   <div>
     <a
-      href="/proyectos"
+      href="https://www.hipowercr.com/proyectos/"
       className="mr-8 relative px-5 py-3 font-medium text-white overflow-hidden bg-[#037F3F] transition-all duration-500 hover:text-white group rounded-tl-xl rounded-br-xl mt-8 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#037F3F]"
       aria-label="Ver proyectos relacionados"
     >

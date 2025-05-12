@@ -22,7 +22,7 @@ const StatisticsSection = () => {
             <div className="relative z-10 text-white mb-4">
               <Image
                 src="/assets/landing/HeroIcon.svg"
-                alt=""
+                alt="star"
                 width={64}
                 height={64}
                 className="mb-6"
@@ -40,7 +40,7 @@ const StatisticsSection = () => {
             <div className="relative z-10 text-white mb-4">
               <Image
                 src="/assets/landing/HeroIcon.svg"
-                alt=""
+                alt="star"
                 width={96}
                 height={96}
                 aria-hidden="true"
@@ -57,7 +57,7 @@ const StatisticsSection = () => {
             <div className="relative z-10 text-white mb-4">
               <Image
                 src="/assets/landing/HeroIcon.svg"
-                alt=""
+                alt="star"
                 width={64}
                 height={64}
                 className="mb-6"
