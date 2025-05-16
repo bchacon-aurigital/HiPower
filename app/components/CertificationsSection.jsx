@@ -138,6 +138,13 @@ const CertificationsSection = () => {
               </div>
             </li>
           </ul>
+              <a
+                href="https://www.hipowercr.com/sobrenosotros/"
+                className="button-project ml-5 mb-5"
+                aria-label="Volver al inicio"
+              >
+                Sobre nosotros
+              </a>
         </div>
       </div>
     </section>

@@ -121,7 +121,7 @@ const Footer = () => {
                                 <ul className="mt-2 " aria-labelledby="resources-heading">
                                     <li>
                                         <a
-                                            href="/"
+                                            href="https://www.hipowercr.com/"
                                             className="hover:text-[#037F3F] transition-colors"
                                             aria-label="Enlace al sitio web principal"
                                         >

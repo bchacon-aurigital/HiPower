@@ -114,6 +114,7 @@ const Footer = () => {
                 <li>
                   <a 
                     href="/Términos y Condiciones de HiPower Systems.pdf" 
+                    target="blank"
                     download="Términos y Condiciones de HiPower Systems.pdf"
                     className="hover:text-gray-300 transition-colors"
                   >
@@ -199,13 +200,13 @@ const Footer = () => {
           rel="noopener noreferrer"
           className="flex justify-center mx-auto w-full"
         >
-          <p className="text-white uppercase text-[8px] text-center p-1 hover:text-[#28C0F5] ">
+          <p className="text-white uppercase text-[12px] text-center p-1 hover:text-[#28C0F5] content-center ">
             Design and Development by :
           </p>
           <img
             src="/isotipo.avif"
             alt="Design and Development by aurigital"
-            className="h-[20px] w-[20px]"
+            className="h-[30px] w-[30px]"
           />
         </a>
       </div>

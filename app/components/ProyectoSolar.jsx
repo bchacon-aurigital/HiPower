@@ -165,7 +165,7 @@ const ProyectoSolar = () => {
                                 <source src={currentServiceData.videoPathMp4} type="video/mp4" />
                                 <p>Tu navegador no soporta videos HTML5.</p>
                             </video>
-                            <a href="/proyectos/" className="absolute top-5 md:top-9 left-7 md:w-52">
+                            <a href="https://www.hipowercr.com/proyectos/" className="absolute top-5 md:top-9 left-7 md:w-52">
                                 <p className="text-center bg-white relative px-3 py-2 md:px-10 md:py-4 rounded-full text-xs font-medium shadow-md text-black transition-colors duration-300 hover:text-white overflow-hidden group">
                                     <span className="absolute inset-0 bg-gradient-to-r from-[#037F3F] to-[#002D6A] opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full z-0"></span>
                                     <span className="relative z-10 block group-hover:hidden ">{currentServiceData.projectName}</span>

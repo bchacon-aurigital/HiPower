@@ -9,7 +9,7 @@ const BrandCarousel = () => {
     dots: false,
     infinite: true,
     speed: 3000,
-    slidesToShow: 5, 
+    slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 0,
@@ -21,24 +21,24 @@ const BrandCarousel = () => {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 1
-        }
+          slidesToScroll: 1,
+        },
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1
-        }
+          slidesToScroll: 1,
+        },
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   const brands = [
@@ -46,7 +46,10 @@ const BrandCarousel = () => {
     { src: "/assets/landing/brands/image 4.avif", alt: "Banco Popular" },
     { src: "/assets/landing/brands/image 5.avif", alt: "Establishment Labs" },
     { src: "/assets/landing/brands/image 6.avif", alt: "Segundo Social" },
-    { src: "/assets/landing/brands/image 7.avif", alt: "Guanacaste Aeropuerto" },
+    {
+      src: "/assets/landing/brands/image 7.avif",
+      alt: "Guanacaste Aeropuerto",
+    },
     { src: "/assets/landing/brands/image 8.avif", alt: "Fundación Omar Dengo" },
     { src: "/assets/landing/brands/image 9.avif", alt: "Claro" },
     { src: "/assets/landing/brands/image 10.avif", alt: "Lincoln School" },
@@ -64,29 +67,31 @@ const BrandCarousel = () => {
   const visibleBrands = [...brands, ...brands.slice(0, 8)];
 
   return (
-    <section className="w-full bg-white px-6 md:px-8 py-8 md:py-14" aria-labelledby="clientes-heading">
+    <section
+      className="w-full bg-white px-6 md:px-8 py-8 md:py-24"
+      aria-labelledby="clientes-heading"
+    >
       <div className="mx-auto">
-        <h2 
-          id="clientes-heading" 
-          className="text-3xl lg:text-[2.7rem] leading-10 font-semibold text-black px-8 pb-10 text-center w-full"
+        <h2
+          id="clientes-heading"
+          className="text-3xl lg:text-[2.7rem] font-semibold text-black mx-auto text-center w-full"
         >
           Empresas que impulsan su crecimiento con{" "}
-          <span className="text-[#339C59] font-bold">
-            Hi Power
-          </span>
+          <span className="text-[#339C59] font-bold">Hi Power</span>
         </h2>
-        
-        <ul 
-          className="w-full" 
-          aria-label="Clientes de Hi Power"
+        <div className="flex justify-center md:pb-16">
+        <a
+          href="https://www.hipowercr.com/proyectos/"
+          className="button-project"
+          aria-label="Ver proyectos relacionados"
         >
+          Conoce nuestros proyectos
+        </a>
+        </div>
+        <ul className="w-full" aria-label="Clientes de Hi Power">
           <Slider {...settings} aria-live="polite">
             {visibleBrands.map((brand, index) => (
-              <li
-                key={index}
-                className="px-2"
-                aria-label={brand.alt}
-              >
+              <li key={index} className="px-2" aria-label={brand.alt}>
                 <div className="flex items-center justify-center h-56 w-full rounded-tl-3xl rounded-br-3xl border-2 border-[#656565]">
                   <Image
                     src={brand.src}
@@ -101,6 +106,8 @@ const BrandCarousel = () => {
             ))}
           </Slider>
         </ul>
+
+
       </div>
     </section>
   );

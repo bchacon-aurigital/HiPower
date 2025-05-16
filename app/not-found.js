@@ -34,19 +34,13 @@ export default function NotFound() {
         </p>
 
         <a
-          className="relative px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-medium text-white overflow-hidden bg-[#037F3F] transition-all duration-500 hover:text-white group rounded-tl-xl rounded-br-xl mt-6 sm:mt-8 focus:outline-none focus:ring-2 focus:ring-[#037F3F] focus:ring-offset-2 focus:ring-offset-white"
-          aria-label="Conecta con nosotros para consultoría energética"
-          href="/"
+          className="button-project"
+          aria-label="Vuelve al inicio"
+          href="https://www.hipowercr.com/"
           data-aos="fade-up"
           data-aos-delay="350"
         >
-          <span
-            className="absolute inset-0 bg-gradient-to-r from-[#037F3F] to-[#002D6A] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-            aria-hidden="true"
-          ></span>
-          <span className="relative z-10 font-bold text-xl sm:text-2xl">
             Volver al Inicio
-          </span>
         </a>
       </div>
       <Footer />

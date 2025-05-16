@@ -52,6 +52,31 @@ body {
   font-style: normal;
 }
 
+.button-project {
+  display: inline-block;
+  margin-right: 2rem;
+  padding: 0.75rem 1.25rem;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: white;
+  background-color: #037F3F;
+  border-radius: 0.75rem 0 0.75rem 0; /* Combines rounded-tl-xl and rounded-br-xl */
+  margin-top: 2rem;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+.button-project:hover {
+  background-image: linear-gradient(to right, #037F3F, #002D6A);
+}
+
+/* Focus styles */
+.button-project:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px white, 0 0 0 4px #037F3F;
+}
 
 
 

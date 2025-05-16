@@ -3,6 +3,8 @@ import React, { memo, useState } from "react";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import { useContactAction } from "../../hooks/useContactAction";
+import { FaArrowRight, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+
 
 const servicios = [
   {
@@ -111,37 +113,21 @@ const Carousel = memo(({ imagenes, alt }) => {
 Carousel.displayName = "Carousel";
 
 const ActionButtons = memo(({ titulo, onContact }) => (
-  <div>
-    <a
-      href="https://www.hipowercr.com/proyectos/"
-      className="mr-8 relative px-5 py-3 font-medium text-white overflow-hidden bg-[#037F3F] transition-all duration-500 hover:text-white group rounded-tl-xl rounded-br-xl mt-8 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#037F3F]"
-      aria-label="Ver proyectos relacionados"
-    >
-      <span
-        className="absolute inset-0 bg-gradient-to-r from-[#037F3F] to-[#002D6A] opacity-0 transition-opacity duration-500 group-hover:opacity-100 rounded-tl-xl rounded-br-xl"
-        aria-hidden="true"
-      />
-      <span className="relative z-10 font-bold text-xl">Ver Proyecto</span>
-    </a>
+  <div className="flex">
+        <a
+          href="https://www.hipowercr.com/proyectos/"
+          className="button-project !mt-0"
+          aria-label="Ver proyectos"
+        >
+          Ver Proyectos
+        </a>
     <div
       onClick={onContact}
-      className="cursor-pointer inline-flex items-center text-[#037F3F] md:text-xl font-medium hover:text-[#002D6A] transition-colors focus:outline-none focus:ring-2 focus:ring-[#037F3F] focus:ring-offset-2 rounded-md py-1"
+      className="cursor-pointer inline-flex items-center text-[#037F3F] md:text-xl font-medium hover:text-[#002D6A] transition-colors focus:outline-none focus:ring-2 focus:ring-[#037F3F] focus:ring-offset-2 rounded-md "
       aria-label={`Adquirir servicio de ${titulo}`}
     >
       Adquirir servicio
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-5 w-5 ml-1"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        aria-hidden="true"
-      >
-        <path
-          fillRule="evenodd"
-          d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
-          clipRule="evenodd"
-        />
-      </svg>
+      <FaArrowRight className="ml-2" aria-hidden="true" />
     </div>
   </div>
 ));
@@ -164,9 +150,9 @@ const ServicioCard = memo(
 
         <div className="lg:w-1/2 flex flex-col justify-center">
           <h2 className="text-[#037F3F] text-3xl lg:text-5xl font-bold mb-4">{titulo}</h2>
-          <p className="text-gray-600 mb-2 text-base md:text-xl">{descripcion}</p>
+          <p className="text-gray-600 mb-2 text-base md:text-lg text-justify">{descripcion}</p>
           <p
-            className="text-gray-600 mb-6 text-base md:text-xl"
+            className="text-gray-600 mb-6 text-base md:text-lg text-justify"
             dangerouslySetInnerHTML={{ __html: descripcion2 }}
           />
           <ActionButtons titulo={titulo} onContact={onContact} />

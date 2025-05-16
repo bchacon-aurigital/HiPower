@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const StatisticsSection = () => {
   return (
-    <section className="w-full px-6 md:px-8 py-8 md:py-14" aria-labelledby="por-que-hipower-heading">
+    <section className="w-full px-6 md:px-8 py-8 md:pt-36" aria-labelledby="por-que-hipower-heading">
       <div className="max-w-7xl mx-auto text-center">
         <h2 id="por-que-hipower-heading" className="text-3xl text-white md:text-4xl lg:text-5xl leading-tight font-semibold mb-12">
           ¿Por qué{" "}
