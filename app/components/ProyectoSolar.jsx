@@ -130,7 +130,7 @@ const ProyectoSolar = () => {
                             </div>
                         </div>
 
-                        <h3 id={currentServiceData.id} className="text-[#037F3F] text-5xl font-bold mb-4 w-[80%]">
+                        <h3 id={currentServiceData.id} className="text-[#037F3F] text-4xl lg:text-5xl font-bold mb-4 w-[80%]">
                             {currentServiceData.title}
                         </h3>
 
@@ -143,7 +143,7 @@ const ProyectoSolar = () => {
                             className="w-48 font-semibold border-2 border-[#0046AD] text-[#0046AD] rounded-full px-4 py-1 flex items-center justify-center gap-2 hover:bg-[#0046AD] hover:text-white transition-colors"
                             aria-label={`Más información sobre ${currentServiceData.title}`}
                         >
-                            Más Información
+                            Ir al servicio
                             <FaArrowRight aria-hidden="true" />
                         </a>
 

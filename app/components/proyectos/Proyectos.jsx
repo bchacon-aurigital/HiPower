@@ -10,7 +10,7 @@ const proyectos = [
     id: "planta-solar-huacas",
     titulo: "Planta Solar Huacas",
     ubicacionDescripcion: "Ubicada en La Garita Nueva, Santa Cruz, Guanacaste, la Planta Solar Huacas es la más grande de Costa Rica.",
-    descripcion: "Esta planta solar propiedad de Coopeguanacaste fue implementada por Hi Energy y HiPower, hoy abastece de energía limpia a más de 5,000 hogares.",
+    descripcion: "Esta planta solar propiedad de Coopeguanacaste fue implementada por Advanced Energy y HiPower, hoy abastece de energía limpia a más de 5,000 hogares.",
     beneficios: "Este proyecto ha generado oportunidades de empleo para la comunidad local, demostrando que la sostenibilidad también impulsa el desarrollo social.",
     caracteristicas: [
       { valor: '17,000', descripcion: 'Paneles solares' },

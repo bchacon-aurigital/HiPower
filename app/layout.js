@@ -159,24 +159,6 @@ export default function RootLayout({ children }) {
             })(window,document,'script','dataLayer','GTM-5ZKZ99DB');`,
           }}
         />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preload"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@400;500;600;700;800&display=swap"
-          rel="stylesheet"
-          media="print"
-        />
-
-        <noscript>
-          <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@400;500;600;700;800&display=swap"
-            rel="stylesheet"
-          />
-        </noscript>
       </head>
       <body>
         <noscript>

@@ -104,15 +104,15 @@ export default function SolarEnergySection() {
                 <h3 className="text-lg font-semibold text-gray-800 mb-2">Necesitas mayor estabilidad y autonomía energética</h3>
               </div>
             </div>
-
-          </div>
-          <a
+            <a
             href="https://www.hipowercr.com/servicios/"
             className="button-project"
             aria-label="Ir a servicios"
           >
             Conoce nuestros servicios
           </a>
+          </div>
+
         </div>
       </div>
     </section>

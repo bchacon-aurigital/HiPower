@@ -79,10 +79,10 @@ const BrandCarousel = () => {
           Empresas que impulsan su crecimiento con{" "}
           <span className="text-[#339C59] font-bold">Hi Power</span>
         </h2>
-        <div className="flex justify-center md:pb-16">
+        <div className="flex justify-center pb-10 md:pb-16">
         <a
           href="https://www.hipowercr.com/proyectos/"
-          className="button-project"
+          className="button-project !mr-0"
           aria-label="Ver proyectos relacionados"
         >
           Conoce nuestros proyectos
