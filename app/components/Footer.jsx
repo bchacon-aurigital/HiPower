@@ -113,7 +113,8 @@ const Footer = () => {
                 </li>
                 <li>
                   <a 
-                    href="/Términos y Condiciones de HiPower Systems.pdf" 
+                    href="/TerminosyCondicionesdeHiPowerSystems.pdf" 
+                    download="TerminosyCondicionesdeHiPowerSystems.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-gray-300 transition-colors"
