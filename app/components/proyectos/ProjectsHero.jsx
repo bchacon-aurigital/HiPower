@@ -4,10 +4,12 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useContactAction } from '../../hooks/useContactAction';
+import { useIsMobile } from '../../hooks/useIsMobile';
 
 
 export default function ProjectsHero() {
   const handleContactClick = useContactAction();
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     AOS.init({
@@ -29,8 +31,8 @@ export default function ProjectsHero() {
           poster="/assets/homepage/HeroBG.png"
           preload="auto"
         >
-          <source src="/assets/proyectos/projects.webm" type="video/webm" />
-          <source src="/assets/proyectos/projects.mp4" type="video/mp4" />
+          <source src={isMobile ? "/assets/proyectos/projectsMobile.webm" : "/assets/proyectos/projects.webm"} type="video/webm" />
+          <source src={isMobile ? "/assets/proyectos/projectsMobile.mp4" : "/assets/proyectos/projects.mp4"} type="video/mp4" />
           <p>Tu navegador no soporta videos HTML5.</p>
         </video>
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>

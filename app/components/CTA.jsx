@@ -1,9 +1,11 @@
 "use client";
 import "aos/dist/aos.css";
 import { useContactAction } from '../hooks/useContactAction';
+import { useIsMobile } from '../hooks/useIsMobile';
 
 export default function EnergyCTA() {
     const handleContactClick = useContactAction();
+    const isMobile = useIsMobile();
 
     return (
         <>
@@ -22,8 +24,8 @@ export default function EnergyCTA() {
                             poster="/assets/homepage/HeroBG.png"
                             fetchPriority="low"
                         >
-                            <source src="/assets/homepage/HPHeroVid.webm" type="video/webm" />
-                            <source src="/assets/homepage/HPHeroVid.mp4" type="video/mp4" />
+                            <source src={isMobile ? "/assets/homepage/HPHeroVidMobile.webm" : "/assets/homepage/HPHeroVid.webm"} type="video/webm" />
+                            <source src={isMobile ? "/assets/homepage/HPHeroVidMobile.mp4" : "/assets/homepage/HPHeroVid.mp4"} type="video/mp4" />
                             <p>Tu navegador no soporta videos HTML5.</p>
                         </video>
                         <div className="absolute inset-0 bg-black bg-opacity-30"></div>

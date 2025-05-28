@@ -2,10 +2,12 @@
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import { FaArrowRight, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { useIsMobile } from "../hooks/useIsMobile";
 
 const ProyectoSolar = () => {
     const [currentService, setCurrentService] = useState(0);
     const videoRef = useRef(null);
+    const isMobile = useIsMobile();
 
     const services = [
         {
@@ -20,6 +22,8 @@ const ProyectoSolar = () => {
             ],
             videoPathWebm: "/assets/homepage/energiaSolar.webm",
             videoPathMp4: "/assets/homepage/energiaSolar.mp4",
+            videoPathWebmMobile: "/assets/homepage/energiaSolar.webm",
+            videoPathMp4Mobile: "/assets/homepage/energiaSolar.mp4",
             altText: "Vista aérea de la Planta Solar Huacas con sus paneles solares",
             id: "gran-escala-heading"
         },
@@ -35,6 +39,8 @@ const ProyectoSolar = () => {
             ],
             videoPathWebm: "/assets/homepage/microredes.webm",
             videoPathMp4: "/assets/homepage/microredes.mp4",
+            videoPathWebmMobile: "/assets/homepage/microredesMobile.webm",
+            videoPathMp4Mobile: "/assets/homepage/microredesMobile.mp4",
             altText: "Instalación solar en Establishment Labs mostrando el sistema de microrredes",
             id: "microgrids-heading"
         },
@@ -49,6 +55,8 @@ const ProyectoSolar = () => {
             ],
             videoPathWebm: "/assets/homepage/autoconsumo.webm",
             videoPathMp4: "/assets/homepage/autoconsumo.mp4",
+            videoPathWebmMobile: "/assets/homepage/autoconsumoMobile.webm",
+            videoPathMp4Mobile: "/assets/homepage/autoconsumoMobile.mp4",
             altText: "Vista aérea del Hospital de Turrialba con sus paneles solares",
             id: "autoconsumo-heading"
         },
@@ -64,6 +72,8 @@ const ProyectoSolar = () => {
             ],
             videoPathWebm: "/assets/homepage/hibridos.webm",
             videoPathMp4: "/assets/homepage/hibridos.mp4",
+            videoPathWebmMobile: "/assets/homepage/hibridosMobile.webm",
+            videoPathMp4Mobile: "/assets/homepage/hibridosMobile.mp4",
             altText: "Vista aérea de la Casa Santuario con sus paneles solares",
             id: "hibridos-heading"
         },
@@ -162,8 +172,8 @@ const ProyectoSolar = () => {
                                 className="w-full h-full object-cover rounded-tl-3xl rounded-br-3xl "
                                 aria-label={currentServiceData.altText}
                             >
-                                <source src={currentServiceData.videoPathWebm} type="video/webm" />
-                                <source src={currentServiceData.videoPathMp4} type="video/mp4" />
+                                <source src={isMobile ? currentServiceData.videoPathWebmMobile : currentServiceData.videoPathWebm} type="video/webm" />
+                                <source src={isMobile ? currentServiceData.videoPathMp4Mobile : currentServiceData.videoPathMp4} type="video/mp4" />
                                 <p>Tu navegador no soporta videos HTML5.</p>
                             </video>
                             <a href="https://www.hipowercr.com/proyectos/" className="absolute top-5 md:top-9 left-7 md:w-52">

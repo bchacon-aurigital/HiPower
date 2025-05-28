@@ -3,9 +3,11 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useContactAction } from "../../hooks/useContactAction";
+import { useIsMobile } from "../../hooks/useIsMobile";
 
 export default function ProjectsCTA() {
   const handleContactClick = useContactAction();
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     AOS.init({
@@ -34,8 +36,8 @@ export default function ProjectsCTA() {
             playsInline
             poster="/assets/homepage/HeroBG.png"
           >
-            <source src="/assets/proyectos/projects.webm" type="video/webm" />
-            <source src="/assets/proyectos/projects.mp4" type="video/mp4" />
+            <source src={isMobile ? "/assets/proyectos/projectsMobile.webm" : "/assets/proyectos/projects.webm"} type="video/webm" />
+            <source src={isMobile ? "/assets/proyectos/projectsMobile.mp4" : "/assets/proyectos/projects.mp4"} type="video/mp4" />
             <p>Tu navegador no soporta videos HTML5.</p>
           </video>
         </div>

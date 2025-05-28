@@ -63,8 +63,8 @@ export default function projectsjCTA() {
               id="cta-subheading"
               data-aos="fade-down"
             >
-              <strong>Conversemos sobre cómo la energía solar y el almacenamiento puede
-              ser parte de tu presente y futuro.</strong>
+              Conversemos sobre cómo la energía solar y el almacenamiento puede
+              ser parte de tu presente y futuro.
             </p>
 
             <div className="flex">
