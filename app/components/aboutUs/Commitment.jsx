@@ -14,14 +14,14 @@ const CommitmentSection = () => {
           </div>
           <div>
             <p className="text-black text-lg md:text-[1.60rem] md:font-medium mb-2">
-              Impulsar el crecimiento de nuestros clientes mediante proyectos
-              sostenibles, innovadores y a la medida.
+              <strong>Impulsar el crecimiento de nuestros clientes</strong> mediante proyectos
+              sostenibles, innovadores y adaptados a las necesidades específicas de cada operación.
             </p>
             <p className="text-[#00000099] text-lg font-medium">
-              Llevamos energía solar donde sea que se necesite. Hemos
-              participado en algunos de los proyectos más desafiantes de Costa
-              Rica, incluyendo instalaciones en zonas indígenas de difícil
-              acceso.
+              <strong>En HiPower, llevamos energía solar donde sea que se necesite.</strong> Hemos
+              participado en algunos de los <strong>proyectos más desafiantes de Costa
+              Rica</strong>, incluyendo <strong>instalaciones en zonas indígenas de difícil
+              acceso</strong>.
             </p>
           </div>
         </div>

@@ -52,7 +52,7 @@ const BeneficiosEnergiaSolar = () => {
                         id="beneficios-titulo"
                         className="text-3xl md:text-4xl font-bold text-white mb-4 max-w-md mx-auto"
                     >
-                        Beneficios de la energía solar con Hi Power
+                        Beneficios de la energía solar con HiPower
                     </h2>
                     <p className="text-white/90 max-w-md mx-auto">
                         Nos aseguramos de que tu inversión en energía solar sea rentable,

@@ -59,23 +59,22 @@ export default function AboutUsHero() {
               cambio hacia un futuro 
               más limpio y sostenible
             </h1>
-            <p className="text-white text-lg md:text-xl mb-8 max-w-4xl max-w-[650px]">
-            Lideramos proyectos solares desde hace 14 años para diversificar y descarbonizar la energía en Costa Rica
+            <p className="text-white text-lg md:text-xl mb-8 max-w-[650px]">
+            <strong className="font-bold">Lideramos proyectos solares desde hace 14 años</strong> para diversificar y descarbonizar la energía en Costa Rica
             </p>
-            <button
+            <a
+              href="https://www.hipowercr.com/proyectos/"
               className="relative px-8 py-4 text-lg font-medium text-white overflow-hidden bg-[#037F3F] transition-all duration-500 hover:text-white group rounded-tl-xl rounded-br-xl focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#037F3F]"
-              aria-label="Conecta con nosotros para consultoría energética"
-              type="button"
-              onClick={handleContactClick}
+              aria-label="Conoce nuestros proyectos"
             >
               <span
                 className="absolute inset-0 bg-gradient-to-r from-[#037F3F] to-[#002D6A] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
                 aria-hidden="true"
               ></span>
               <span className="relative z-10 font-bold text-2xl">
-                Conecta con nosotros
+                Conoce nuestros proyectos
               </span>
-            </button>
+            </a>
           </div>
         </div>
       </div>

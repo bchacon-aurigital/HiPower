@@ -71,7 +71,6 @@ export default function ProjectsCTA() {
           <div className="flex">
           <a
             href="https://www.hipowercr.com/servicios/"
-            class="button-project"
             aria-label="Ir a servicios"
           >
             Conoce nuestros servicios

@@ -71,7 +71,6 @@ export default function projectsjCTA() {
             <div className="flex">
               <a
                 href="https://www.hipowercr.com/"
-                class="button-project"
                 aria-label="Volver al inicio"
               >
                 Volver al inicio

@@ -10,7 +10,14 @@ const timelineData = [
         year: "1945",
         title: "El nacimiento de una visión",
         icon: "light-bulb",
-        description: "La historia de Hi Power comienza con un hombre visionario: Federico Varela Herrera. Este nació el 8 de agosto de 1945 en San Carlos de Alajuela, rodeado de árboles, cataratas y campos. Su infancia en el pueblo de San Vicente, marcada por un profundo amor por la naturaleza, sembró en él, el deseo de protegerla a lo largo de su vida.",
+        description: (
+            <>
+               <strong> La historia de HiPower</strong> comienza con un hombre visionario: <strong>Federico Varela Herrera</strong>.
+                Nació el <strong>8 de agosto de 1945</strong> en <strong>San Carlos de Alajuela</strong>, rodeado de árboles, cataratas y campos. Su infancia
+                en el pueblo de <strong>San Vicente</strong>, marcada por un profundo amor por la naturaleza, <strong>sembró en él el deseo de
+                protegerla</strong> a lo largo de su vida.
+            </>
+        ),
         animate: true
     },
     {
@@ -18,15 +25,30 @@ const timelineData = [
         year: "1993",
         title: "La inspiración en medio de una crisis energética",
         icon: "lightning",
-        description: "Durante una consultoría para empresas cafetaleras y azucareras en Honduras, Federico fue testigo de una crisis energética nacional, donde hubo racionamientos de hasta 12 horas que afectaron industrias, hospitales, escuelas, comercios y a la población en general. Allí conoció los sistemas de energía alternativos, lo que despertó en él una fascinación por las energías renovables y sembró la semilla de un futuro más sostenible.",
+        description: (
+            <>
+                Durante una consultoría para empresas cafetaleras y azucareras en <strong>Honduras</strong>, <strong>Federico fue testigo de una
+                crisis energética nacional</strong>, con racionamientos de hasta <strong>12 horas</strong> que afectaban a <strong>industrias, hospitales,
+                escuelas, comercios y a la población en general</strong>.
+                Allí conoció las <strong>energías alternativas</strong>, lo que <strong>despertó su fascinación por las energías renovables</strong> y sembró
+                la semilla de un <strong>futuro más sostenible</strong>.
+            </>
+        ),
         animate: true
     },
     {
         id: "2011",
         year: "2011",
-        title: "Fundación de Hi Power",
+        title: "Fundación de HiPower",
         icon: "flag",
-        description: "Con el conocimiento adquirido y el apoyo de su hijo Marco Varela, en 2011 nace Hi Power con una visión clara: Ser impulsores del cambio en el modelo energético de Costa Rica y la región. Desde entonces, la empresa ha sido pionera y ha liderado proyectos innovadores que combinan sostenibilidad, tecnología y compromiso social",
+        description: (
+            <>
+                Con el conocimiento adquirido y el apoyo de su hijo <strong>Marco Varela</strong>, en <strong>2011 nace HiPower</strong> con una visión
+                clara: <strong>Ser impulsores del cambio en el modelo energético de Costa Rica y la región</strong>.
+                Desde entonces, la empresa ha sido <strong>pionera en proyectos innovadores</strong> que combinan <strong>sostenibilidad,
+                tecnología y compromiso social</strong>.
+            </>
+        ),
         animate: true
     },
     {
@@ -34,7 +56,14 @@ const timelineData = [
         year: "Hoy",
         title: "Impulsando un futuro solar",
         icon: "arrow-up",
-        description: "Hoy, Hi Power continúa con un propósito firme que consiste en contribuir a la sostenibilidad de nuestro planeta, reduciendo la huella de carbono de nuestra sociedad y los costos energéticos de nuestros hogares, empresas e instituciones mediante la generación de energía limpia y eficiente.",
+        description: (
+            <>
+                El legado de <strong>Don Federico</strong> sigue vivo en cada proyecto que desarrollamos.
+                Hoy, <strong>HiPower</strong> continúa con un propósito firme: <strong>contribuir a la sostenibilidad del planeta, reducir la huella
+                de carbono, promover la independencia energética</strong> y <strong>disminuir los costos</strong> para hogares, empresas e
+                instituciones mediante la <strong>generación de energía limpia y eficiente</strong>.
+            </>
+        ),
         animate: true
     }
 ];
@@ -208,14 +237,10 @@ const Timeline = () => {
 
             <div className='max-w-xl mx-auto text-center mb-9'>
             <h2 className="text-3xl lg:text-[2.7rem] leading-10 font-semibold text-black mb-2">
-                Nuestra Historia <br/>
-                Un legado de ­
-                <span className="text-[#0046AD] font-bold">
-                energía limpia
-                </span>
+                <strong>Nuestra Historia – Un legado de energía limpia</strong>
             </h2>
             <p className="text-xl text-black">
-            Un sueño impulsado por la pasión por la naturaleza y la innovación en energía sustentable.
+           Un sueño impulsado por la  <strong>pasión por la naturaleza</strong> y la innovación en <strong>energía renovable</strong>.
             </p>
             </div>
 

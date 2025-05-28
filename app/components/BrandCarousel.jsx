@@ -77,7 +77,7 @@ const BrandCarousel = () => {
           className="text-3xl lg:text-[2.7rem] font-semibold text-black mx-auto text-center w-full"
         >
           Empresas que impulsan su crecimiento con{" "}
-          <span className="text-[#339C59] font-bold">Hi Power</span>
+          <span className="text-[#339C59] font-bold">HiPower</span>
         </h2>
         <div className="flex justify-center pb-10 md:pb-16">
         <a
@@ -88,14 +88,14 @@ const BrandCarousel = () => {
           Conoce nuestros proyectos
         </a>
         </div>
-        <ul className="w-full" aria-label="Clientes de Hi Power">
+        <ul className="w-full" aria-label="Clientes de HiPower">
           <Slider {...settings} aria-live="polite">
             {visibleBrands.map((brand, index) => (
               <li key={index} className="px-2" aria-label={brand.alt}>
                 <div className="flex items-center justify-center h-56 w-full rounded-tl-3xl rounded-br-3xl border-2 border-[#656565]">
                   <Image
                     src={brand.src}
-                    alt={`Logo de ${brand.alt} - Cliente de Hi Power`}
+                    alt={`Logo de ${brand.alt} - Cliente de HiPower`}
                     width={200}
                     height={160}
                     className="object-contain mx-auto px-7"

@@ -122,7 +122,7 @@ const ProcesoTrabajo = () => {
             <img src="../assets/servicios/iconos/Vector (7).svg" className='w-6 h-6' alt='energia'/>
             </div>
             <h3 className="text-xl font-bold mb-2">No pierdas más energía!</h3>
-            <p className=" text-sm">Adquiere estos y más servicios trabajando con el equipo de Hi power.</p>
+            <p className=" text-sm">Adquiere estos y más servicios trabajando con el equipo de HiPower.</p>
 
             <button
             onClick={handleContactClick}

@@ -50,7 +50,7 @@ const proyectos = [
   {
     id: "hospitales-publicos",
     titulo: "Sector de Salud ",
-    ubicacionDescripcion: "Hi Power ha desarrollado proyectos solares en hospitales públicos de Turrialba, Puntarenas y San Isidro contribuyendo a la descarbonización del sector salud.",
+    ubicacionDescripcion: "HiPower ha desarrollado proyectos solares en hospitales públicos de Turrialba, Puntarenas y San Isidro contribuyendo a la descarbonización del sector salud.",
     descripcion: "Estos centros médicos cuentan con sistemas fotovoltaicos de autoconsumo lo que reduce considerablemente gastos energéticos.",
     beneficios: "Reducir su huella de carbono, costos energéticos y avanzar hacia una operación más sostenible y resiliente.",
     caracteristicas: [

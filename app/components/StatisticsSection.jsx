@@ -7,13 +7,13 @@ const StatisticsSection = () => {
       <div className="max-w-7xl mx-auto text-center">
         <h2 id="por-que-hipower-heading" className="text-3xl text-white md:text-4xl lg:text-5xl leading-tight font-semibold mb-12">
           ¿Por qué{" "}
-          <span className="text-[#339C59] font-bold">Hi Power</span>?
+          <span className="text-[#339C59] font-bold">HiPower</span>?
         </h2>
         
         <ul 
           className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 list-none"
           role="list"
-          aria-label="Datos clave de Hi Power"
+          aria-label="Datos clave de HiPower"
         >
           <li className="relative bg-black/20 text-white rounded-tl-3xl rounded-br-3xl p-16 flex flex-col items-center justify-center shadow-lg transform transition-transform hover:scale-105">
             <div className="absolute inset-0 rounded-tl-3xl rounded-br-3xl border-2 border-transparent bg-clip-padding" style={{ 

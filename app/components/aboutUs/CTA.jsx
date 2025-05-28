@@ -55,7 +55,7 @@ export default function projectsjCTA() {
               className="text-4xl md:text-5xl text-center max-w-xl mb-4 font-roboto font-bold lg:leading-snug"
               data-aos="fade-down"
             >
-              ¿Quieres impulsar un cambio real?
+              <strong>¿Quieres impulsar un cambio real?</strong>
             </h2>
 
             <p
@@ -63,25 +63,18 @@ export default function projectsjCTA() {
               id="cta-subheading"
               data-aos="fade-down"
             >
-              Conversemos sobre cómo la energía solar y el almacenamiento puede
-              ser parte de tu presente y futuro.
+              <strong>Conversemos sobre cómo la energía solar y el almacenamiento puede
+              ser parte de tu presente y futuro.</strong>
             </p>
 
             <div className="flex">
-              <a
-                href="https://www.hipowercr.com/"
-                class="button-project"
-                aria-label="Volver al inicio"
-              >
-                Volver al inicio
-              </a>
               <button
                 className="button-project"
-                aria-label="Conecta con nosotros para consultoría energética"
+                aria-label="Forma parte del cambio"
                 type="button"
                 onClick={handleContactClick}
               >
-                Conecta con nosotros
+                Forma parte del cambio
               </button>
             </div>
           </div>

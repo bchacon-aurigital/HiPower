@@ -25,7 +25,7 @@ const CertificationsSection = () => {
           <div 
             className="w-full mb-8 bg-black relative aspect-video"
             role="region" 
-            aria-label="Video sobre certificaciones de Hi Power"
+            aria-label="Video sobre certificaciones de HiPower"
           >
             <video
               src="/assets/homepage/nabcep.mp4"
@@ -41,7 +41,7 @@ const CertificationsSection = () => {
             </video>
           </div>
 
-          <ul className="lista-certificaciones" aria-label="Certificaciones internacionales de Hi Power">
+          <ul className="lista-certificaciones" aria-label="Certificaciones internacionales de HiPower">
             <li className="py-9 px-8 flex flex-col md:flex-row items-center justify-between border-b border-gray-200">
               <div className="md:hidden w-full flex justify-center mb-6">
                 <Image

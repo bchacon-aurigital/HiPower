@@ -66,7 +66,7 @@ export const metadata = {
 const schemaData = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: "Hi Power",
+  name: "HiPower",
   description:
     "Ahorra energía, evitá cortes y optimizá tu operación. Con 14 años de experiencia, lideramos proyectos solares exitosos en todo Costa Rica.",
   telephone: "+50640004990",

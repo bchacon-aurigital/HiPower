@@ -149,7 +149,7 @@ const ServicioCard = memo(
 
         <div className="lg:w-1/2 flex flex-col justify-center">
           <h2 className="text-[#037F3F] text-3xl lg:text-5xl font-bold mb-4">{titulo}</h2>
-          <p className="text-gray-600 mb-2 text-base md:text-lg text-justify">{descripcion}</p>
+          <p className="text-gray-600 mb-2 text-base md:text-lg text-left">{descripcion}</p>
           <p
             className="text-gray-600 mb-6 text-base md:text-lg text-justify"
             dangerouslySetInnerHTML={{ __html: descripcion2 }}
