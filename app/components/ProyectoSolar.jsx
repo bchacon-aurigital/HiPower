@@ -60,7 +60,7 @@ const ProyectoSolar = () => {
                 { value: "20", description: "Cantidad de paneles" },
                 { value: "10 kWp", description: "Potencia instalada" },
                 { value: "10.8 kWh", description: "Capacidad de almacenamiento" },
-                { value: "1", description: "Inversores" },
+                { value: "1", description: "Inversor" },
             ],
             videoPathWebm: "/assets/homepage/hibridos.webm",
             videoPathMp4: "/assets/homepage/hibridos.mp4",
@@ -158,6 +158,7 @@ const ProyectoSolar = () => {
                                 loop
                                 muted
                                 playsInline
+                                poster={`/assets/homepage/${currentServiceData.videoPathWebm.split('/').pop().replace('.webm', '.avif')}`}
                                 className="w-full h-full object-cover rounded-tl-3xl rounded-br-3xl "
                                 aria-label={currentServiceData.altText}
                             >

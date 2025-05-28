@@ -1,9 +1,5 @@
 "use client";
-import dynamic from "next/dynamic";
-
-const Footer = dynamic(() => import("./components/Footer"), {
-  ssr: false,
-});
+import Footer from "./components/Footer";
 
 export default function NotFound() {
   return (

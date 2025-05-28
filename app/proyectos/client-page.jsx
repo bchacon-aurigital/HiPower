@@ -1,24 +1,11 @@
 "use client";
-import dynamic from "next/dynamic";
 import { useEffect } from "react";
 import ProjectsHero from "../components/proyectos/ProjectsHero";
 import { useContactAction } from '../hooks/useContactAction';
-
-const Navbar = dynamic(() => import("../components/Navbar"), {
-  ssr: false,
-});
-
-const Footer = dynamic(() => import("../components/Footer"), {
-  ssr: false,
-});
-
-const Proyectos = dynamic(() => import("../components/proyectos/Proyectos"), {
-  ssr: false,
-});
-
-const CTA = dynamic(() => import("../components/proyectos/CTA"), {
-  ssr: false,
-});
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import Proyectos from "../components/proyectos/Proyectos";
+import CTA from "../components/proyectos/CTA";
 
 export default function ProyectosClientPage() {
   const handleContactClick = useContactAction();

@@ -1,32 +1,12 @@
 "use client";
-import dynamic from "next/dynamic";
 import { useEffect } from "react";
 import ServiciosHero from "../components/servicios/ServiciosHero";
-
-const NavbarServicios = dynamic(() => import("../components/NavbarServicios"), {
-  ssr: false,
-});
-
-const Footer = dynamic(() => import("../components/Footer"), {
-  ssr: false,
-});
-
-const Servicios = dynamic(() => import("../components/servicios/Servicios"), {
-  ssr: false,
-});
-
-const ProcesoTrabajo = dynamic(() => import("../components/servicios/ProcesoTrabajo"), {
-  ssr: false,
-});
-
-const BeneficiosEnergiaSolar  = dynamic(() => import("../components/servicios/BeneficiosEnergiaSolar"), {
-  ssr: false,
-});
-
-
-const CTA = dynamic(() => import("../components/servicios/CTA"), {
-    ssr: false,
-  });
+import NavbarServicios from "../components/NavbarServicios";
+import Footer from "../components/Footer";
+import Servicios from "../components/servicios/Servicios";
+import ProcesoTrabajo from "../components/servicios/ProcesoTrabajo";
+import BeneficiosEnergiaSolar from "../components/servicios/BeneficiosEnergiaSolar";
+import CTA from "../components/servicios/CTA";
 
 export default function ProyectosClientPage() {
   return (

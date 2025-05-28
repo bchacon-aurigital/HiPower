@@ -1,5 +1,4 @@
 import "./globals.css";
-import { LoadingProvider } from "./context/LoadingContext";
 import { ContactModalProvider } from "./context/ContactModalContext";
 
 export const metadata = {
@@ -170,7 +169,7 @@ export default function RootLayout({ children }) {
           />
         </noscript>
         <ContactModalProvider>
-          <LoadingProvider>{children}</LoadingProvider>
+          {children}
         </ContactModalProvider>
         <script
           type="application/ld+json"

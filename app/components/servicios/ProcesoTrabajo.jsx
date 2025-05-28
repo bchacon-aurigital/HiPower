@@ -62,7 +62,7 @@ const ProcesoTrabajo = () => {
             <img src="../assets/servicios/iconos/ion_document-sharp.svg" className='w-6 h-6' alt='permisos'/>
             </div>
             <h3 className="text-xl font-bold mb-2 text-black pt-3">Gestión de Permisos y Trámites</h3>
-            <p className="text-gray-600 text-sm">Te apoyamos en la búsqueda de opciones de financiamiento para tu proyecto.</p>
+            <p className="text-gray-600 text-sm">Nos encargamos de toda la documentación regulatoria para su implementación.</p>
           </div>
           
           <div 

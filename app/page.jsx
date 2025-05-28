@@ -1,43 +1,15 @@
 "use client";
-import dynamic from "next/dynamic";
 import { Parallax } from 'react-parallax';
 import Hero from "./components/Hero";
-
-const Navbar = dynamic(() => import("./components/Navbar"), {
-  ssr: false,
-});
-
-const ProyectoSolar = dynamic(() => import("./components/ProyectoSolar"), {
-  ssr: false,
-});
-
-const BrandCarousel = dynamic(() => import("./components/BrandCarousel"), {
-  ssr: false,
-});
-
-const Footer = dynamic(() => import("./components/Footer"), {
-  ssr: false,
-});
-
-const StatisticsSection = dynamic(() => import("./components/StatisticsSection"), {
-  ssr: false,
-});
-
-const CertificationsSection = dynamic(() => import("./components/CertificationsSection"), {
-  ssr: false,
-});
-
-const SolarEnergySection = dynamic(() => import("./components/SolarEnergySection"), {
-  ssr: false,
-});
-
-const PartnersSection = dynamic(() => import("./components/PartnersSection"), {
-  ssr: false,
-});
-
-const CTA = dynamic(() => import("./components/CTA"), {
-  ssr: false,
-});
+import Navbar from "./components/Navbar";
+import ProyectoSolar from "./components/ProyectoSolar";
+import BrandCarousel from "./components/BrandCarousel";
+import Footer from "./components/Footer";
+import StatisticsSection from "./components/StatisticsSection";
+import CertificationsSection from "./components/CertificationsSection";
+import SolarEnergySection from "./components/SolarEnergySection";
+import PartnersSection from "./components/PartnersSection";
+import CTA from "./components/CTA";
 
 const Home = () => {
   return (
