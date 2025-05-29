@@ -1,21 +1,8 @@
 "use client";
-import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useContactAction } from '../hooks/useContactAction';
 
 export default function Hero() {
-  // State to control animation classes
-  const [isLoaded, setIsLoaded] = useState(false);
-  
-  useEffect(() => {
-    // Set a timeout to trigger animations after component mounts
-    const timer = setTimeout(() => {
-      setIsLoaded(true);
-    }, 100);
-    
-    return () => clearTimeout(timer);
-  }, []);
-
   const stats = [
     { text: "Únicos en Costa Rica con certificación NABCEP", color: "bg-[#037F3F]" },
     { text: "+14 años de experiencia", color: "bg-[#00439D]" },
@@ -50,11 +37,7 @@ export default function Hero() {
       </div>
 
       <div className="relative h-full flex flex-col items-center justify-center text-white px-4">
-        <div
-          className={`text-center max-w-4xl mx-auto transition-all duration-700 ${
-            isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}
-        >
+        <div className="text-center max-w-4xl mx-auto">
           <h1
             className="text-4xl md:text-5xl font-bold mb-6 leading-tight"
             id="hero-heading"
@@ -98,20 +81,13 @@ export default function Hero() {
           <div id="estadisticas" className="sr-only">Resultados destacados</div>
           <div className="container mx-auto px-4">
             <ul className="flex items-center justify-center gap-8 text-white list-none">
-              {/* First stat with staggered animation */}
-              <li
-                className={`bg-[#037F3F]/50 rounded-full px-4 py-3 transition-all duration-700 ${
-                  isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
-                }`}
-                style={{ transitionDelay: '200ms' }}
-              >
+              {/* First stat */}
+              <li className="bg-[#037F3F]/50 rounded-full px-4 py-3">
                 <p className="text-md 2xl:text-xl font-bold">{stats[0].text}</p>
               </li>
 
-              {/* Star icon with staggered animation */}
-              <li className={`flex-shrink-0 transition-all duration-700 ${
-                isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
-              }`} style={{ transitionDelay: '300ms' }}>
+              {/* Star icon */}
+              <li className="flex-shrink-0">
                 <Image
                   src="/assets/landing/HeroIcon.svg"
                   alt="star"
@@ -123,14 +99,11 @@ export default function Hero() {
                 />
               </li>
 
-              {/* Other stats with staggered animations */}
+              {/* Other stats */}
               {stats.slice(1).map((stat, index) => (
                 <li
                   key={index}
-                  className={`bg-[#00439D]/50 rounded-full px-4 py-3 transition-all duration-700 ${
-                    isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
-                  }`}
-                  style={{ transitionDelay: `${400 + index * 100}ms` }}
+                  className="bg-[#00439D]/50 rounded-full px-4 py-3"
                 >
                   <p className="text-md 2xl:text-xl font-bold">{stat.text}</p>
                 </li>
