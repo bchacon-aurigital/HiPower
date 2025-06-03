@@ -6,8 +6,7 @@ const StatisticsSection = () => {
     <section className="w-full px-6 md:px-8 py-8 md:pt-36" aria-labelledby="por-que-hipower-heading">
       <div className="max-w-7xl mx-auto text-center">
         <h2 id="por-que-hipower-heading" className="text-3xl text-white md:text-4xl lg:text-5xl leading-tight font-semibold mb-12">
-          ¿Por qué{" "}
-          <span className="text-[#339C59] font-bold">HiPower</span>?
+          Trayectoria
         </h2>
         
         <ul 
@@ -17,7 +16,7 @@ const StatisticsSection = () => {
         >
           <li className="relative bg-black/20 text-white rounded-tl-3xl rounded-br-3xl p-16 flex flex-col items-center justify-center shadow-lg transform transition-transform hover:scale-105">
             <div className="absolute inset-0 rounded-tl-3xl rounded-br-3xl border-2 border-transparent bg-clip-padding" style={{ 
-              background: "linear-gradient(black, black) padding-box, linear-gradient(to bottom, #1C4CD0, #037F3F) border-box" 
+              background: "linear-gradient(to right, #1C4CD0, #037F3F) padding-box" 
             }}></div>
             <div className="relative z-10 text-white mb-4">
               <Image
@@ -29,7 +28,7 @@ const StatisticsSection = () => {
                 aria-hidden="true"
               />
             </div>
-            <strong className="relative z-10 text-5xl font-bold text-blue-500 mb-2">+14</strong>
+            <strong className="relative z-10 text-5xl font-bold mb-2">+14</strong>
             <span className="relative z-10 text-2xl">años de experiencia</span>
           </li>
           

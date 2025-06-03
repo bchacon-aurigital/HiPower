@@ -1,165 +1,52 @@
+// app/layout.js - Versión Optimizada
 import "./globals.css";
 import { ContactModalProvider } from "./context/ContactModalContext";
+import Script from "next/script";
 
 export const metadata = {
   metadataBase: new URL("https://www.hipowercr.com/"),
   title: "Energía solar y almacenamiento para empresas | HiPower",
-  description:
-    "Ahorra energía, evitá cortes y optimizá tu operación. Con 14 años de experiencia, lideramos proyectos solares exitosos en todo Costa Rica.",
-
-  // Favicon configuration
-  icons: {
-    icon: [
-      { url: "/favicon.ico" },
-      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-    ],
-    apple: [{ url: "/apple-touch-icon.png" }],
-    other: [
-      {
-        rel: "icon",
-        url: "/android-chrome-192x192.png",
-        sizes: "192x192",
-        type: "image/png",
-      },
-    ],
-  },
-
-  // Web manifest
-  manifest: "/site.webmanifest",
-
-  // OpenGraph
-  openGraph: {
-    title: "Energía solar y almacenamiento para empresas | HiPower",
-    description:
-      "Ahorra energía, evitá cortes y optimizá tu operación. Con 14 años de experiencia, lideramos proyectos solares exitosos en todo Costa Rica.",
-    url: "https://www.hipowercr.com/",
-    siteName: "Energía solar y almacenamiento para empresas | HiPower",
-    images: [
-      {
-        url: "https://www.hipowercr.com/HeroBG.png",
-        width: 1200,
-        height: 630,
-        alt: "HiPower Energía Solar",
-      },
-    ],
-    locale: "es_ES",
-    type: "website",
-  },
-
-  // Twitter Card
-  twitter: {
-    card: "summary_large_image",
-    title: "Energía solar y almacenamiento para empresas | HiPower",
-    description:
-      "Ahorra energía, evitá cortes y optimizá tu operación. Con 14 años de experiencia, lideramos proyectos solares exitosos en todo Costa Rica.",
-    images: ["https://www.hipowercr.com/HeroBG.png"],
-    creator: "@hipowercr",
-    site: "@hipowercr",
-  },
-
-  alternates: {
-    canonical: "https://www.hipowercr.com/",
-  },
+  description: "Ahorra energía, evitá cortes y optimizá tu operación. Con 14 años de experiencia, lideramos proyectos solares exitosos en todo Costa Rica.",
+  // ... resto del metadata
 };
 
 const schemaData = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "HiPower",
-  description:
-    "Ahorra energía, evitá cortes y optimizá tu operación. Con 14 años de experiencia, lideramos proyectos solares exitosos en todo Costa Rica.",
-  telephone: "+50640004990",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "150 mts sur del cementerio de San Luis",
-    addressLocality: "Santo Domingo",
-    addressRegion: "Heredia",
-    postalCode: "",
-    addressCountry: "CR",
-  },
-  openingHoursSpecification: [
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      opens: "08:00",
-      closes: "17:00",
-    },
-  ],
-  sameAs: [
-    "https://www.linkedin.com/company/hipowercr/",
-    "https://www.youtube.com/@hipowercr",
-    "https://www.facebook.com/hipowercr",
-    "https://www.instagram.com/hipower.cr/",
-  ],
-  makesOffer: [
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Diseño e instalación de plantas solares fotovoltaicas a gran escala",
-      },
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Implementación de Micro Redes (Microgrids)",
-      },
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Sistemas Off-Grid para autonomía energética",
-      },
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Sistemas de generación distribuida",
-      },
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Sistemas de almacenamiento de energía con baterías",
-      },
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Consultoría y estudios de viabilidad energética",
-      },
-    },
-    {
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: "Soporte técnico integral",
-      },
-    },
-  ],
+  description: "Ahorra energía, evitá cortes y optimizá tu operación. Con 14 años de experiencia, lideramos proyectos solares exitosos en todo Costa Rica.",
+  // ... resto del schema
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-5ZKZ99DB');`,
-          }}
+        {/* Precarga de recursos críticos */}
+        <link
+          rel="preload"
+          href="/assets/homepage/HeroBG.png"
+          as="image"
+          type="image/jpeg"
         />
+        <link
+          rel="preload"
+          href="/assets/landing/LogoHiPower.svg"
+          as="image"
+          type="image/svg+xml"
+        />
+        
+        {/* DNS prefetch para dominios externos */}
+        <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="//js.hsforms.net" />
+        
+        {/* Preconnect para recursos críticos */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
       </head>
+      
       <body>
+        {/* GTM NoScript - mantener para compatibilidad */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-5ZKZ99DB"
@@ -168,11 +55,31 @@ export default function RootLayout({ children }) {
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
+        
         <ContactModalProvider>
           {children}
         </ContactModalProvider>
-        <script
+
+        {/* Scripts críticos diferidos */}
+        <Script
+          id="gtm-script"
+          strategy="afterInteractive" // Cargar después de que la página sea interactiva
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','GTM-5ZKZ99DB');
+            `,
+          }}
+        />
+
+        {/* Schema JSON-LD con menor prioridad */}
+        <Script
+          id="schema-org"
           type="application/ld+json"
+          strategy="lazyOnload" // Cargar cuando sea necesario
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
         />
       </body>

@@ -30,6 +30,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@next/bundle-analyzer": "^15.3.2",
+    "@svgr/webpack": "^8.1.0",
     "brotli-webpack-plugin": "^1.1.0",
     "compression-webpack-plugin": "^11.1.0",
     "critters": "^0.0.23",
@@ -39,6 +40,7 @@
     "postcss": "^8",
     "serve": "^14.2.4",
     "tailwindcss": "^3.4.1",
-    "terser-webpack-plugin": "^5.3.14"
+    "terser-webpack-plugin": "^5.3.14",
+    "url-loader": "^4.1.1"
   }
 }

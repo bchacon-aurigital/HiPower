@@ -12,13 +12,13 @@ const ProyectoSolar = () => {
     const services = [
         {
             title: "Energía Solar a Gran Escala",
-            description: "Diseñamos, construimos e instalamos plantas solares para generadoras y distribuidoras de energía, incluyendo algunas de las más grandes de Costa Rica.",
+            description: "Diseñamos, construimos e instalamos plantas solares de gran capacidad para generadoras y distribuidoras de energía, incluyendo algunas de las más destacadas del país, como la Planta Solar Huacas.",
             projectName: "Planta Solar Huacas",
             metrics: [
-                { value: "17,000", description: "Cantidad de paneles" },
+                { value: "17,000", description: "Paneles Solares" },
                 { value: "10 MWp", description: "Potencia instalada" },
                 { value: "46", description: "Inversores" },
-                { value: "1700 tn", description: " anuales de CO₂ mitigado" },
+                { value: "1700 tn", description: "CO₂ mitigado por año" },
             ],
             videoPathWebm: "/assets/homepage/energiaSolar.webm",
             videoPathMp4: "/assets/homepage/energiaSolar.mp4",
@@ -28,13 +28,13 @@ const ProyectoSolar = () => {
             id: "gran-escala-heading"
         },
         {
-            title: "Microrredes (Microgrids)",
-            description: "Sistemas de energía integrados con paneles solares, baterías y generadores para garantizar autonomía y continuidad operativa.",
+            title: "Microrredes",
+            description: "Sistemas de energía que integran paneles solares, baterías y generadores para brindarte autonomía energética y continuidad operativa, incluso ante interrupciones del servicio eléctrico.",
             projectName: "Establishment Labs",
             metrics: [
-                { value: "1,501", description: "Cantidad de paneles" },
+                { value: "1,501", description: "Paneles Solares" },
                 { value: "1 MWp", description: "Potencia instalada" },
-                { value: "2 Mwh", description: "Capacidad de almacenamiento" },
+                { value: "2 Mwh", description: "de almacenamiento" },
                 { value: "6", description: "Inversores" },
             ],
             videoPathWebm: "/assets/homepage/microredes.webm",
@@ -46,12 +46,12 @@ const ProyectoSolar = () => {
         },
         {
             title: "Sistemas de autoconsumo",
-            description: "Sistemas fotovoltaicos diseñados para autoconsumo, que permiten generar electricidad de manera eficiente y reducir costos.",
+            description: "Soluciones fotovoltaicas que te permiten generar tu propia electricidad, optimizar el consumo energético y reducir los costos operativos de tu empresa o institución.",
             projectName: "Hospital de Turrialba",
             metrics: [
                 { value: "1700", description: "Paneles Solares" },
                 { value: "900 kWp", description: "Potencia instalada" },
-                { value: "142 tn", description: "anuales de CO₂ mitigado" },
+                { value: "142 tn", description: "CO₂ mitigado por año" },
             ],
             videoPathWebm: "/assets/homepage/autoconsumo.webm",
             videoPathMp4: "/assets/homepage/autoconsumo.mp4",
@@ -62,12 +62,12 @@ const ProyectoSolar = () => {
         },
         {
             title: "Sistemas Híbridos",
-            description: "Los sistemas solares híbridos combinan paneles solares, almacenamiento en baterías y, en algunos casos, respaldo de la red eléctrica o generadores",
+            description: "Sistemas solares que combinan paneles, baterías y respaldo de red (o generadores), ideales para operar en zonas con acceso limitado o inestable a la red eléctrica.",
             projectName: "Casa Santuario",
             metrics: [
-                { value: "20", description: "Cantidad de paneles" },
+                { value: "20", description: "Paneles Solares" },
                 { value: "10 kWp", description: "Potencia instalada" },
-                { value: "10.8 kWh", description: "Capacidad de almacenamiento" },
+                { value: "10.8 kWh", description: "de almacenamiento" },
                 { value: "1", description: "Inversor" },
             ],
             videoPathWebm: "/assets/homepage/hibridos.webm",
@@ -102,7 +102,7 @@ const ProyectoSolar = () => {
                     <li key={index} className="flex flex-col">
                         <p className="text-[#037F3F] text-3xl font-bold" aria-label={`${metric.description}: ${metric.value}`}>
                             {metric.value}
-                            <span className=" text-xl md:text-2xl font-medium max-w-[7rem] text-black block">
+                            <span className=" text-sm md:text-lg font-medium max-w-[12rem] text-black block">
                                 {metric.description}
                             </span>
                         </p>
