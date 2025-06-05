@@ -86,7 +86,7 @@ const CertificationsSection = () => {
                 <h3 className="text-3xl font-semibold text-[#339C59] mb-1">
                   NABCEP
                 </h3>
-                <p className="text-gray-600 max-w-sm">
+                <p className="text-gray-600">
                   La certificación solar más reconocida a nivel mundial. HiPower
                   es la única empresa en Costa Rica con esta acreditación, lo
                   que garantiza proyectos solares diseñados e instalados bajo
@@ -121,9 +121,8 @@ const CertificationsSection = () => {
                 <h3 className="text-3xl font-semibold text-[#339C59] mb-1">
                   SEI
                 </h3>
-                <p className="text-gray-600 max-w-sm">
-                  Reconocidos por Solar Energy International por nuestros altos
-                  estándares técnicos.
+                <p className="text-gray-600 ">
+                Reconocidos por nuestra excelencia técnica. Nuestro equipo ha sido capacitado y evaluado por Solar Energy International (SEI), una de las instituciones líderes en formación solar a nivel global, asegurando prácticas actualizadas y de clase mundial.
                 </p>
               </div>
 
@@ -153,9 +152,8 @@ const CertificationsSection = () => {
                 <h3 className="text-3xl font-semibold text-[#339C59] mb-1">
                   OSHA
                 </h3>
-                <p className="text-gray-600 max-w-sm">
-                  Cumplimos con normas de seguridad ocupacional para proteger
-                  equipo y clientes.
+                <p className="text-gray-600 ">
+                Comprometidos con la seguridad en cada etapa del proyecto. Cumplimos con los estándares de seguridad ocupacional más exigentes, protegiendo tanto a nuestro equipo como a los proyectos que desarrollamos.
                 </p>
               </div>
 

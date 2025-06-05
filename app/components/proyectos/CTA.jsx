@@ -71,7 +71,7 @@ export default function ProjectsCTA() {
             solución personalizada de energía limpia y confiable.
           </p>
           <div className="flex">
-          <a
+          <a className="button-project"
             href="https://www.hipowercr.com/servicios/"
             aria-label="Ir a servicios"
           >

@@ -69,7 +69,7 @@ export default function projectsjCTA() {
               tu futuro.
             </p>
             <div className="flex">
-              <a
+              <a  className="button-project"
                 href="https://www.hipowercr.com/"
                 aria-label="Volver al inicio"
               >

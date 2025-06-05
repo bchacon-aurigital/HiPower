@@ -16,7 +16,7 @@ const StatisticsSection = () => {
         >
           <li className="relative bg-black/20 text-white rounded-tl-3xl rounded-br-3xl p-16 flex flex-col items-center justify-center shadow-lg transform transition-transform hover:scale-105">
             <div className="absolute inset-0 rounded-tl-3xl rounded-br-3xl border-2 border-transparent bg-clip-padding" style={{ 
-              background: "linear-gradient(to right, #1C4CD0, #037F3F) padding-box" 
+              background: "linear-gradient(to right, #1C4CD0, #037F3F) padding-box, linear-gradient(to bottom, #1C4CD0, #037F3F) border-box" 
             }}></div>
             <div className="relative z-10 text-white mb-4">
               <Image
@@ -28,13 +28,13 @@ const StatisticsSection = () => {
                 aria-hidden="true"
               />
             </div>
-            <strong className="relative z-10 text-5xl font-bold mb-2">+14</strong>
-            <span className="relative z-10 text-2xl">años de experiencia</span>
+            <strong className="relative z-10 text-6xl font-bold mb-2">+14</strong>
+            <span className="relative z-10 text-3xl">años de experiencia</span>
           </li>
           
           <li className="relative bg-black bg-opacity-60 text-white rounded-tl-3xl rounded-br-3xl p-16 flex flex-col items-center justify-center shadow-lg transform transition-transform hover:scale-105">
             <div className="absolute inset-0 rounded-tl-3xl rounded-br-3xl border-2 border-transparent bg-clip-padding" style={{ 
-              background: "linear-gradient(black, black) padding-box, linear-gradient(to bottom, #1C4CD0, #037F3F) border-box" 
+              background: "linear-gradient(to right, #1C4CD0, #037F3F) padding-box, linear-gradient(to bottom, #1C4CD0, #037F3F) border-box" 
             }}></div>
             <div className="relative z-10 text-white mb-4">
               <Image
@@ -45,13 +45,13 @@ const StatisticsSection = () => {
                 aria-hidden="true"
               />
             </div>
-            <strong className="relative z-10 text-5xl font-bold text-blue-500 mb-2">+30 MW</strong>
-            <span className="relative z-10 text-2xl">en nuestra gestión solar</span>
+            <strong className="relative z-10 text-6xl font-bold text-white mb-2">+30 MW</strong>
+            <span className="relative z-10 text-3xl">en nuestra gestión solar</span>
           </li>
           
           <li className="relative bg-black text-white rounded-tl-3xl rounded-br-3xl p-16 flex flex-col items-center justify-center shadow-lg transform transition-transform hover:scale-105">
             <div className="absolute inset-0 rounded-tl-3xl rounded-br-3xl border-2 border-transparent bg-clip-padding" style={{ 
-              background: "linear-gradient(black, black) padding-box, linear-gradient(to bottom, #1C4CD0, #037F3F) border-box" 
+              background: "linear-gradient(to right, #1C4CD0, #037F3F) padding-box, linear-gradient(to bottom, #1C4CD0, #037F3F) border-box" 
             }}></div>
             <div className="relative z-10 text-white mb-4">
               <Image
@@ -63,8 +63,8 @@ const StatisticsSection = () => {
                 aria-hidden="true"
               />
             </div>
-            <strong className="relative z-10 text-5xl font-bold text-blue-500 mb-2">+5 MWH</strong>
-            <span className="relative z-10 text-2xl">en almacenamiento</span>
+            <strong className="relative z-10 text-6xl font-bold text-white mb-2">+5 MWH</strong>
+            <span className="relative z-10 text-3xl">en almacenamiento</span>
           </li>
         </ul>
       </div>
