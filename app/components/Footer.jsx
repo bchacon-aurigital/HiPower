@@ -194,7 +194,7 @@ const Footer = () => {
         </div>
 
       </div>
-      <div className="w-full h-5 ">
+      <div className=" hidden w-full h-5 ">
         <a
           href="https://aurigital.com"
           target="_blank"
