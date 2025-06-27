@@ -191,7 +191,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="relative w-full h-6 bg-[#2A5757] rounded-b-3xl">
+                <div className="hidden relative w-full h-6 bg-[#2A5757] rounded-b-3xl">
                     <a
                         href="https://aurigital.com"
                         target="_blank"

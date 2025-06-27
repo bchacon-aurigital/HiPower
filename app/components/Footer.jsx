@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { FaInstagram, FaLinkedin, FaFacebook, FaYoutube } from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaFacebook, FaYoutube, FaWhatsapp } from "react-icons/fa";
 import { useContactAction } from '../hooks/useContactAction';
 
 const Footer = () => {
@@ -147,6 +147,17 @@ const Footer = () => {
                       +506 4000-4090
                     </a>
                   </li>
+                  <li className="mt-4">
+                    <a
+                      href="https://api.whatsapp.com/send?phone=50670662545"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 bg-white text-[#037F3F] px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300 hover:scale-105 transform"
+                    >
+                      <FaWhatsapp className="text-xl" />
+                      Soporte y Mantenimiento
+                    </a>
+                  </li>
                 </ul>
               </div>
 
@@ -194,14 +205,14 @@ const Footer = () => {
         </div>
 
       </div>
-      <div className=" hidden w-full h-5 ">
+      <div className="hidden w-full h-5">
         <a
           href="https://aurigital.com"
           target="_blank"
           rel="noopener noreferrer"
           className="flex justify-center mx-auto w-full"
         >
-          <p className="text-white uppercase text-[12px] text-center p-1 hover:text-[#28C0F5] content-center ">
+          <p className=" text-white uppercase text-[12px] text-center p-1 hover:text-[#28C0F5] content-center ">
             Design and Development by :
           </p>
           <img
