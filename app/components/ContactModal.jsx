@@ -94,8 +94,8 @@ const ContactModal = ({ isOpen, onClose }) => {
               </div>
               
               
-              <div className="grid grid-cols-1 md:grid-cols-2 w-full h-full md:h-auto md:max-w-7xl overflow-auto md:overflow-visible">
-                <div className="bg-gradient-to-br from-[#037F3F] to-[#002D6A] text-white p-4 md:p-6 lg:p-8 flex flex-col rounded-bl-none md:rounded-bl-3xl">
+              <div className="items-center w-full h-full md:h-auto md:max-w-4xl overflow-auto md:overflow-visible">
+                {/* <div className="bg-gradient-to-br from-[#037F3F] to-[#002D6A] text-white p-4 md:p-6 lg:p-8 flex flex-col rounded-bl-none md:rounded-bl-3xl">
                   <h3 className="text-2xl md:text-3xl font-light mb-2">Escríbenos</h3>
                   <p className="text-sm md:text-md font-thin mb-4">Elegí la opción que mejor se ajuste a tu consulta:</p>
                   
@@ -206,7 +206,7 @@ const ContactModal = ({ isOpen, onClose }) => {
                       </a>
                     </div>
                   </div>
-                </div>
+                </div> */}
                 
                 <div className="p-4 md:p-6 lg:p-8 overflow-auto border-2 border-[#000000] rounded-tr-none md:rounded-tr-3xl h-[700px] md:h-auto "> 
                   <div id="hubspot-form-container" className="hubspot-form min-h-[350px]">
