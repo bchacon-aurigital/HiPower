@@ -1,8 +1,11 @@
 "use client";
 import Image from "next/image";
 import { useContactAction } from '../hooks/useContactAction';
+import { useIsMobile } from '../hooks/useIsMobile';
 
 export default function Hero() {
+  const isMobile = useIsMobile();
+  
   const stats = [
     { text: "Únicos en Costa Rica con certificación NABCEP", color: "bg-[#037F3F]" },
     { text: "+14 años de experiencia", color: "bg-[#00439D]" },
@@ -26,8 +29,9 @@ export default function Hero() {
           loop
           playsInline
           poster="/assets/homepage/HeroBG.png"
-          preload="auto"
+          preload={isMobile ? "metadata" : "auto"} // Preload condicional
           fetchPriority="high"
+          style={{ willChange: 'auto' }} // Optimización GPU
         >
           <source src="/assets/homepage/HPHeroVid.webm" type="video/webm" />
           <source src="/assets/homepage/HPHeroVid.mp4" type="video/mp4" />
@@ -95,7 +99,8 @@ export default function Hero() {
                   height={56}
                   className="w-14 h-14"
                   aria-hidden="true"
-                  priority
+                  priority={false} 
+                  loading="lazy"
                 />
               </li>
 
