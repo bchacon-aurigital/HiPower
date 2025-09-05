@@ -7,7 +7,30 @@ export const metadata = {
   metadataBase: new URL("https://www.hipowercr.com/"),
   title: "Energía solar y almacenamiento para empresas | HiPower",
   description: "Ahorra energía, evitá cortes y optimizá tu operación. Con 14 años de experiencia, lideramos proyectos solares exitosos en todo Costa Rica.",
-  // ... resto del metadata
+  
+  alternates: {
+    canonical: "https://www.hipowercr.com/"
+  },
+
+  keywords: "energía solar, almacenamiento energético, paneles solares, Costa Rica, HiPower, energía renovable, ahorro energético",
+
+  openGraph: {
+    title: "Energía solar y almacenamiento para empresas | HiPower",
+    description: "Ahorra energía, evitá cortes y optimizá tu operación. Con 14 años de experiencia, lideramos proyectos solares exitosos en todo Costa Rica.",
+    url: "https://www.hipowercr.com/",
+    siteName: "HiPower - Energía Solar y Almacenamiento",
+    images: [
+      {
+        url: "https://www.hipowercr.com/HeroBG.png",
+        width: 1200,
+        height: 630,
+        alt: "HiPower - Energía solar y almacenamiento para empresas en Costa Rica",
+      },
+    ],
+    locale: "es_ES",
+    type: "website"
+  },
+  
 };
 
 const schemaData = {
