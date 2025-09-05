@@ -121,7 +121,7 @@ const Footer = () => {
                                 <ul className="mt-2 " aria-labelledby="resources-heading">
                                     <li>
                                         <a
-                                            href="https://www.hipowercr.com/"
+                                            href="https://www.hipowercr.com"
                                             className="hover:text-[#037F3F] transition-colors"
                                             aria-label="Enlace al sitio web principal"
                                         >
@@ -130,16 +130,9 @@ const Footer = () => {
                                     </li>
                                     <li>
                                         <a
-                                            href="/privacy"
-                                            className="hover:text-[#037F3F] transition-colors"
-                                            aria-label="Enlace a la Política de Privacidad"
-                                        >
-                                            Política de Privacidad
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            href="/terms"
+                                            href="https://www.hipowercr.com/TerminosyCondicionesdeHiPowerSystems.pdf"
+                                            download="TerminosyCondicionesdeHiPowerSystems.pdf"                          
+                                            rel="noopener noreferrer"
                                             className="hover:text-[#037F3F] transition-colors"
                                             aria-label="Enlace a Términos y Condiciones"
                                         >
