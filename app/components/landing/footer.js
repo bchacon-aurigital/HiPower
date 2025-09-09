@@ -36,6 +36,10 @@ const Footer = () => {
                             src="/assets/BgFooter.png"
                             alt="Footer Background"
                             className="absolute inset-0 w-full h-full object-cover rounded-3xl"
+                            loading="lazy"
+                            decoding="async"
+                            width="1920"
+                            height="1080"
                         />
                     </picture>
                 </div>
@@ -198,6 +202,10 @@ const Footer = () => {
                             src="/assets/isotipo.avif"
                             alt="Aurigital logo"
                             className="h-[18px] w-[18px] ml-1"
+                            loading="lazy"
+                            decoding="async"
+                            width="18"
+                            height="18"
                         />
                     </a>
                 </div>

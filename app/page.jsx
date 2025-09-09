@@ -51,6 +51,8 @@ const Home = () => {
           loop
           muted
           playsInline
+          preload="metadata"
+          poster="/assets/homepage/HeroBG.png"
         >
           <source src={isMobile ? "/assets/homepage/parallaxMobile.webm" : "/assets/homepage/parallax.webm"} type="video/webm" />
           <source src={isMobile ? "/assets/homepage/parallaxMobile.mp4" : "/assets/homepage/parallax.mp4"} type="video/mp4" />

@@ -44,6 +44,11 @@ export default function AboutUsHero() {
             src="/assets/aboutUs/AboutUsHeroBGM.png"
             alt="Paneles solares en techo industrial"
             className="w-full h-full object-cover absolute inset-0"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+            width="1920"
+            height="1080"
           />
         </picture>
       </div>

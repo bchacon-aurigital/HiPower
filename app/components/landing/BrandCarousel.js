@@ -81,6 +81,10 @@ const BrandCarousel = () => {
                     src={brand.src}
                     alt={brand.alt}
                     className="max-h-18 max-w-18 object-contain mx-auto"
+                    loading="lazy"
+                    decoding="async"
+                    width="160"
+                    height="64"
                   />
                 </div>
               </div>

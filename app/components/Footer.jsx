@@ -186,7 +186,7 @@ const Footer = () => {
                 width={280}
                 height={84}
                 className="mb-4 mx-auto"
-                priority
+                loading="lazy"
               />
             </a>
             
@@ -219,6 +219,10 @@ const Footer = () => {
             src="/isotipo.avif"
             alt="Design and Development by aurigital"
             className="h-[30px] w-[30px]"
+            loading="lazy"
+            decoding="async"
+            width="30"
+            height="30"
           />
         </a>
       </div>

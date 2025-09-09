@@ -9,6 +9,10 @@ export default function NotFound() {
           src="/assets/404-error.svg"
           alt="Error 404 Ilustración"
           className="w-44 h-44 mb-6"
+          loading="eager"
+          decoding="async"
+          width="176"
+          height="176"
         />
 
         <h2

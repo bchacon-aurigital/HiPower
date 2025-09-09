@@ -37,6 +37,10 @@ export default function projectsjCTA() {
               src="/assets/servicios/mission_sectionM.png"
               alt="Paneles solares en techo industrial"
               className="w-full h-full object-cover absolute inset-0"
+              loading="lazy"
+              decoding="async"
+              width="1920"
+              height="1080"
             />
           </picture>
           <div className="absolute inset-0 bg-black bg-opacity-20"></div>
