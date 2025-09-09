@@ -1,5 +1,4 @@
 "use client";
-import "aos/dist/aos.css";
 import { useContactAction } from "../../hooks/useContactAction";
 
 export default function projectsjCTA() {
@@ -46,7 +45,7 @@ export default function projectsjCTA() {
           <div className="absolute inset-0 bg-black bg-opacity-20"></div>
         </div>
         <section
-          className="relative z-20 md:w-[86%] rounded-tl-3xl rounded-br-3xl h-[66vh] overflow-hidden mx-auto my-auto bg-white/60 md:bg-white/80"
+          className="relative z-20 md:w-[86%] rounded-tl-3xl rounded-br-3xl h-[66vh] overflow-hidden mx-auto my-auto bg-white/60 md:bg-white/80 performance-offscreen"
           aria-labelledby="cta-heading"
         >
           <div

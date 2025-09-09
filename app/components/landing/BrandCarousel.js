@@ -1,7 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css"; 
 
 const BrandCarousel = () => {
   const settings = {
@@ -61,7 +60,7 @@ const BrandCarousel = () => {
   ];
 
   return (
-    <section>
+    <section className="performance-offscreen">
     <div className="w-full bg-white py-24" role="region" aria-labelledby="carousel-heading">
       <div className="mx-auto px-4">
         <h2 id="carousel-heading" className="sr-only">

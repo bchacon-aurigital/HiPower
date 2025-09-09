@@ -2,6 +2,7 @@
 import "./globals.css";
 import { ContactModalProvider } from "./context/ContactModalContext";
 import Script from "next/script";
+import AOSProvider from "./components/AOSProvider";
 
 export const metadata = {
   metadataBase: new URL("https://www.hipowercr.com/"),
@@ -127,9 +128,11 @@ export default function RootLayout({ children }) {
           />
         </noscript>
 
-        <ContactModalProvider>
-          {children}
-        </ContactModalProvider>
+        <AOSProvider>
+          <ContactModalProvider>
+            {children}
+          </ContactModalProvider>
+        </AOSProvider>
 
         {/* Schema JSON-LD con menor prioridad */}
         <Script

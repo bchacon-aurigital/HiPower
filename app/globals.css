@@ -34,6 +34,7 @@ body {
   src: url("/assets/fonts/Futura Bold font.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
 
 /* futura medium condensed bt */
@@ -42,6 +43,7 @@ body {
   src: url("/assets/fonts/futura medium condensed bt.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 
 /* FuturaMediumBT */
@@ -50,6 +52,7 @@ body {
   src: url("/assets/fonts/FuturaMediumBT.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 
 .button-project {
@@ -76,6 +79,23 @@ body {
 .button-project:focus {
   outline: none;
   box-shadow: 0 0 0 2px white, 0 0 0 4px #037F3F;
+}
+
+/* ---------- Utilidades de rendimiento ---------- */
+/* Evita layout reflow de secciones offscreen y reduce trabajo de pintura */
+.performance-offscreen {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 1000px; /* Tamaño estimado para reservar espacio */
+}
+
+/* Reduce animaciones pesadas para usuarios que prefieren menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 

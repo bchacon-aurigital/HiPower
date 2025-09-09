@@ -1,19 +1,10 @@
 "use client";
-import React, { useEffect } from 'react';
+import React from 'react';
 import Image from 'next/image';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+
+export const dynamic = "force-static";
 
 const BeneficiosEnergiaSolar = () => {
-    useEffect(() => {
-        AOS.init({
-            duration: 800,
-            once: true,
-            offset: 100,
-            delay: 100
-        });
-    }, []);
-
     const beneficios = [
         {
             id: 1,

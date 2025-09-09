@@ -11,19 +11,20 @@ export default function EnergyCTA() {
         <>
             <div id="contacto" className="flex items-center justify-center bg-white px-6 md:px-8 py-8 md:py-14">
                 <section
-                    className="relative md:w-[86%] rounded-tl-3xl rounded-br-3xl h-[88vh] overflow-hidden mx-auto"
+                    className="relative md:w-[86%] rounded-tl-3xl rounded-br-3xl h-[88vh] overflow-hidden mx-auto performance-offscreen"
                     aria-labelledby="cta-heading"
                 >
                     <div className="absolute inset-0" aria-hidden="true">
-                        <video
-                            className="object-cover w-full h-full"
-                            autoPlay
-                            muted
-                            loop
-                            playsInline
-                            poster="/assets/homepage/HeroBG.png"
-                            fetchPriority="low"
-                        >
+                        						<video
+							className="object-cover w-full h-full"
+							autoPlay
+							muted
+							loop
+							playsInline
+							poster="/assets/homepage/HeroBG.png"
+							preload="metadata"
+							fetchPriority="low"
+						>
                             <source src={isMobile ? "/assets/homepage/HPHeroVidMobile.webm" : "/assets/homepage/HPHeroVid.webm"} type="video/webm" />
                             <source src={isMobile ? "/assets/homepage/HPHeroVidMobile.mp4" : "/assets/homepage/HPHeroVid.mp4"} type="video/mp4" />
                             <p>Tu navegador no soporta videos HTML5.</p>

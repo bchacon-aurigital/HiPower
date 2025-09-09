@@ -1,21 +1,10 @@
 "use client";
-import React, { useEffect } from 'react';
+import React from 'react';
 import Link from 'next/link';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import { useContactAction } from '../../hooks/useContactAction';
 
 const ProcesoTrabajo = () => {
   const handleContactClick = useContactAction();
-
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      once: true,
-      offset: 100,
-      delay: 100
-    });
-  }, []);
 
   return (
     <section className="px-6 md:px-8 py-8 md:py-14" aria-labelledby="proceso-trabajo-titulo">

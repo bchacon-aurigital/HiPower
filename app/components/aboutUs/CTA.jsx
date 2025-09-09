@@ -1,5 +1,4 @@
 "use client";
-import "aos/dist/aos.css";
 import { useContactAction } from "../../hooks/useContactAction";
 
 export default function projectsjCTA() {

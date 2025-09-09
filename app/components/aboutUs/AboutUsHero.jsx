@@ -1,20 +1,9 @@
 "use client";
 import Image from "next/image";
-import { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import { useContactAction } from '../../hooks/useContactAction';
 
 export default function AboutUsHero() {
   const handleContactClick = useContactAction();
-
-  useEffect(() => {
-    AOS.init({
-      once: true,
-      offset: 50,
-      duration: 750,
-    });
-  }, []);
 
   return (
     <section className="relative h-screen w-full overflow-hidden " aria-labelledby="AboutUs-hero-heading">
