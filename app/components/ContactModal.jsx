@@ -73,7 +73,7 @@ const ContactModal = ({ isOpen, onClose }) => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed inset-0 z-50 overflow-auto"
+            className="fixed inset-0 z-50 bg-white "
             initial="hidden"
             animate="visible"
             exit="exit"
@@ -81,29 +81,118 @@ const ContactModal = ({ isOpen, onClose }) => {
             role="dialog"
             aria-modal="true"
             aria-labelledby="modal-title"
+            style={{
+              height: '100vh',
+              width: '100vw',
+              overflow: 'hidden'
+            }}
           >
-            <div className="absolute inset-0 flex items-center justify-center bg-white">
-              <div className="z-10 absolute top-4 right-4 md:top-10 md:left-10">             
-                <button
-                  onClick={onClose}
-                  className="text-[#002D6A] hover:text-[#037F3F] transition-colors bg-white rounded-full"
-                  aria-label="Cerrar ventana de contacto"
+            {/* Botón cerrar */}
+            <button
+              onClick={onClose}
+              className="absolute top-4 right-4 z-50 text-[#002D6A] hover:text-[#037F3F] transition-colors bg-white rounded-full p-2 shadow-md"
+              aria-label="Cerrar ventana de contacto"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+            
+            {/* Scroll container */}
+            <div 
+              className='bg-white'
+              style={{
+                height: '100vh',
+                width: '100vw',
+                overflowY: 'auto',
+                overflowX: 'hidden',
+                WebkitOverflowScrolling: 'touch',
+                padding: '60px 20px 40px 20px'
+              }}
+            >
+              {/* Form container */}
+              <div 
+                style={{
+                  width: '100%',
+                  maxWidth: '900px',
+                  margin: '0 auto',
+                  minHeight: 'calc(100vh - 100px)'
+                }}
+              >
+                <div 
+                  style={{
+                    border: '2px solid #000000',
+                    borderTopRightRadius: '24px',
+                    backgroundColor: 'white',
+                    padding: '32px 24px'
+                  }}
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="md:w-12 md:h-12">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                  </svg>
-                </button>
-              </div>
-              
-              
-              <div className="items-center w-full h-full md:h-auto md:max-w-4xl overflow-auto md:overflow-visible"> 
-                <div className="p-4 md:p-6 lg:p-8 overflow-auto border-2 border-[#000000] rounded-tr-none md:rounded-tr-3xl h-[700px] md:h-auto "> 
-                  <div id="hubspot-form-container" className="hubspot-form min-h-[350px]">
-                  </div>
+                  <div id="hubspot-form-container"></div>
                 </div>
               </div>
             </div>
+            
+            {/* Global styles for HubSpot form */}
+            <style dangerouslySetInnerHTML={{
+              __html: `
+                /* Reset HubSpot iframe styles */
+                #hubspot-form-container iframe {
+                  width: 100% !important;
+                  min-width: 100% !important;
+                  max-width: 100% !important;
+                  border: none !important;
+                  margin: 0 !important;
+                  padding: 0 !important;
+                }
+                
+                /* Ensure form fields don't overflow */
+                .hs-form {
+                  width: 100% !important;
+                  max-width: 100% !important;
+                  box-sizing: border-box !important;
+                }
+                
+                .hs-form-field {
+                  width: 100% !important;
+                  max-width: 100% !important;
+                  box-sizing: border-box !important;
+                  margin-bottom: 16px !important;
+                }
+                
+                .hs-input {
+                  width: 100% !important;
+                  max-width: 100% !important;
+                  box-sizing: border-box !important;
+                }
+                
+                .hs-fieldtype-select select {
+                  width: 100% !important;
+                  max-width: 100% !important;
+                  box-sizing: border-box !important;
+                }
+                
+                /* Mobile specific adjustments */
+                @media (max-width: 768px) {
+                  #hubspot-form-container iframe {
+                    width: 100% !important;
+                  }
+                  
+                  .hs-form {
+                    width: 100% !important;
+                  }
+                  
+                  .hs-form-field {
+                    width: 100% !important;
+                  }
+                  
+                  .hs-input {
+                    width: 100% !important;
+                    font-size: 16px !important;
+                  }
+                }
+              `
+            }} />
           </motion.div>
         )}
       </AnimatePresence>
