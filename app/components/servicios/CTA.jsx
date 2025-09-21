@@ -80,7 +80,7 @@ export default function projectsjCTA() {
               </a>
               <button
                 className="button-project"
-                aria-label="Conecta con nosotros para consultoría energética"
+                aria-label="Cotizar mi proyecto para consultoría energética"
                 type="button"
                 onClick={handleContactClick}
               >

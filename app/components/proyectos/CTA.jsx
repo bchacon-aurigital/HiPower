@@ -79,13 +79,13 @@ export default function ProjectsCTA() {
           </a>
           <button
             className="button-project"
-            aria-label="Conecta con nosotros para consultoría energética"
+            aria-label="Cotizar mi proyecto para consultoría energética"
             type="button"
             onClick={handleContactClick}
             data-aos="fade-up"
             data-aos-delay="350"
           >
-            Conecta con nosotros
+            Cotizar mi proyecto
           </button>
           </div>
         </div>

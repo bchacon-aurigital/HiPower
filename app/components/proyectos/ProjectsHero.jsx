@@ -51,7 +51,7 @@ export default function ProjectsHero() {
               Durante más de 14 años, en HiPower hemos desarrollado proyectos solares y de almacenamiento que han contribuido a reducir los costos energéticos de nuestros clientes, así como a diversificar y descarbonizar la matriz energética de Costa Rica.            </p>
             <button
               className="relative px-8 py-4 text-lg font-medium text-white overflow-hidden bg-[#037F3F] transition-all duration-500 hover:text-white group rounded-tl-xl rounded-br-xl focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#037F3F]"
-              aria-label="Conecta con nosotros para consultoría energética"
+              aria-label="Cotizar mi proyecto para consultoría energética"
               type="button"
               onClick={handleContactClick}
             >
@@ -60,7 +60,7 @@ export default function ProjectsHero() {
                 aria-hidden="true"
               ></span>
               <span className="relative z-10 font-bold text-2xl">
-                Conecta con nosotros
+                Cotizar mi proyecto
               </span>
             </button>
           </div>

@@ -116,7 +116,7 @@ const ProcesoTrabajo = () => {
             <button
             onClick={handleContactClick}
             className="w-fit relative px-8 py-4 text-lg border-2 border-white font-medium text-white overflow-hidden bg-[#037F3F] transition-all duration-500 hover:text-white group rounded-tl-xl rounded-br-xl mt-8 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#037F3F]"
-            aria-label="Conecta con nosotros para consultoría energética"
+            aria-label="Cotizar mi proyecto para consultoría energética"
             type="button"
           >
             <span
@@ -124,7 +124,7 @@ const ProcesoTrabajo = () => {
               aria-hidden="true"
             ></span>
             <span className="relative z-10 font-bold text-lg">
-              Conecta con nosotros
+              Cotizar mi proyecto
             </span>
           </button>
           
