@@ -83,6 +83,7 @@ export default function projectsjCTA() {
                 aria-label="Cotizar mi proyecto para consultoría energética"
                 type="button"
                 onClick={handleContactClick}
+                data-aos-disabled="true"
               >
                 Recibir Asesoría
               </button>

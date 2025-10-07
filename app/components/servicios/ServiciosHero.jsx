@@ -69,6 +69,7 @@ export default function ProjectsHero() {
                 aria-label="Cotizar mi proyecto para consultoría energética"
                 type="button"
                 onClick={handleContactClick}
+                data-aos-disabled="true"
                               >
                 <span
                   className="absolute inset-0 bg-gradient-to-r from-[#037F3F] to-[#002D6A] opacity-0 transition-opacity duration-500 group-hover:opacity-100"

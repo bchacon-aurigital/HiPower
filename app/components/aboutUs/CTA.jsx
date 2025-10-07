@@ -76,6 +76,7 @@ export default function projectsjCTA() {
                 aria-label="Forma parte del cambio"
                 type="button"
                 onClick={handleContactClick}
+                data-aos-disabled="true"
               >
                 Forma parte del cambio
               </button>

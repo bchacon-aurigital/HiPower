@@ -82,8 +82,7 @@ export default function ProjectsCTA() {
             aria-label="Cotizar mi proyecto para consultoría energética"
             type="button"
             onClick={handleContactClick}
-            data-aos="fade-up"
-            data-aos-delay="350"
+            data-aos-disabled="true"
           >
             Cotizar mi proyecto
           </button>

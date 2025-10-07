@@ -6,35 +6,50 @@ const ContactModal = ({ isOpen, onClose }) => {
   const [hubspotLoaded, setHubspotLoaded] = useState(false);
   const [hubspotLoading, setHubspotLoading] = useState(false);
   
+  const createForm = () => {
+    const container = document.getElementById('hubspot-form-container');
+    if (container && window.hbspt) {
+      // Clear any existing form
+      container.innerHTML = '';
+
+      window.hbspt.forms.create({
+        portalId: "7941218",
+        formId: "1513627b-0a5d-4f12-bd35-c7f935c1eca4",
+        region: "na1",
+        target: "#hubspot-form-container"
+      });
+    }
+  };
+
   const loadHubSpot = () => {
-    if (hubspotLoaded || hubspotLoading) return;
-    
+    if (hubspotLoading) return;
+
+    // If script already loaded, just create form
+    if (hubspotLoaded || window.hbspt) {
+      // Use setTimeout to ensure the container is in the DOM
+      setTimeout(() => createForm(), 0);
+      return;
+    }
+
     setHubspotLoading(true);
-    
+
     const script = document.createElement('script');
     script.src = '//js.hsforms.net/forms/embed/v2.js';
     script.async = true;
+    script.fetchPriority = 'high';
     script.onload = () => {
       setHubspotLoaded(true);
       setHubspotLoading(false);
-      
-      if (window.hbspt) {
-        window.hbspt.forms.create({
-          portalId: "7941218",
-          formId: "1513627b-0a5d-4f12-bd35-c7f935c1eca4",
-          region: "na1",
-          target: "#hubspot-form-container"
-        });
-      }
+      createForm();
     };
     script.onerror = () => {
       setHubspotLoading(false);
       console.warn('Error loading HubSpot script');
     };
-    
+
     document.head.appendChild(script);
   };
-  
+
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -42,7 +57,7 @@ const ContactModal = ({ isOpen, onClose }) => {
     } else {
       document.body.style.overflow = 'auto';
     }
-    
+
     return () => {
       document.body.style.overflow = 'auto';
     };

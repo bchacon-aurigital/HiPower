@@ -124,6 +124,7 @@ const ActionButtons = memo(({ titulo, onContact }) => (
       onClick={onContact}
       className="cursor-pointer inline-flex items-center text-[#037F3F] md:text-xl font-medium hover:text-[#002D6A] transition-colors focus:outline-none focus:ring-2 focus:ring-[#037F3F] focus:ring-offset-2 rounded-md "
       aria-label={`Adquirir servicio de ${titulo}`}
+      data-aos-disabled="true"
     >
       Adquirir servicio
       <FaArrowRight className="ml-2" aria-hidden="true" />
