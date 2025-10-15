@@ -47,11 +47,11 @@ export default function SolarEnergySection() {
 						id="solar-heading"
 						className="text-3xl md:text-[2.40rem] leading-tight font-bold text-white mb-4 max-w-lg mx-auto"
 					>
-						¿Cómo sé si tengo que implementar energía solar?
+						¿Cómo saber si tu empresa necesita energía solar?
 					</h2>
 
 					<p className="text-lg md:text-xl text-white mb-10 max-w-lg mx-auto">
-						La energía solar tiene múltiples aplicaciones, y es ideal para tu empresa si:
+						La energía solar se adapta a distintos tipos de operación. Es ideal si tu empresa:
 					</p>
 
 					<div
@@ -70,7 +70,7 @@ export default function SolarEnergySection() {
 										className="mb-4 mx-auto lg:mx-0"
 									/>
 								</div>
-								<h3 className="text-lg font-semibold text-gray-800 mb-2">Quieres reducir costos con tecnología eficiente</h3>
+								<h3 className="text-lg font-semibold text-gray-800 mb-2">Tiene altos consumos eléctricos o picos de demanda.</h3>
 							</div>
 
 							<div className="flex flex-col items-center">
@@ -83,7 +83,7 @@ export default function SolarEnergySection() {
 										className="mb-4 mx-auto lg:mx-0"
 									/>
 								</div>
-								<h3 className="text-lg font-semibold text-gray-800 mb-2">Buscas operar de manera sostenible y reducir emisiones</h3>
+								<h3 className="text-lg font-semibold text-gray-800 mb-2">Busca reducir costos operativos y dependencia de la red.</h3>
 							</div>
 
 							<div className="flex flex-col items-center">
@@ -96,7 +96,7 @@ export default function SolarEnergySection() {
 										className="mb-4 mx-auto lg:mx-0"
 									/>
 								</div>
-								<h3 className="text-lg font-semibold text-gray-800 mb-2">Necesitas mayor estabilidad y autonomía energética</h3>
+								<h3 className="text-lg font-semibold text-gray-800 mb-2">Requiere energía estable para continuidad operativa.</h3>
 							</div>
 						</div>
 						<a
@@ -104,7 +104,7 @@ export default function SolarEnergySection() {
 						className="button-project"
 						aria-label="Ir a servicios"
 					>
-						Conoce nuestros servicios
+						Cotizar mi proyecto
 						</a>
 					</div>
 

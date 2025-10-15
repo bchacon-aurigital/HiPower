@@ -46,12 +46,12 @@ export default function Hero() {
             className="text-4xl md:text-5xl font-bold mb-6 leading-tight"
             id="hero-heading"
           >
-            Energía solar y almacenamiento para empresas
+            Energía solar y almacenamiento para empresas más eficientes
           </h1>
           <p
             className="text-xl md:text-2xl font-normal mb-6 leading-tight"
           >
-            Solicitá tu diagnóstico sin costo y empezá a reducir tu factura eléctrica.
+            Diseñamos proyectos a la medida que combinan paneles solares y sistemas de almacenamiento para maximizar tu ahorro y autonomía energética.
           </p>
 
           <div
@@ -73,7 +73,7 @@ export default function Hero() {
               aria-hidden="true"
             ></span>
             <span className="relative z-10 font-bold text-2xl">
-              Cotizar mi proyecto
+              COTIZAR MI PROYECTO
             </span>
           </button>
         </div>

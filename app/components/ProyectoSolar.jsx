@@ -11,8 +11,8 @@ const ProyectoSolar = () => {
 
     const services = [
         {
-            title: "Energía Solar a Gran Escala",
-            description: "Diseñamos, construimos e instalamos plantas solares de gran capacidad para generadoras y distribuidoras de energía, incluyendo algunas de las más destacadas del país, como la Planta Solar Huacas.",
+            title: "Energía solar a gran escala",
+            description: "Desarrollamos proyectos solares de gran capacidad para generadores y distribuidoras de energía. Nuestra experiencia se refleja en la Planta Solar Huacas, un referente nacional en eficiencia y generación sostenible.",
             projectName: "Planta Solar Huacas",
             metrics: [
                 { value: "17,000", description: "Paneles Solares" },
@@ -28,8 +28,8 @@ const ProyectoSolar = () => {
             id: "gran-escala-heading"
         },
         {
-            title: "Microrredes",
-            description: "Sistemas de energía que integran paneles solares, baterías y generadores para brindarte autonomía energética y continuidad operativa, incluso ante interrupciones del servicio eléctrico.",
+            title: "Microredes",
+            description: "Diseñamos e implementamos microredes energéticas que integran paneles solares, baterías y generadores para garantizar autonomía, eficiencia y respaldo operativo ante cortes o picos de demanda.",
             projectName: "Establishment Labs",
             metrics: [
                 { value: "1,501", description: "Paneles Solares" },
@@ -45,8 +45,8 @@ const ProyectoSolar = () => {
             id: "microgrids-heading"
         },
         {
-            title: "Sistemas de autoconsumo",
-            description: "Soluciones fotovoltaicas que te permiten generar tu propia electricidad, optimizar el consumo energético y reducir los costos operativos de tu empresa o institución.",
+            title: "Sistemas de Autoconsumo",
+            description: "Ideales para empresas e instituciones que buscan mayor eficiencia energética. Permiten generar energía limpia, reducir costos operativos y tomar control del consumo eléctrico.",
             projectName: "Hospital de Turrialba",
             metrics: [
                 { value: "1700", description: "Paneles Solares" },
@@ -62,7 +62,7 @@ const ProyectoSolar = () => {
         },
         {
             title: "Sistemas Híbridos",
-            description: "Sistemas solares que combinan paneles, baterías y respaldo de red (o generadores), ideales para operar en zonas con acceso limitado o inestable a la red eléctrica.",
+            description: "Perfectos para negocios o instalaciones en zonas con red eléctrica inestable o sin acceso a ella. Combinan energía solar y almacenamiento para ofrecer un suministro fiable, constante y eficiente.",
             projectName: "Casa Santuario",
             metrics: [
                 { value: "20", description: "Paneles Solares" },
@@ -149,11 +149,11 @@ const ProyectoSolar = () => {
 
                         <a
                             href="https://www.hipowercr.com/servicios/"                        
-                            className="w-48 font-semibold border-2 border-[#0046AD] text-[#0046AD] rounded-full px-4 py-1 flex items-center justify-center gap-2 hover:bg-[#0046AD] hover:text-white transition-colors"
-                            aria-label={`Más información sobre ${currentServiceData.title}`}
+                            className=" w-fit font-semibold border-2 border-[#0046AD] text-[#0046AD] rounded-full px-6 py-2 flex items-center justify-center gap-2 hover:bg-[#0046AD] hover:text-white transition-colors whitespace-nowrap"
+                            aria-label={`Cotizar proyecto de ${currentServiceData.title}`}
                         >
-                            Ir al servicio
-                            <FaArrowRight aria-hidden="true" />
+                            Cotizar mi proyecto
+                            <FaArrowRight aria-hidden="false" />
                         </a>
 
                         {renderMetrics(currentServiceData.metrics)}
