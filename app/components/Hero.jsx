@@ -73,7 +73,7 @@ export default function Hero() {
               aria-hidden="true"
             ></span>
             <span className="relative z-10 font-bold text-2xl">
-              COTIZAR MI PROYECTO
+              Cotizar mi proyecto
             </span>
           </button>
         </div>
