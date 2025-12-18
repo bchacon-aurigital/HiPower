@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { FaInstagram, FaLinkedin, FaFacebook, FaYoutube } from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaFacebook, FaYoutube, FaWhatsapp } from "react-icons/fa";
 import { useContactAction } from '../hooks/useContactAction';
 
 const Navbar = () => {
@@ -147,6 +147,16 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
+
+            <a
+              href="https://api.whatsapp.com/send?phone=50670662545"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-white text-[#037F3F] px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300 hover:scale-105 transform"
+            >
+              <FaWhatsapp className="text-xl" />
+              Soporte y Mantenimiento
+            </a>
           </div>
         </div>
       </nav>
@@ -210,26 +220,38 @@ const Navbar = () => {
             </ul>
           </nav>
 
-          <div className="mt-auto mb-8">
-            <p className="text-white text-lg mb-4" id="social-heading">Síguenos</p>
-            <ul 
-              className="flex gap-4" 
-              aria-labelledby="social-heading"
+          <div className="mt-auto mb-8 space-y-4">
+            <div>
+              <p className="text-white text-lg mb-4" id="social-heading">Síguenos</p>
+              <ul 
+                className="flex gap-4" 
+                aria-labelledby="social-heading"
+              >
+                {socialLinks.map((link, index) => (
+                  <li key={index}>
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white hover:text-gray-300 transition-colors"
+                      aria-label={`Visitar ${link.name} de HiPower`}
+                    >
+                      {link.icon}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <a
+              href="https://api.whatsapp.com/send?phone=50670662545"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 bg-white text-[#037F3F] px-4 py-3 rounded-lg font-semibold w-full hover:bg-gray-100 transition-colors duration-300 hover:scale-[1.02] transform"
             >
-              {socialLinks.map((link, index) => (
-                <li key={index}>
-                  <a
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white hover:text-gray-300 transition-colors"
-                    aria-label={`Visitar ${link.name} de HiPower`}
-                  >
-                    {link.icon}
-                  </a>
-                </li>
-              ))}
-            </ul>
+              <FaWhatsapp className="text-2xl" />
+              Soporte y Mantenimiento
+            </a>
           </div>
         </div>
       </div>
