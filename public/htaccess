@@ -1,0 +1,36 @@
+# Definir página de error 404 personalizada
+ErrorDocument 404 /404.html
+
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Forzar HTTPS (redirigir HTTP a HTTPS)
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+  # Redirigir de non-www a www (manteniendo HTTPS)
+  RewriteCond %{HTTP_HOST} ^hipowercr\.com$ [NC]
+  RewriteRule ^(.*)$ https://www.hipowercr.com/$1 [R=301,L]
+
+  # No aplicar reglas a archivos o directorios existentes
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # No aplicar reglas al archivo 404.html
+  RewriteRule ^404\.html$ - [L]
+
+  # Redirigir a index.html solo para rutas de la aplicación Next.js
+  RewriteCond %{REQUEST_URI} ^/(api|_next)/.*
+  RewriteRule ^ /index.html [L]
+
+  # Para cualquier otra ruta inexistente, mostrar el error 404
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ /404.html [R=404,L]
+</IfModule>
