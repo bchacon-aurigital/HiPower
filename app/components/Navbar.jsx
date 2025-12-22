@@ -39,7 +39,7 @@ const Navbar = () => {
     { name: "INICIO", href: "https://www.hipowercr.com/" },
     { name: "SERVICIOS", href: "https://www.hipowercr.com/servicios/" },
     { name: "PROYECTOS", href: "https://www.hipowercr.com/proyectos/" },
-    { name: "SOBRE NOSOTROS", href: "https://www.hipowercr.com/sobrenosotros/" },
+    { name: "NOSOTROS", href: "https://www.hipowercr.com/sobrenosotros/" },
     { name: "CONTACTO", href: "#", action: "contact" },
     { name: "BLOG", href: "https://blog.hipowercr.com/" },
   ];
