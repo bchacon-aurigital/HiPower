@@ -12,7 +12,7 @@ const BrandCarousel = () => {
     slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 0,
+    autoplaySpeed: 5000,
     cssEase: "linear",
     arrows: false,
     pauseOnHover: false,
@@ -68,18 +68,18 @@ const BrandCarousel = () => {
 
   return (
     <section
-      className="w-full bg-white px-6 md:px-8 py-8 md:py-24"
+      className="w-full bg-white py-8 md:py-24"
       aria-labelledby="clientes-heading"
     >
-      <div className="mx-auto">
+      <div className="mx-auto w-full">
         <h2
           id="clientes-heading"
-          className="text-3xl lg:text-[2.7rem] font-semibold text-black mx-auto text-center w-full"
+          className="px-6 md:px-8 text-3xl lg:text-[2.7rem] font-semibold text-black mx-auto text-center w-full"
         >
           Empresas que impulsan su crecimiento con{" "}
           <span className="text-[#339C59] font-bold">HiPower</span>
         </h2>
-        <div className="flex justify-center pb-10 md:pb-16">
+        <div className="px-6 md:px-8 flex justify-center pb-10 md:pb-16">
         <a
           href="https://www.hipowercr.com/proyectos/"
           className="button-project !mr-0"
@@ -88,17 +88,17 @@ const BrandCarousel = () => {
           Conoce nuestros proyectos
         </a>
         </div>
-        <ul className="w-full" aria-label="Clientes de HiPower">
+        <ul className="w-full overflow-hidden" aria-label="Clientes de HiPower">
           <Slider {...settings} aria-live="polite">
             {visibleBrands.map((brand, index) => (
-              <li key={index} className="px-2" aria-label={brand.alt}>
-                <div className="flex items-center justify-center h-56 w-full rounded-tl-3xl rounded-br-3xl border-2 border-[#656565]">
+              <li key={index} className="px-4" aria-label={brand.alt}>
+                <div className="flex items-center justify-center h-56 w-full rounded-tl-3xl rounded-br-3xl border-2 border-[#656565] mx-auto">
                   <Image
                     src={brand.src}
                     alt={`Logo de ${brand.alt} - Cliente de HiPower`}
                     width={200}
                     height={160}
-                    className="object-contain mx-auto px-7"
+                    className="object-contain mx-auto px-4"
                     blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjgwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjZTJlOGYwIi8+PC9zdmc+"
                   />
                 </div>
