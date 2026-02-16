@@ -8,9 +8,9 @@ export default function Hero() {
   
   const stats = [
     { text: "Únicos en Costa Rica con certificación NABCEP", color: "bg-[#037F3F]" },
-    { text: "+14 años de experiencia", color: "bg-[#00439D]" },
-    { text: "+30 MW instalados", color: "bg-[#00439D]" },
-    { text: "+5MWH generados", color: "bg-[#00439D]" },
+    { text: "15+ años de trayectoria en ingeniería solar", color: "bg-[#00439D]" },
+    { text: "+58 MW instalados en proyectos solares en Costa Rica", color: "bg-[#00439D]" },
+    { text: "+55 MWh en sistemas de almacenamiento energético", color: "bg-[#00439D]" },
   ];
 
   const handleContactClick = useContactAction();
@@ -58,7 +58,7 @@ export default function Hero() {
             className="font-light mb-6 md:hidden text-sm"
             aria-label="Estadísticas móviles"
           >
-            <p>+14 años de experiencia | +30 MW instalados | +5MWH</p>
+            <p>15+ años de trayectoria en ingeniería solar | +58 MW instalados en proyectos solares en Costa Rica | +55 MWh en sistemas de almacenamiento energético</p>
             <p>Únicos en Costa Rica con certificación NABCEP</p>
           </div>
 
@@ -87,7 +87,7 @@ export default function Hero() {
             <ul className="flex items-center justify-center gap-8 text-white list-none">
               {/* First stat */}
               <li className="bg-[#037F3F]/50 rounded-full px-4 py-3">
-                <p className="text-md 2xl:text-xl font-bold">{stats[0].text}</p>
+                <p className="text-md 2xl:text-xl text-center font-bold">{stats[0].text}</p>
               </li>
 
               {/* Star icon */}
@@ -110,7 +110,7 @@ export default function Hero() {
                   key={index}
                   className="bg-[#00439D]/50 rounded-full px-4 py-3"
                 >
-                  <p className="text-md 2xl:text-xl font-bold">{stat.text}</p>
+                  <p className="text-md 2xl:text-lg text-center font-bold">{stat.text}</p>
                 </li>
               ))}
             </ul>
