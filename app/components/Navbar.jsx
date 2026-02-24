@@ -72,7 +72,7 @@ const Navbar = () => {
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/assets/landing/logoHP.svg"
+              src="/assets/landing/logoHP.png"
               alt="Logo de HiPower"
               className="w-[200px] sm:w-[360px] h-auto"
             />
