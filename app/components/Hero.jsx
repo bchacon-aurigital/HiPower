@@ -17,7 +17,7 @@ export default function Hero() {
 
   return (
     <header
-      className="relative h-screen w-full overflow-hidden"
+      className="relative h-screen w-full"
       role="banner"
       aria-label="Sección principal"
     >

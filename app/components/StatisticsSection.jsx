@@ -28,7 +28,7 @@ const StatisticsSection = () => {
                 aria-hidden="true"
               />
             </div>
-            <strong className="relative z-10 text-6xl font-bold mb-2">+14</strong>
+            <strong className="relative z-10 text-6xl font-bold mb-2">+15</strong>
             <span className="relative z-10 text-3xl">años de experiencia</span>
           </li>
           
@@ -45,7 +45,7 @@ const StatisticsSection = () => {
                 aria-hidden="true"
               />
             </div>
-            <strong className="relative z-10 text-6xl font-bold text-white mb-2">+30 MW</strong>
+            <strong className="relative z-10 text-6xl font-bold text-white mb-2">+58 MW</strong>
             <span className="relative z-10 text-3xl">en nuestra gestión solar</span>
           </li>
           
@@ -63,7 +63,7 @@ const StatisticsSection = () => {
                 aria-hidden="true"
               />
             </div>
-            <strong className="relative z-10 text-6xl font-bold text-white mb-2">+5 MWH</strong>
+            <strong className="relative z-10 text-6xl font-bold text-white mb-2">+55 MWH</strong>
             <span className="relative z-10 text-3xl">en almacenamiento</span>
           </li>
         </ul>

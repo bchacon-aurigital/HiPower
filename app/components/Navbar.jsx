@@ -1,24 +1,32 @@
 "use client";
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import { FaInstagram, FaLinkedin, FaFacebook, FaYoutube, FaWhatsapp } from "react-icons/fa";
 import { useContactAction } from '../hooks/useContactAction';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [showSocial, setShowSocial] = useState(true);
 
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 1024);
     };
-    
+
     checkMobile();
     window.addEventListener('resize', checkMobile);
-    
+
     return () => {
       window.removeEventListener('resize', checkMobile);
     };
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowSocial(window.scrollY < window.innerHeight * 0.8);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   useEffect(() => {
@@ -57,18 +65,16 @@ const Navbar = () => {
     <>
       <nav className="absolute w-full z-50 px-6 py-4" aria-label="Navegación principal" data-aos="fade-down">
         <div className="container mx-auto flex items-center justify-between xl:justify-center gap-10">
-          <a 
-            href="https://www.hipowercr.com/" 
+          <a
+            href="https://www.hipowercr.com/"
             className={`flex-shrink-0 transition-opacity duration-300 ${isOpen ? 'opacity-0' : 'opacity-100'}`}
             aria-label="HiPower - Ir a inicio"
           >
-            <Image
-              src="/assets/landing/LogoHiPower.svg"
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/assets/landing/logoHP.svg"
               alt="Logo de HiPower"
-              width={200}
-              height={74}
-              className="h-auto brightness-0 invert"
-              priority
+              className="w-[200px] sm:w-[360px] h-auto"
             />
           </a>
 
@@ -105,8 +111,8 @@ const Navbar = () => {
                       <span className="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap text-[#037F3F] text-[10px] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         Proximamente!
                       </span>
-                      <a 
-                        href="/#" 
+                      <a
+                        href="/#"
                         className="text-gray-800 font-medium transition-colors opacity-100 group-hover:opacity-50"
                       >
                         {link.name}
@@ -131,22 +137,6 @@ const Navbar = () => {
               ))}
             </ul>
 
-            <ul className="flex items-center gap-2" aria-label="Redes sociales">
-              {socialLinks.map((link, index) => (
-                <li key={index}>
-                  <a
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-9 h-9 flex items-center justify-center bg-white/25 rounded-tl-md rounded-br-md hover:bg-white/40 transition-colors"
-                    aria-label={`Visitar ${link.name} de HiPower`}
-                  >
-                    {link.icon}
-                  </a>
-                </li>
-              ))}
-            </ul>
-
             <a
               href="https://api.whatsapp.com/send?phone=50670662545"
               target="_blank"
@@ -158,7 +148,29 @@ const Navbar = () => {
             </a>
           </div>
         </div>
+
       </nav>
+
+      <ul
+        className={`hidden xl:flex flex-col items-center gap-2 fixed right-4 top-1/2 -translate-y-1/2 z-50 transition-all duration-500 ${
+          showSocial ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4 pointer-events-none'
+        }`}
+        aria-label="Redes sociales"
+      >
+        {socialLinks.map((link, index) => (
+          <li key={index}>
+            <a
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-9 h-9 flex items-center justify-center bg-white/25 rounded-tl-md rounded-br-md hover:bg-white/40 transition-colors text-white"
+              aria-label={`Visitar ${link.name} de HiPower`}
+            >
+              {link.icon}
+            </a>
+          </li>
+        ))}
+      </ul>
 
       <div
         className={`lg:hidden fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 ${
