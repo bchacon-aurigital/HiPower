@@ -54,7 +54,7 @@ export default function AboutUsHero() {
               más limpio y sostenible
             </h1>
             <p className="text-white text-lg md:text-xl mb-8 max-w-[650px]">
-            <strong className="font-bold">Lideramos proyectos solares desde hace 14 años</strong> para diversificar y descarbonizar la energía en Costa Rica
+            <strong className="font-bold">Lideramos proyectos solares desde hace 15 años</strong> para diversificar y descarbonizar la energía en Costa Rica
             </p>
             <a
               href="https://www.hipowercr.com/proyectos/"

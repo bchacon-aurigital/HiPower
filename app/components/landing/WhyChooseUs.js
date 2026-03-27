@@ -2,7 +2,7 @@ export default function WhyChooseUs() {
   const cards = [
     {
       title: "Trayectoria Comprobada",
-      description: "14 años de experiencia y más de 20 MW instalados en proyectos solares fotovoltaicos, junto con +5 MWh en almacenamiento de energía, nos posicionan como pioneros en Costa Rica.",
+      description: "15 años de experiencia y más de 20 MW instalados en proyectos solares fotovoltaicos, junto con +5 MWh en almacenamiento de energía, nos posicionan como pioneros en Costa Rica.",
       imageUrl: "/assets/landing/WhyChooseUs/Card1.avif",
       fallbackUrl: "/assets/landing/WhyChooseUs/Card1.png",
       alt: "Imagen de instalaciones solares y almacenamiento de energía"

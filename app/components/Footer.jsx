@@ -181,7 +181,7 @@ const Footer = () => {
           <div className="flex-shrink-0 flex flex-col items-center lg:items-end space-y-6 lg:max-w-md">
             <a href="https://www.hipowercr.com/">
               <Image
-                src="/assets/landing/LogoHiPower.svg"
+                src="/assets/landing/logoHP.png"
                 alt="Logo de HiPower"
                 width={280}
                 height={84}

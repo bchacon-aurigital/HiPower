@@ -48,7 +48,7 @@ export default function ProjectsHero() {
               Proyectos emblemáticos con resultados reales 
             </h1>
             <p className="text-white text-lg md:text-xl mb-8 max-w-4xl">
-              Durante más de 14 años, en HiPower hemos desarrollado proyectos solares y de almacenamiento que han contribuido a reducir los costos energéticos de nuestros clientes, así como a diversificar y descarbonizar la matriz energética de Costa Rica.            </p>
+              Durante más de 15 años, en HiPower hemos desarrollado proyectos solares y de almacenamiento que han contribuido a reducir los costos energéticos de nuestros clientes, así como a diversificar y descarbonizar la matriz energética de Costa Rica.            </p>
             <button
               className="relative px-8 py-4 text-lg font-medium text-white overflow-hidden bg-[#037F3F] transition-all duration-500 hover:text-white group rounded-tl-xl rounded-br-xl focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#037F3F]"
               aria-label="Cotizar mi proyecto para consultoría energética"

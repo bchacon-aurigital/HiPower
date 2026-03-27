@@ -3,7 +3,7 @@ import ServiciosClientPage from './client-page';
 export const metadata = {
   metadataBase: new URL('https://www.hipowercr.com/'),
   title: 'Servicios de Energía Solar | HiPower - Soluciones Renovables en Costa Rica',
-  description: 'Servicios especializados en energía solar y almacenamiento con más de 14 años de experiencia. Proyectos innovadores, rentables y con tecnología avanzada.',
+  description: 'Servicios especializados en energía solar y almacenamiento con más de 15 años de experiencia. Proyectos innovadores, rentables y con tecnología avanzada.',
   
   // Canonical URL for this specific page
   alternates: {
@@ -12,7 +12,7 @@ export const metadata = {
   
   openGraph: {
     title: 'Servicios de Energía Solar | HiPower - Soluciones Renovables en Costa Rica',
-    description: 'Servicios especializados en energía solar y almacenamiento con más de 14 años de experiencia.',
+    description: 'Servicios especializados en energía solar y almacenamiento con más de 15 años de experiencia.',
     url: 'https://www.hipowercr.com/servicios/',
     siteName: 'HiPower - Energía Solar y Almacenamiento',
     images: [
@@ -31,7 +31,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Servicios de Energía Solar | HiPower',
-    description: 'Servicios especializados en energía solar y almacenamiento con más de 14 años de experiencia.',
+    description: 'Servicios especializados en energía solar y almacenamiento con más de 15 años de experiencia.',
     images: ['https://www.hipowercr.com/HeroBG.png'],
     creator: '@hipowercr',
     site: '@hipowercr'

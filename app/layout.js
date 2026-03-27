@@ -7,7 +7,7 @@ import AOSProvider from "./components/AOSProvider";
 export const metadata = {
   metadataBase: new URL("https://www.hipowercr.com/"),
   title: "Energía solar y almacenamiento para empresas | HiPower",
-  description: "Ahorra energía, evitá cortes y optimizá tu operación. Con 14 años de experiencia, lideramos proyectos solares exitosos en todo Costa Rica.",
+  description: "Ahorra energía, evitá cortes y optimizá tu operación. Con 15 años de experiencia, lideramos proyectos solares exitosos en todo Costa Rica.",
 
   alternates: {
     canonical: "https://www.hipowercr.com/"
@@ -17,7 +17,7 @@ export const metadata = {
 
   openGraph: {
     title: "Energía solar y almacenamiento para empresas | HiPower",
-    description: "Ahorra energía, evitá cortes y optimizá tu operación. Con 14 años de experiencia, lideramos proyectos solares exitosos en todo Costa Rica.",
+    description: "Ahorra energía, evitá cortes y optimizá tu operación. Con 15 años de experiencia, lideramos proyectos solares exitosos en todo Costa Rica.",
     url: "https://www.hipowercr.com/",
     siteName: "HiPower - Energía Solar y Almacenamiento",
     images: [
@@ -49,7 +49,7 @@ const schemaData = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "HiPower",
-  description: "Ahorra energía, evitá cortes y optimizá tu operación. Con 14 años de experiencia, lideramos proyectos solares exitosos en todo Costa Rica.",
+  description: "Ahorra energía, evitá cortes y optimizá tu operación. Con 15 años de experiencia, lideramos proyectos solares exitosos en todo Costa Rica.",
   // ... resto del schema
 };
 
