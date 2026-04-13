@@ -1,6 +1,6 @@
-const CACHE_NAME = 'hipower-v1';
-const STATIC_CACHE = 'hipower-static-v1';
-const DYNAMIC_CACHE = 'hipower-dynamic-v1';
+const CACHE_NAME = 'hipower-v2';
+const STATIC_CACHE = 'hipower-static-v2';
+const DYNAMIC_CACHE = 'hipower-dynamic-v2';
 
 const STATIC_ASSETS = [
   '/',
@@ -17,6 +17,7 @@ const STATIC_ASSETS = [
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(STATIC_CACHE).then(cache => {
+      console.log('Caching static assets');
       return cache.addAll(STATIC_ASSETS);
     })
   );
@@ -40,43 +41,51 @@ self.addEventListener('fetch', event => {
   const { request } = event;
   const url = new URL(request.url);
 
-  if (request.method !== 'GET' || !url.origin.includes('hipowercr.com')) {
+  // Skip non-GET requests and cross-origin requests (except for fonts if needed)
+  if (request.method !== 'GET' || url.origin !== self.location.origin) {
     return;
   }
 
-  if (request.url.includes('/assets/') || request.url.includes('/fonts/')) {
+  // Assets and Fonts: Cache-First strategy
+  if (url.pathname.includes('/assets/') || url.pathname.includes('/fonts/')) {
     event.respondWith(
-      caches.match(request).then(response => {
-        return response || fetch(request).then(fetchResponse => {
-          return caches.open(DYNAMIC_CACHE).then(cache => {
-            cache.put(request, fetchResponse.clone());
+      caches.match(request).then(cachedResponse => {
+        if (cachedResponse) return cachedResponse;
+        
+        return fetch(request).then(fetchResponse => {
+          if (!fetchResponse || fetchResponse.status !== 200 || fetchResponse.type !== 'basic') {
             return fetchResponse;
+          }
+          const responseToCache = fetchResponse.clone();
+          caches.open(DYNAMIC_CACHE).then(cache => {
+            cache.put(request, responseToCache);
           });
+          return fetchResponse;
         });
       })
     );
     return;
   }
 
-  if (request.mode === 'navigate') {
-    event.respondWith(
-      fetch(request).then(response => {
-        return caches.open(DYNAMIC_CACHE).then(cache => {
-          cache.put(request, response.clone());
-          return response;
-        });
-      }).catch(() => {
-        return caches.match(request).then(response => {
-          return response || caches.match('/');
-        });
-      })
-    );
-    return;
-  }
-
+  // Navigation and other requests: Stale-While-Revalidate strategy
   event.respondWith(
-    caches.match(request).then(response => {
-      return response || fetch(request);
+    caches.match(request).then(cachedResponse => {
+      const fetchPromise = fetch(request).then(fetchResponse => {
+        if (fetchResponse && fetchResponse.status === 200 && fetchResponse.type === 'basic') {
+          const responseToCache = fetchResponse.clone();
+          caches.open(DYNAMIC_CACHE).then(cache => {
+            cache.put(request, responseToCache);
+          });
+        }
+        return fetchResponse;
+      }).catch(() => {
+        // Fallback for offline navigation
+        if (request.mode === 'navigate') {
+          return caches.match('/') || caches.match('/offline.html');
+        }
+      });
+
+      return cachedResponse || fetchPromise;
     })
   );
 }); 

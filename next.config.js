@@ -266,10 +266,11 @@ const nextConfig = {
         })
       );
 
-      // Optimización adicional: Tree shaking mejorado
+      // Tree shaking — usedExports only, sideEffects:false removed
+      // sideEffects:false lets webpack eliminate GTM/analytics initializers
       config.optimization.usedExports = true;
-      config.optimization.sideEffects = false;
-      
+      // sideEffects controlled per-package via package.json, not globally
+
       // Module concatenation para bundles más pequeños
       config.optimization.concatenateModules = true;
     }
