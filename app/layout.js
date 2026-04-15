@@ -66,6 +66,14 @@ export default function RootLayout({ children }) {
           }}
         />
 
+        {/* Google Analytics G-THELB7S56G */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-THELB7S56G" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-THELB7S56G');`,
+          }}
+        />
+
         <link
           rel="preload"
           href="/assets/homepage/HeroBG.png"
