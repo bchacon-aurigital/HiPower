@@ -3,11 +3,13 @@ import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import { FaArrowRight, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useIsMobile } from "../hooks/useIsMobile";
+import { useContactAction } from '../hooks/useContactAction';
 
 const ProyectoSolar = () => {
     const [currentService, setCurrentService] = useState(0);
     const videoRef = useRef(null);
     const isMobile = useIsMobile();
+    const handleContactClick = useContactAction();
 
     const services = [
         {
@@ -147,14 +149,15 @@ const ProyectoSolar = () => {
                             {currentServiceData.description}
                         </p>
 
-                        <a
-                            href="https://www.hipowercr.com/servicios/"                        
+                        <button
+                            onClick={handleContactClick}
                             className=" w-fit font-semibold border-2 border-[#0046AD] text-[#0046AD] rounded-full px-6 py-2 flex items-center justify-center gap-2 hover:bg-[#0046AD] hover:text-white transition-colors whitespace-nowrap"
                             aria-label={`Cotizar proyecto de ${currentServiceData.title}`}
+                            type="button"
                         >
                             Cotizar mi proyecto
                             <FaArrowRight aria-hidden="false" />
-                        </a>
+                        </button>
 
                         {renderMetrics(currentServiceData.metrics)}
                     </article>

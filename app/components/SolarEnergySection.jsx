@@ -1,9 +1,11 @@
 "use client";
 import Image from "next/image";
+import { useContactAction } from '../hooks/useContactAction';
 
 export const dynamic = "force-static";
 
 export default function SolarEnergySection() {
+	const handleContactClick = useContactAction();
 	return (
 		<section className="relative w-full flex items-center justify-center px-6 md:px-8 py-8 md:py-14 overflow-hidden" aria-labelledby="solar-heading">
 			<div className="absolute inset-0 z-0" aria-hidden="true">
@@ -102,13 +104,14 @@ export default function SolarEnergySection() {
 									<p className="text-sm text-gray-600">El almacenamiento energético permite mantener la operación ante interrupciones, reduciendo riesgos en procesos críticos.</p>
 							</div>
 						</div>
-						<a
-						href="https://www.hipowercr.com/servicios/"
+						<button
+						onClick={handleContactClick}
 						className="button-project"
-						aria-label="Ir a servicios"
+						aria-label="Evaluar mi caso"
+						type="button"
 					>
 						Evaluar mi caso
-						</a>
+						</button>
 					</div>
 
 				</div>
