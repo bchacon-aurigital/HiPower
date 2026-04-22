@@ -43,12 +43,13 @@ export default function ProjectsHero() {
           <div className="max-w-4xl text-center md:text-left" data-aos="fade-right">
             <h1
               id="projects-hero-heading"
-              className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-white max-w-[700px]"
+              className="text-3xl font-bold mb-6 leading-tight text-white max-w-[700px]"
             >
-              Proyectos emblemáticos con resultados reales 
+              Proyectos de energía solar y almacenamiento para operaciones industriales y del sector eléctrico
             </h1>
-            <p className="text-white text-lg md:text-xl mb-8 max-w-4xl">
-              Durante más de 15 años, en HiPower hemos desarrollado proyectos solares y de almacenamiento que han contribuido a reducir los costos energéticos de nuestros clientes, así como a diversificar y descarbonizar la matriz energética de Costa Rica.            </p>
+            <p className="text-white text-base mb-8 max-w-4xl">
+              Hemos desarrollado e implementado proyectos de energía solar, almacenamiento en baterías (BESS) y microrredes en operaciones industriales, institucionales y del sector eléctrico en Costa Rica. Cada proyecto refleja nuestra capacidad de ejecución, control técnico y desempeño en condiciones reales de operación.
+            </p>
             <button
               className="relative px-8 py-4 text-lg font-medium text-white overflow-hidden bg-[#037F3F] transition-all duration-500 hover:text-white group rounded-tl-xl rounded-br-xl focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#037F3F]"
               aria-label="Cotizar mi proyecto para consultoría energética"
@@ -61,7 +62,7 @@ export default function ProjectsHero() {
                 aria-hidden="true"
               ></span>
               <span className="relative z-10 font-bold text-2xl">
-                Cotizar mi proyecto
+                Hablar con un especialista
               </span>
             </button>
           </div>

@@ -7,10 +7,10 @@ export default function Hero() {
   const isMobile = useIsMobile();
   
   const stats = [
-    { text: "Únicos en Costa Rica con certificación NABCEP", color: "bg-[#037F3F]" },
-    { text: "15+ años de trayectoria en ingeniería solar", color: "bg-[#00439D]" },
-    { text: "+58 MW instalados en proyectos solares en Costa Rica", color: "bg-[#00439D]" },
-    { text: "+55 MWh en sistemas de almacenamiento energético", color: "bg-[#00439D]" },
+    { text: "58+ MW instalados", color: "bg-[#037F3F]" },
+    { text: "55+ MWh en almacenamiento", color: "bg-[#00439D]" },
+    { text: "15+ años de experiencia", color: "bg-[#00439D]" },
+    { text: "Ejecución EPC + O&M", color: "bg-[#00439D]" },
   ];
 
   const handleContactClick = useContactAction();
@@ -43,28 +43,27 @@ export default function Hero() {
       <div className="relative h-full flex flex-col items-center justify-center text-white px-4">
         <div className="text-center max-w-4xl mx-auto">
           <h1
-            className="text-4xl md:text-5xl font-bold mb-6 leading-tight"
+            className="text-2xl md:text-4xl xl:text-5xl font-bold mb-6 leading-tight"
             id="hero-heading"
           >
-            Energía solar y almacenamiento para empresas más eficientes
+            Soluciones de energía solar y almacenamiento para el sector industrial y energético
           </h1>
           <p
-            className="text-xl md:text-2xl font-normal mb-6 leading-tight"
+            className="text-base font-normal mb-6 leading-tight"
           >
-            Diseñamos proyectos a la medida que combinan paneles solares y sistemas de almacenamiento para maximizar tu ahorro y autonomía energética.
+            Diseñamos e implementamos sistemas fotovoltaicos, almacenamiento en baterías y microrredes que reducen costos energéticos y aseguran la continuidad operativa en entornos industriales y utility scale.
           </p>
 
           <div
-            className="font-light mb-6 md:hidden text-sm"
+            className="font-light mb-6 md:hidden text-xs md:text-sm"
             aria-label="Estadísticas móviles"
           >
-            <p>15+ años de trayectoria en ingeniería solar | +58 MW instalados en proyectos solares en Costa Rica | +55 MWh en sistemas de almacenamiento energético</p>
-            <p>Únicos en Costa Rica con certificación NABCEP</p>
+            <p>58+ MW instalados | 55+ MWh en almacenamiento | 15+ años de experiencia | Ejecución EPC + O&M</p>
           </div>
 
           <button
             className="relative px-8 py-4 text-lg font-medium text-white overflow-hidden bg-[#037F3F] transition-all duration-500 hover:text-white group rounded-tl-xl rounded-br-xl mt-8 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#037F3F]"
-            aria-label="Cotizar mi proyecto para consultoría energética"
+            aria-label="Hablar con un especialista"
             type="button"
             onClick={handleContactClick}
           >
@@ -73,7 +72,7 @@ export default function Hero() {
               aria-hidden="true"
             ></span>
             <span className="relative z-10 font-bold text-2xl">
-              Cotizar mi proyecto
+              Hablar con un especialista
             </span>
           </button>
         </div>

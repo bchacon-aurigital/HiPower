@@ -8,24 +8,24 @@ const BeneficiosEnergiaSolar = () => {
     const beneficios = [
         {
             id: 1,
-            titulo: "Maximiza la rentabilidad",
-            descripcion: "Si buscas que tu proyecto genere la mayor rentabilidad, es con nosotros.",
+            titulo: "Capacidad constructiva propia",
+            descripcion: "Equipo y experiencia para ejecutar fases críticas de construcción, incluyendo pruebas POT, pre-drilling e hincado.",
             imageSrc: "/assets/servicios/BeneficiosEnergiaSolar1",
-            imageAlt: "Paneles solares instalados en un techo generando alta rentabilidad"
+            imageAlt: "Equipo de construcción y equipamiento especializado para instalaciones solares"
         },
         {
             id: 2,
-            titulo: "Energía confiable y segura",
-            descripcion: "Si buscas que tu proyecto se ejecute en tiempo y forma, es con nosotros.",
+            titulo: "Respaldo técnico certificado",
+            descripcion: "Contamos con certificación NABCEP, fortaleciendo nuestros estándares técnicos en el diseño e implementación de soluciones solares.",
             imageSrc: "/assets/servicios/BeneficiosEnergiaSolar2",
-            imageAlt: "Técnico instalando paneles solares con equipo de seguridad"
+            imageAlt: "Certificación NABCEP y estándares técnicos internacionales en instalaciones solares"
         },
         {
             id: 3,
-            titulo: "Acompañamiento garantizado",
-            descripcion: "Si buscas acompañamiento a lo largo de la vida útil de tu proyecto, es con nosotros.",
+            titulo: "Soluciones adaptadas a cada operación",
+            descripcion: "Cada proyecto se diseña según el perfil energético, la infraestructura y las condiciones específicas del sitio.",
             imageSrc: "/assets/servicios/BeneficiosEnergiaSolar3",
-            imageAlt: "Paneles solares con vista al cielo mostrando servicio de monitoreo continuo"
+            imageAlt: "Diseño personalizado de soluciones solares según necesidades operativas"
         }
     ];
 
@@ -43,11 +43,10 @@ const BeneficiosEnergiaSolar = () => {
                         id="beneficios-titulo"
                         className="text-3xl md:text-4xl font-bold text-white mb-4 max-w-md mx-auto"
                     >
-                        Beneficios de la energía solar con HiPower
+                        ¿Por qué HiPower?
                     </h2>
                     <p className="text-white/90 max-w-md mx-auto">
-                        Nos aseguramos de que tu inversión en energía solar sea rentable,
-                        segura y respaldada a lo largo del tiempo.
+                        Combinamos capacidad constructiva propia, respaldo técnico certificado y soluciones diseñadas según las necesidades de cada operación.
                     </p>
                 </div>
 

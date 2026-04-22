@@ -12,11 +12,11 @@ const ProyectoSolar = () => {
     const services = [
         {
             title: "Energía solar a gran escala",
-            description: "Desarrollamos proyectos solares de gran capacidad para generadores y distribuidoras de energía. Nuestra experiencia se refleja en la Planta Solar Huacas, un referente nacional en eficiencia y generación sostenible.",
+            description: "Desarrollamos plantas solares de gran escala para actores del sector energético, con capacidad constructiva propia, maquinaria especializada y estándares internacionales de calidad en obra, ideal para industrias que requieren generación a gran escala.",
             projectName: "Planta Solar Huacas",
             metrics: [
                 { value: "17,000", description: "Paneles Solares" },
-                { value: "10 MWp", description: "Potencia instalada" },
+                { value: "12 MWp", description: "Potencia instalada" },
                 { value: "46", description: "Inversores" },
                 { value: "1700 tn", description: "CO₂ mitigado por año" },
             ],
@@ -28,8 +28,8 @@ const ProyectoSolar = () => {
             id: "gran-escala-heading"
         },
         {
-            title: "Microredes",
-            description: "Diseñamos e implementamos microredes energéticas que integran paneles solares, baterías y generadores para garantizar autonomía, eficiencia y respaldo operativo ante cortes o picos de demanda.",
+            title: "Microrredes energéticas",
+            description: "Diseñamos microrredes que integran generación solar con paneles, sistemas de almacenamiento en baterías (BESS) y sistemas de control para optimizar la gestión energética y asegurar respaldo operativo, especialmente en operaciones donde la continuidad energética es crítica.",
             projectName: "Establishment Labs",
             metrics: [
                 { value: "1,501", description: "Paneles Solares" },
@@ -45,8 +45,8 @@ const ProyectoSolar = () => {
             id: "microgrids-heading"
         },
         {
-            title: "Sistemas de Autoconsumo",
-            description: "Ideales para empresas e instituciones que buscan mayor eficiencia energética. Permiten generar energía limpia, reducir costos operativos y tomar control del consumo eléctrico.",
+            title: "Sistemas de autoconsumo industrial",
+            description: "Construimos plantas de generación distribuida diseñadas para utilizar energía solar directamente en el sitio. Integramos estos sistemas al perfil de carga de la operación para reducir la dependencia de la red eléctrica y optimizar los costos energéticos, particularmente en empresas con altos consumos eléctricos.",
             projectName: "Hospital de Turrialba",
             metrics: [
                 { value: "1700", description: "Paneles Solares" },
@@ -61,8 +61,8 @@ const ProyectoSolar = () => {
             id: "autoconsumo-heading"
         },
         {
-            title: "Sistemas Híbridos",
-            description: "Perfectos para negocios o instalaciones en zonas con red eléctrica inestable o sin acceso a ella. Combinan energía solar y almacenamiento para ofrecer un suministro fiable, constante y eficiente.",
+            title: "Sistemas híbridos con almacenamiento (BESS)",
+            description: "Implementamos soluciones que combinan energía solar fotovoltaica y almacenamiento en baterías para reducir costos energéticos mediante estrategias como peak shaving y load shifting, especialmente en operaciones con picos de demanda elevados o necesidad de respaldo energético.",
             projectName: "Casa Santuario",
             metrics: [
                 { value: "20", description: "Paneles Solares" },
@@ -119,7 +119,7 @@ const ProyectoSolar = () => {
                     <article className="w-full md:w-[40%]" aria-labelledby={currentServiceData.id}>
                         <div className="flex justify-between items-center gap-4 mb-6">
                             <h2 id="servicios-heading" className="bg-[#0046AD] text-white px-3 py-2 rounded-bl-xl rounded-tr-xl text-xl font-semibold inline-block">
-                                Nuestros Servicios
+                            Soluciones energéticas <br/> para industria
                             </h2>
                             <div className="flex gap-3 border-2 border-[#037F3F] p-3 rounded-full" aria-label="Navegación de servicios">
                                 <button

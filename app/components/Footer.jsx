@@ -15,7 +15,6 @@ const Footer = () => {
 
   // Updated navLinks with trailing slashes
   const navLinks = [
-    { name: "INICIO", href: "https://www.hipowercr.com/" },
     { name: "SERVICIOS", href: "https://www.hipowercr.com/servicios/" },
     { name: "PROYECTOS", href: "https://www.hipowercr.com/proyectos/" },
     { name: "SOBRE NOSOTROS", href: "https://www.hipowercr.com/sobrenosotros/" },

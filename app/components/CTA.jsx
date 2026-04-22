@@ -44,7 +44,7 @@ export default function EnergyCTA() {
                             className="text-4xl md:text-5xl text-center max-w-[61rem] mb-4 font-roboto font-bold lg:leading-snug"
                             data-aos="fade-down"
                         >
-                            ¿Listo para optimizar tu consumo energético?
+                            Evalúa si la energía solar tiene sentido para tu operación
                         </h2>
 
                         <p
@@ -52,12 +52,12 @@ export default function EnergyCTA() {
                             id="cta-subheading"
                             data-aos="fade-down"
                         >
-                            Da el primer paso hacia un futuro más sostenible y rentable con HiPower
+                            Evaluamos tu operación, tu consumo energético y tus objetivos para definir si una solución solar realmente hace sentido desde el punto de vista técnico y económico.
                         </p>
 
                         <button
                             className="relative px-8 py-4 text-lg font-medium text-white overflow-hidden bg-[#037F3F] transition-all duration-500 hover:text-white group rounded-tl-xl rounded-br-xl mt-8 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#037F3F]"
-                            aria-label="Cotizar mi proyecto para consultoría energética"
+                            aria-label="Hablar con un especialista"
                             type="button"
                             onClick={handleContactClick}
                             data-aos-disabled="true"
@@ -67,7 +67,7 @@ export default function EnergyCTA() {
                                 aria-hidden="true"
                             ></span>
                             <span className="relative z-10 font-bold text-2xl">
-                                Cotizar mi proyecto
+                                Hablar con un especialista
                             </span>
                         </button>
                     </div>

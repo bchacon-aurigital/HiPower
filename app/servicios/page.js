@@ -2,17 +2,17 @@ import ServiciosClientPage from './client-page';
 
 export const metadata = {
   metadataBase: new URL('https://www.hipowercr.com/'),
-  title: 'Servicios de Energía Solar | HiPower - Soluciones Renovables en Costa Rica',
-  description: 'Servicios especializados en energía solar y almacenamiento con más de 15 años de experiencia. Proyectos innovadores, rentables y con tecnología avanzada.',
-  
+  title: 'Energía Solar, BESS y Microrredes para Industria | HiPower',
+  description: 'Soluciones de energía solar, almacenamiento (BESS) y microrredes para operaciones industriales. +15 años de experiencia y proyectos en todo Costa Rica.',
+
   // Canonical URL for this specific page
   alternates: {
     canonical: "https://www.hipowercr.com/servicios/"
   },
-  
+
   openGraph: {
-    title: 'Servicios de Energía Solar | HiPower - Soluciones Renovables en Costa Rica',
-    description: 'Servicios especializados en energía solar y almacenamiento con más de 15 años de experiencia.',
+    title: 'Energía Solar, BESS y Microrredes para Industria | HiPower',
+    description: 'Soluciones de energía solar, almacenamiento (BESS) y microrredes para operaciones industriales. +15 años de experiencia y proyectos en todo Costa Rica.',
     url: 'https://www.hipowercr.com/servicios/',
     siteName: 'HiPower - Energía Solar y Almacenamiento',
     images: [
@@ -30,8 +30,8 @@ export const metadata = {
   // Twitter card
   twitter: {
     card: 'summary_large_image',
-    title: 'Servicios de Energía Solar | HiPower',
-    description: 'Servicios especializados en energía solar y almacenamiento con más de 15 años de experiencia.',
+    title: 'Energía Solar, BESS y Microrredes para Industria | HiPower',
+    description: 'Soluciones de energía solar, almacenamiento (BESS) y microrredes para operaciones industriales. +15 años de experiencia y proyectos en todo Costa Rica.',
     images: ['https://www.hipowercr.com/HeroBG.png'],
     creator: '@hipowercr',
     site: '@hipowercr'

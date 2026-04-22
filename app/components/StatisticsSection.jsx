@@ -6,7 +6,7 @@ const StatisticsSection = () => {
     <section className="w-full px-6 md:px-8 py-8 md:pt-36" aria-labelledby="por-que-hipower-heading">
       <div className="max-w-7xl mx-auto text-center">
         <h2 id="por-que-hipower-heading" className="text-3xl text-white md:text-4xl lg:text-5xl leading-tight font-semibold mb-12">
-          Trayectoria
+          Experiencia en proyectos solares y almacenamiento energético
         </h2>
         
         <ul 
@@ -46,7 +46,7 @@ const StatisticsSection = () => {
               />
             </div>
             <strong className="relative z-10 text-6xl font-bold text-white mb-2">+58 MW</strong>
-            <span className="relative z-10 text-3xl">en nuestra gestión solar</span>
+            <span className="relative z-10 text-3xl">en gestión solar</span>
           </li>
           
           <li className="relative bg-black text-white rounded-tl-3xl rounded-br-3xl p-16 flex flex-col items-center justify-center shadow-lg transform transition-transform hover:scale-105">

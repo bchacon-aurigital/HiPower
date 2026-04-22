@@ -76,18 +76,11 @@ const BrandCarousel = () => {
           id="clientes-heading"
           className="px-6 md:px-8 text-3xl lg:text-[2.7rem] font-semibold text-black mx-auto text-center w-full"
         >
-          Empresas que impulsan su crecimiento con{" "}
-          <span className="text-[#339C59] font-bold">HiPower</span>
+          Operaciones que confían en HiPower
         </h2>
-        <div className="px-6 md:px-8 flex justify-center pb-10 md:pb-16">
-        <a
-          href="https://www.hipowercr.com/proyectos/"
-          className="button-project !mr-0"
-          aria-label="Ver proyectos relacionados"
-        >
-          Conoce nuestros proyectos
-        </a>
-        </div>
+        <p className="px-6 md:px-8 text-center text-gray-600 mb-10 md:mb-16 max-w-2xl mx-auto mt-2">
+          Proyectos ejecutados en operaciones reales con requerimientos técnicos exigentes.
+        </p>
         <ul className="w-full overflow-hidden" aria-label="Clientes de HiPower">
           <Slider {...settings} aria-live="polite">
             {visibleBrands.map((brand, index) => (

@@ -14,10 +14,10 @@ const CertificationsSection = () => {
           id="certificaciones-heading"
           className="text-3xl md:text-5xl font-bold mb-6"
         >
-          Certificaciones Internacionales
+          Certificaciones internacionales
         </h2>
-        <p className="text-sm md:text-lg mb-4">
-          Única empresa certificada NABCEP y que sigue normas OSHA.
+        <p className="text-sm md:text-lg mb-4 max-w-2xl mx-auto">
+          Estas certificaciones respaldan cómo se diseñan, ejecutan y operan sistemas fotovoltaicos, microrredes y soluciones con almacenamiento, asegurando calidad, seguridad y desempeño técnico.
         </p>
         <Image
           src="/assets/landing/HeroIcon.svg"
@@ -86,12 +86,11 @@ const CertificationsSection = () => {
                 <h3 className="text-3xl font-semibold text-[#339C59] mb-1">
                   NABCEP
                 </h3>
+                <p className="text-sm text-gray-500 mb-3">
+                  North American Board of Certified Energy Practitioners
+                </p>
                 <p className="text-gray-600">
-                  La certificación solar más reconocida a nivel mundial. HiPower
-                  es la única empresa en Costa Rica con esta acreditación, lo
-                  que garantiza proyectos solares diseñados e instalados bajo
-                  los más altos estándares de calidad, seguridad y desempeño
-                  técnico.
+                  NABCEP es el estándar más reconocido en la industria solar a nivel internacional, con requisitos estrictos en diseño, instalación y validación de sistemas. Esto asegura que los proyectos se desarrollen bajo criterios técnicos exigentes, reduciendo riesgos y aumentando la confiabilidad del sistema.
                 </p>
               </div>
 
@@ -121,8 +120,11 @@ const CertificationsSection = () => {
                 <h3 className="text-3xl font-semibold text-[#339C59] mb-1">
                   SEI
                 </h3>
-                <p className="text-gray-600 ">
-                Reconocidos por nuestra excelencia técnica. Nuestro equipo ha sido capacitado y evaluado por Solar Energy International (SEI), una de las instituciones líderes en formación solar a nivel global, asegurando prácticas actualizadas y de clase mundial.
+                <p className="text-sm text-gray-500 mb-3">
+                  Solar Energy International
+                </p>
+                <p className="text-gray-600">
+                  Solar Energy International (SEI) es una organización líder a nivel global en formación técnica en energías renovables, con más de 30 años de experiencia capacitando profesionales del sector. Nuestro equipo ha sido formado bajo sus programas, lo que asegura la aplicación de mejores prácticas internacionales en el diseño e implementación de sistemas energéticos. Esto permite tomar decisiones técnicas fundamentadas desde las etapas iniciales del proyecto.
                 </p>
               </div>
 
@@ -152,8 +154,11 @@ const CertificationsSection = () => {
                 <h3 className="text-3xl font-semibold text-[#339C59] mb-1">
                   OSHA
                 </h3>
-                <p className="text-gray-600 ">
-                Comprometidos con la seguridad en cada etapa del proyecto. Cumplimos con los estándares de seguridad ocupacional más exigentes, protegiendo tanto a nuestro equipo como a los proyectos que desarrollamos.
+                <p className="text-sm text-gray-500 mb-3">
+                  Occupational Safety and Health Administration
+                </p>
+                <p className="text-gray-600">
+                  OSHA establece estándares internacionales en seguridad ocupacional para la ejecución de proyectos industriales. En HiPower, estos lineamientos se integran en cada etapa del proyecto, desde la planificación hasta la construcción, asegurando condiciones seguras en obra y continuidad en la ejecución. Esto reduce riesgos operativos y protege tanto al equipo como al desarrollo del proyecto.
                 </p>
               </div>
 

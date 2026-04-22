@@ -5,7 +5,7 @@ export const dynamic = "force-static";
 
 export default function SolarEnergySection() {
 	return (
-		<section className="relative w-full md:h-screen flex items-center justify-center px-6 md:px-8 py-8 md:py-14 overflow-hidden" aria-labelledby="solar-heading">
+		<section className="relative w-full flex items-center justify-center px-6 md:px-8 py-8 md:py-14 overflow-hidden" aria-labelledby="solar-heading">
 			<div className="absolute inset-0 z-0" aria-hidden="true">
 				<picture>
 					<source
@@ -47,11 +47,11 @@ export default function SolarEnergySection() {
 						id="solar-heading"
 						className="text-3xl md:text-[2.40rem] leading-tight font-bold text-white mb-4 max-w-lg mx-auto"
 					>
-						¿Cómo saber si tu empresa necesita energía solar?
+						¿Tu operación necesita energía solar?
 					</h2>
 
 					<p className="text-lg md:text-xl text-white mb-10 max-w-lg mx-auto">
-						La energía solar se adapta a distintos tipos de operación. Es ideal si tu empresa:
+						Este tipo de soluciones suele aplicarse cuando la operación presenta condiciones como estas:
 					</p>
 
 					<div
@@ -70,7 +70,8 @@ export default function SolarEnergySection() {
 										className="mb-4 mx-auto lg:mx-0"
 									/>
 								</div>
-								<h3 className="text-lg font-semibold text-gray-800 mb-2">Tiene altos consumos eléctricos o picos de demanda.</h3>
+								<h3 className="text-lg font-semibold text-gray-800 mb-2">Altos consumos eléctricos o picos de demanda</h3>
+									<p className="text-sm text-gray-600">Los sistemas fotovoltaicos permiten reducir el consumo energético de la red y gestionar mejor los picos de demanda, optimizando el costo energético de la operación.</p>
 							</div>
 
 							<div className="flex flex-col items-center">
@@ -83,7 +84,8 @@ export default function SolarEnergySection() {
 										className="mb-4 mx-auto lg:mx-0"
 									/>
 								</div>
-								<h3 className="text-lg font-semibold text-gray-800 mb-2">Busca reducir costos operativos y dependencia de la red.</h3>
+								<h3 className="text-lg font-semibold text-gray-800 mb-2">Dependencia de la red eléctrica</h3>
+									<p className="text-sm text-gray-600">Cuando la operación depende completamente de la red, cualquier variación en tarifas impacta directamente los costos y la estabilidad del negocio.</p>
 							</div>
 
 							<div className="flex flex-col items-center">
@@ -96,7 +98,8 @@ export default function SolarEnergySection() {
 										className="mb-4 mx-auto lg:mx-0"
 									/>
 								</div>
-								<h3 className="text-lg font-semibold text-gray-800 mb-2">Requiere energía estable para continuidad operativa.</h3>
+								<h3 className="text-lg font-semibold text-gray-800 mb-2">Procesos que requieren continuidad operativa</h3>
+									<p className="text-sm text-gray-600">El almacenamiento energético permite mantener la operación ante interrupciones, reduciendo riesgos en procesos críticos.</p>
 							</div>
 						</div>
 						<a
@@ -104,7 +107,7 @@ export default function SolarEnergySection() {
 						className="button-project"
 						aria-label="Ir a servicios"
 					>
-						Cotizar mi proyecto
+						Evaluar mi caso
 						</a>
 					</div>
 

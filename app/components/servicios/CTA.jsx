@@ -59,7 +59,7 @@ export default function projectsjCTA() {
               className="text-4xl md:text-5xl text-center max-w-[61rem] mb-4 font-roboto font-bold lg:leading-snug"
               data-aos="fade-down"
             >
-              Da el siguiente paso hacia un futuro más sostenible con nosotros
+              Convierte tu consumo energético en un activo estratégico
             </h2>
 
             <p
@@ -67,27 +67,17 @@ export default function projectsjCTA() {
               id="cta-subheading"
               data-aos="fade-down"
             >
-              Solicita una evaluación sin costo y comienza a ahorrar, optimizar
-              y asegurar un suministro confiable con energía solar diseñada para
-              tu futuro.
+              Evaluamos las condiciones de tu operación para definir una solución viable desde el punto de vista técnico y económico.
             </p>
-            <div className="flex">
-              <a  className="button-project"
-                href="https://www.hipowercr.com/"
-                aria-label="Volver al inicio"
-              >
-                Volver al inicio
-              </a>
-              <button
-                className="button-project"
-                aria-label="Cotizar mi proyecto para consultoría energética"
-                type="button"
-                onClick={handleContactClick}
-                data-aos-disabled="true"
-              >
-                Recibir Asesoría
-              </button>
-            </div>
+            <button
+              className="button-project"
+              aria-label="Evaluar mi operación"
+              type="button"
+              onClick={handleContactClick}
+              data-aos-disabled="true"
+            >
+              Evaluar mi operación
+            </button>
           </div>
         </section>
       </div>

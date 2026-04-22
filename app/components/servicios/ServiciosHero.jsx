@@ -59,14 +59,14 @@ export default function ProjectsHero() {
                 id="projects-hero-heading"
                 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-black"
               >
-                Servicios especializados en energía solar y almacenamiento
+                Soluciones energéticas para operaciones industriales
               </h1>
               <p className="text-[#9B9B9B] text-lg md:text-xl mb-8 max-w-4xl">
-                Por más de 15 años, hemos desarrollado proyectos solares y de almacenamiento innovadores, altamente rentables y con las tecnologías más avanzadas. Nuestros proyectos hablan por sí solos, impulsando la eficiencia y sostenibilidad de grandes empresas.
+                Diseñamos, integramos e implementamos sistemas de energía solar, almacenamiento en baterías (BESS) y microrredes para operaciones industriales que requieren confiabilidad, seguridad y alto desempeño técnico.
               </p>
               <button
                 className="relative px-8 py-4 text-lg font-medium text-white overflow-hidden bg-[#037F3F] transition-all duration-500 hover:text-white group rounded-tl-xl rounded-br-xl focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#037F3F]"
-                aria-label="Cotizar mi proyecto para consultoría energética"
+                aria-label="Evaluar mi operación"
                 type="button"
                 onClick={handleContactClick}
                 data-aos-disabled="true"
@@ -76,7 +76,7 @@ export default function ProjectsHero() {
                   aria-hidden="true"
                 ></span>
                 <span className="relative z-10 font-bold text-2xl">
-                  Cotizar mi proyecto
+                  Evaluar mi operación
                 </span>
               </button>
             </div>

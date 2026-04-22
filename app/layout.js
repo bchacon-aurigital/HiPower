@@ -5,8 +5,8 @@ import AOSProvider from "./components/AOSProvider";
 
 export const metadata = {
   metadataBase: new URL("https://www.hipowercr.com/"),
-  title: "Energía solar y almacenamiento para empresas | HiPower",
-  description: "Ahorra energía, evitá cortes y optimizá tu operación. Con 15 años de experiencia, lideramos proyectos solares exitosos en todo Costa Rica.",
+  title: "Energía Solar y Sistemas de Almacenamiento BESS| HiPower",
+  description: "Diseñamos soluciones de energía solar, microrredes y almacenamiento para operaciones industriales. Asegura tu continuidad operativa y reduce costos energéticos.",
 
   alternates: {
     canonical: "https://www.hipowercr.com/"
@@ -15,8 +15,8 @@ export const metadata = {
   keywords: "energía solar, almacenamiento energético, paneles solares, Costa Rica, HiPower, energía renovable, ahorro energético",
 
   openGraph: {
-    title: "Energía solar y almacenamiento para empresas | HiPower",
-    description: "Ahorra energía, evitá cortes y optimizá tu operación. Con 15 años de experiencia, lideramos proyectos solares exitosos en todo Costa Rica.",
+    title: "Energía Solar y Sistemas de Almacenamiento BESS| HiPower",
+    description: "Diseñamos soluciones de energía solar, microrredes y almacenamiento para operaciones industriales. Asegura tu continuidad operativa y reduce costos energéticos.",
     url: "https://www.hipowercr.com/",
     siteName: "HiPower - Energía Solar y Almacenamiento",
     images: [
@@ -48,8 +48,9 @@ const schemaData = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "HiPower",
-  description: "Ahorra energía, evitá cortes y optimizá tu operación. Con 15 años de experiencia, lideramos proyectos solares exitosos en todo Costa Rica.",
-  // ... resto del schema
+  description: "Diseñamos soluciones de energía solar, microrredes y almacenamiento para operaciones industriales. Asegura tu continuidad operativa y reduce costos energéticos.",
+  award: ["NABCEP Certified", "SEI Trained", "OSHA Compliant"],
+  addressCountry: "CR"
 };
 
 export default function RootLayout({ children }) {
