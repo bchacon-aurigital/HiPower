@@ -2,6 +2,7 @@
 import "./globals.css";
 import { ContactModalProvider } from "./context/ContactModalContext";
 import AOSProvider from "./components/AOSProvider";
+import EngagementTracker from "./components/EngagementTracker";
 
 export const metadata = {
   metadataBase: new URL("https://www.hipowercr.com/"),
@@ -132,6 +133,7 @@ export default function RootLayout({ children }) {
           />
         </noscript>
 
+        <EngagementTracker />
         <AOSProvider>
           <ContactModalProvider>
             {children}

@@ -173,15 +173,6 @@ const CertificationsSection = () => {
               </div>
             </li>
           </ul>
-          <div className="flex justify-center md:justify-start">
-            <a
-              href="https://www.hipowercr.com/sobrenosotros/"
-              className="button-project md:ml-5 mb-5 !mr-0"
-              aria-label="Volver al inicio"
-            >
-              Sobre nosotros
-            </a>
-          </div>
         </div>
       </div>
     </section>

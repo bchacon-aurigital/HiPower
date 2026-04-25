@@ -28,7 +28,7 @@ export default function ProjectsHero() {
       </Head>
       
       <section 
-        className="relative flex flex-col h-screen w-full overflow-hidden" 
+        className="relative flex flex-col md:h-screen w-full overflow-hidden" 
         aria-labelledby="projects-hero-heading"
       >
         <div className="sm:h-2/5 h-1/5 w-full">
@@ -49,7 +49,7 @@ export default function ProjectsHero() {
           </video>
         </div>
 
-        <div className="flex flex-grow items-center justify-center w-full">
+        <div className="flex flex-grow items-center justify-center w-full mt-3">
           <div className="container mx-auto px-4 md:px-8 py-6 md:py-8 h-full flex items-center">
             <div 
               className="max-w-4xl text-center mx-auto" 
@@ -59,7 +59,7 @@ export default function ProjectsHero() {
                 id="projects-hero-heading"
                 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-black"
               >
-                Soluciones energéticas para operaciones industriales
+                Soluciones energéticas para operaciones industriales y utilities
               </h1>
               <p className="text-[#9B9B9B] text-lg md:text-xl mb-8 max-w-4xl">
                 Diseñamos, integramos e implementamos sistemas de energía solar, almacenamiento en baterías (BESS) y microrredes para operaciones industriales que requieren confiabilidad, seguridad y alto desempeño técnico.

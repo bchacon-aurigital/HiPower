@@ -14,7 +14,7 @@ const ProyectoSolar = () => {
     const services = [
         {
             title: "Energía solar a gran escala",
-            description: "Desarrollamos plantas solares de gran escala para actores del sector energético, con capacidad constructiva propia, maquinaria especializada y estándares internacionales de calidad en obra, ideal para industrias que requieren generación a gran escala.",
+            description: "Desarrollamos plantas solares (utility scale) para actores del sector energético, con capacidad constructiva propia, maquinaria especializada y estándares internacionales de calidad en obra, ideal para industrias que requieren generación a gran escala.",
             projectName: "Planta Solar Huacas",
             metrics: [
                 { value: "17,000", description: "Paneles Solares" },
@@ -121,7 +121,7 @@ const ProyectoSolar = () => {
                     <article className="w-full md:w-[40%]" aria-labelledby={currentServiceData.id}>
                         <div className="flex justify-between items-center gap-4 mb-6">
                             <h2 id="servicios-heading" className="bg-[#0046AD] text-white px-3 py-2 rounded-bl-xl rounded-tr-xl text-xl font-semibold inline-block">
-                            Soluciones energéticas <br/> para industria
+                            Nuestras soluciones energéticas
                             </h2>
                             <div className="flex gap-3 border-2 border-[#037F3F] p-3 rounded-full" aria-label="Navegación de servicios">
                                 <button
