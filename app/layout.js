@@ -140,15 +140,31 @@ export default function RootLayout({ children }) {
             __html: `
               if ('serviceWorker' in navigator) {
                 window.addEventListener('load', function() {
-                  navigator.serviceWorker.register('/sw.js')
-                    .then(function(registration) {
-                      console.log('SW registered: ', registration);
-                    })
-                    .catch(function(registrationError) {
-                      console.log('SW registration failed: ', registrationError);
-                    });
+                  navigator.serviceWorker.register('/sw.js').catch(function(){});
                 });
               }
+
+              // When a chunk fails to load (stale SW serving old HTML after a deploy),
+              // reload once to get fresh HTML with correct chunk references.
+              window.addEventListener('error', function(e) {
+                if (e && e.message && e.message.includes('ChunkLoadError') ||
+                    (e.filename && e.filename.includes('_next/static/chunks'))) {
+                  var key = '__chunk_reload__';
+                  if (!sessionStorage.getItem(key)) {
+                    sessionStorage.setItem(key, '1');
+                    window.location.reload();
+                  }
+                }
+              });
+              window.addEventListener('unhandledrejection', function(e) {
+                if (e && e.reason && e.reason.name === 'ChunkLoadError') {
+                  var key = '__chunk_reload__';
+                  if (!sessionStorage.getItem(key)) {
+                    sessionStorage.setItem(key, '1');
+                    window.location.reload();
+                  }
+                }
+              });
             `,
           }}
         />

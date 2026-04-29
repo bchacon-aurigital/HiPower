@@ -1,12 +1,9 @@
-const CACHE_NAME = 'hipower-v2';
-const STATIC_CACHE = 'hipower-static-v2';
-const DYNAMIC_CACHE = 'hipower-dynamic-v2';
+// Bump this version on every deploy to force cache invalidation
+const CACHE_VERSION = 'v5';
+const STATIC_CACHE = `hipower-static-${CACHE_VERSION}`;
+const ASSETS_CACHE = `hipower-assets-${CACHE_VERSION}`;
 
-const STATIC_ASSETS = [
-  '/',
-  '/servicios/',
-  '/proyectos/',
-  '/sobrenosotros/',
+const PRECACHE_ASSETS = [
   '/assets/landing/LogoHiPower.svg',
   '/assets/homepage/HeroBG.png',
   '/assets/fonts/Futura Bold font.ttf',
@@ -16,23 +13,20 @@ const STATIC_ASSETS = [
 
 self.addEventListener('install', event => {
   event.waitUntil(
-    caches.open(STATIC_CACHE).then(cache => {
-      console.log('Caching static assets');
-      return cache.addAll(STATIC_ASSETS);
-    })
+    caches.open(ASSETS_CACHE).then(cache => cache.addAll(PRECACHE_ASSETS))
   );
   self.skipWaiting();
 });
 
 self.addEventListener('activate', event => {
   event.waitUntil(
-    caches.keys().then(keys => {
-      return Promise.all(
+    caches.keys().then(keys =>
+      Promise.all(
         keys
-          .filter(key => key !== STATIC_CACHE && key !== DYNAMIC_CACHE)
+          .filter(key => key !== STATIC_CACHE && key !== ASSETS_CACHE)
           .map(key => caches.delete(key))
-      );
-    })
+      )
+    )
   );
   self.clients.claim();
 });
@@ -41,51 +35,54 @@ self.addEventListener('fetch', event => {
   const { request } = event;
   const url = new URL(request.url);
 
-  // Skip non-GET requests and cross-origin requests (except for fonts if needed)
-  if (request.method !== 'GET' || url.origin !== self.location.origin) {
-    return;
-  }
+  if (request.method !== 'GET' || url.origin !== self.location.origin) return;
 
-  // Assets and Fonts: Cache-First strategy
-  if (url.pathname.includes('/assets/') || url.pathname.includes('/fonts/')) {
+  // _next/static/ files have content-hash in their name → safe to cache forever (cache-first)
+  // BUT: never serve stale HTML pages — they reference chunk hashes that must stay in sync
+  if (url.pathname.startsWith('/_next/static/')) {
     event.respondWith(
-      caches.match(request).then(cachedResponse => {
-        if (cachedResponse) return cachedResponse;
-        
-        return fetch(request).then(fetchResponse => {
-          if (!fetchResponse || fetchResponse.status !== 200 || fetchResponse.type !== 'basic') {
-            return fetchResponse;
-          }
-          const responseToCache = fetchResponse.clone();
-          caches.open(DYNAMIC_CACHE).then(cache => {
-            cache.put(request, responseToCache);
-          });
-          return fetchResponse;
-        });
+      caches.open(STATIC_CACHE).then(async cache => {
+        const cached = await cache.match(request);
+        if (cached) return cached;
+        const fresh = await fetch(request);
+        if (fresh.ok) cache.put(request, fresh.clone());
+        return fresh;
       })
     );
     return;
   }
 
-  // Navigation and other requests: Stale-While-Revalidate strategy
-  event.respondWith(
-    caches.match(request).then(cachedResponse => {
-      const fetchPromise = fetch(request).then(fetchResponse => {
-        if (fetchResponse && fetchResponse.status === 200 && fetchResponse.type === 'basic') {
-          const responseToCache = fetchResponse.clone();
-          caches.open(DYNAMIC_CACHE).then(cache => {
-            cache.put(request, responseToCache);
-          });
-        }
-        return fetchResponse;
-      }).catch(() => {
-        // Fallback for offline navigation
-        if (request.mode === 'navigate') {
-          return caches.match('/') || caches.match('/offline.html');
-        }
-      });
+  // Static assets (images, fonts, videos) → cache-first with network fallback
+  if (url.pathname.startsWith('/assets/')) {
+    event.respondWith(
+      caches.open(ASSETS_CACHE).then(async cache => {
+        const cached = await cache.match(request);
+        if (cached) return cached;
+        const fresh = await fetch(request);
+        if (fresh.ok) cache.put(request, fresh.clone());
+        return fresh;
+      })
+    );
+    return;
+  }
 
-      return cachedResponse || fetchPromise;
-    })
-  );
-}); 
+  // HTML pages → network-first so users always get fresh HTML with correct chunk references.
+  // Fall back to cache only when offline.
+  if (request.mode === 'navigate') {
+    event.respondWith(
+      fetch(request)
+        .then(async response => {
+          if (response.ok) {
+            const cache = await caches.open(STATIC_CACHE);
+            cache.put(request, response.clone());
+          }
+          return response;
+        })
+        .catch(async () => {
+          const cached = await caches.match(request);
+          return cached || caches.match('/');
+        })
+    );
+    return;
+  }
+});
