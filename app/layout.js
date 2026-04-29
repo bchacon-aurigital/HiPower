@@ -82,12 +82,6 @@ export default function RootLayout({ children }) {
           as="image"
           type="image/png"
         />
-        <link
-          rel="preload"
-          href="/assets/landing/LogoHiPower.svg"
-          as="image"
-          type="image/svg+xml"
-        />
 
         <link
           rel="preload"
@@ -97,16 +91,11 @@ export default function RootLayout({ children }) {
           crossOrigin="anonymous"
         />
 
-        <link
-          rel="preload"
-          href="/assets/homepage/HPHeroVid.webm"
-          as="video"
-          type="video/webm"
-          media="(min-width: 769px)"
-        />
-
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
         <link rel="dns-prefetch" href="//js.hsforms.net" />
+        <link rel="preconnect" href="https://js.hsforms.net" />
+        <link rel="dns-prefetch" href="//forms.hsforms.com" />
+        <link rel="preconnect" href="https://forms.hsforms.com" />
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//fonts.gstatic.com" />
 

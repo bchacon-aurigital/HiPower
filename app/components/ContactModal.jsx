@@ -50,6 +50,31 @@ const ContactModal = ({ isOpen, onClose }) => {
     document.head.appendChild(script);
   };
 
+  // Preload HubSpot script in idle time so the form is instant when the modal opens
+  useEffect(() => {
+    const preload = () => {
+      if (window.hbspt || hubspotLoaded || hubspotLoading) return;
+      setHubspotLoading(true);
+      const script = document.createElement('script');
+      script.src = '//js.hsforms.net/forms/embed/v2.js';
+      script.async = true;
+      script.onload = () => {
+        setHubspotLoaded(true);
+        setHubspotLoading(false);
+      };
+      script.onerror = () => setHubspotLoading(false);
+      document.head.appendChild(script);
+    };
+
+    if ('requestIdleCallback' in window) {
+      const id = requestIdleCallback(preload, { timeout: 4000 });
+      return () => cancelIdleCallback(id);
+    } else {
+      const id = setTimeout(preload, 3000);
+      return () => clearTimeout(id);
+    }
+  }, []);
+
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';

@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { FaInstagram, FaLinkedin, FaFacebook, FaYoutube, FaWhatsapp } from "react-icons/fa";
 import { useContactAction } from '../hooks/useContactAction';
 
@@ -44,10 +45,10 @@ const Navbar = () => {
 
   // Updated links with trailing slashes and absolute URLs
   const navLinks = [
-    { name: "INICIO", href: "https://www.hipowercr.com/" },
-    { name: "SERVICIOS", href: "https://www.hipowercr.com/servicios/" },
-    { name: "PROYECTOS", href: "https://www.hipowercr.com/proyectos/" },
-    { name: "NOSOTROS", href: "https://www.hipowercr.com/sobrenosotros/" },
+    { name: "INICIO", href: "/", internal: true },
+    { name: "SERVICIOS", href: "/servicios/", internal: true },
+    { name: "PROYECTOS", href: "/proyectos/", internal: true },
+    { name: "NOSOTROS", href: "/sobrenosotros/", internal: true },
     { name: "CONTACTO", href: "#", action: "contact" },
     { name: "BLOG", href: "https://blog.hipowercr.com/" },
   ];
@@ -65,8 +66,8 @@ const Navbar = () => {
     <>
       <nav className="absolute w-full z-50 px-6 py-4" aria-label="Navegación principal" data-aos="fade-down">
         <div className="container mx-auto flex items-center justify-between xl:justify-center gap-10">
-          <a
-            href="https://www.hipowercr.com/"
+          <Link
+            href="/"
             className={`flex-shrink-0 transition-opacity duration-300 ${isOpen ? 'opacity-0' : 'opacity-100'}`}
             aria-label="HiPower - Ir a inicio"
           >
@@ -76,7 +77,7 @@ const Navbar = () => {
               alt="Logo de HiPower"
               className="w-[200px] sm:w-[360px] h-auto"
             />
-          </a>
+          </Link>
 
           <button
             className="xl:hidden text-white focus:outline-none relative w-6 h-6 z-50"
@@ -125,6 +126,13 @@ const Navbar = () => {
                     >
                       {link.name}
                     </button>
+                  ) : link.internal ? (
+                    <Link
+                      href={link.href}
+                      className="text-gray-800 hover:text-[#037F3F] font-medium transition-colors"
+                    >
+                      {link.name}
+                    </Link>
                   ) : (
                     <a
                       href={link.href}
@@ -217,6 +225,14 @@ const Navbar = () => {
                     >
                       {link.name}
                     </button>
+                  ) : link.internal ? (
+                    <Link
+                      href={link.href}
+                      className="text-white text-xl font-medium hover:text-gray-300 transition-colors"
+                      onClick={toggleMenu}
+                    >
+                      {link.name}
+                    </Link>
                   ) : (
                     <a
                       href={link.href}
