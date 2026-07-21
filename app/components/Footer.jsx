@@ -206,9 +206,9 @@ const Footer = () => {
       </div>
       <div className="hidden w-full h-5">
         <a
-          href="https://aurigital.com"
+          href="https://aurigital.com?utm_source=hipower&utm_medium=footer&utm_campaign=branding"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener"
           className="flex justify-center mx-auto w-full"
         >
           <p className=" text-white uppercase text-[12px] text-center p-1 hover:text-[#28C0F5] content-center ">
